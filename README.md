@@ -6,4 +6,4 @@ I'm a Junior Software Engineer with a passion for building things.
 - **HTML**, **CSS**, and front-end development.
 - **WordPress** and its themes and plugin development.
 - **Git** and **GitHub**.
-- Experience in **Python**.
+- Experienced in **Python**.
