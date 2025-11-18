@@ -101,7 +101,7 @@
 <table>
 <tr>
 <td align="center" width="33%" valign="top">
-  <strong>⚡ No Dependencies</strong><br/>
+  <strong>⚡ Zero Dependencies</strong><br/>
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top">
