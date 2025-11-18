@@ -27,10 +27,10 @@
 <tr>
 <td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-    <img src="https://img.shields.io/badge/🎯_3D_GRAPH-Explore-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+    <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/threedotjs.svg" width="80" height="80" alt="3D" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <img src="https://img.shields.io/badge/📊-3D-667eea?style=for-the-badge&logo=threedotjs&logoColor=white" width="60" height="60"/>
   <h3>🚀 3D Contribution Graph</h3>
   <p><sub>
     ✨ Rotating 3D visualization<br/>
@@ -45,10 +45,10 @@
 </td>
 <td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.shields.io/badge/📊_TERMINAL-View-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
+    <img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/windowsterminal.svg" width="80" height="80" alt="Terminal" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <img src="https://img.shields.io/badge/⚡-Terminal-764ba2?style=for-the-badge&logo=windowsterminal&logoColor=white" width="60" height="60"/>
   <h3>💻 Live Dashboard</h3>
   <p><sub>
     ⚡ Real-time metrics<br/>
@@ -63,10 +63,10 @@
 </td>
 <td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-    <img src="https://img.shields.io/badge/🎯_RADAR-Chart-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+    <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/chartdotjs.svg" width="80" height="80" alt="Chart" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <img src="https://img.shields.io/badge/📊-Radar-667eea?style=for-the-badge&logo=chartdotjs&logoColor=white" width="60" height="60"/>
   <h3>📡 Skill Radar</h3>
   <p><sub>
     🎨 6-axis radar chart<br/>
@@ -81,10 +81,10 @@
 </td>
 <td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
-    <img src="https://img.shields.io/badge/🎨_BANNER-Create-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
+    <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/adobe.svg" width="80" height="80" alt="Design" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <img src="https://img.shields.io/badge/✨-Design-764ba2?style=for-the-badge&logo=adobe&logoColor=white" width="60" height="60"/>
   <h3>✨ Banner Generator</h3>
   <p><sub>
     🖼 Custom banners<br/>
@@ -95,17 +95,6 @@
   <p>
     <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/>
     <img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
-  </p>
-</td>
-</tr>
-</table>
-    ✏️ Customizable text and stats display<br/>
-    💾 Download as high-quality PNG
-  </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Sizes-3_Options-success?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Quality-High_Res-blue?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Particles-Animated-brightgreen?style=flat-square"/>
   </p>
 </td>
 </tr>
