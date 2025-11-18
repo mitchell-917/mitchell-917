@@ -25,69 +25,89 @@
 
 <table>
 <tr>
-<td align="center" width="25%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-    <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
-  </a>
-  <br/><br/>
-  <h3>🚀 3D Contribution</h3>
-  <p><sub>
-    ✨ Rotating 3D visualization<br/>
-    🎨 6 color themes<br/>
-    🔍 Zoom controls<br/>
-    📸 Export PNG
-  </sub></p>
-  <br/>
-  <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/><br/>
-  <img src="https://img.shields.io/badge/3D-Enabled-blue?style=flat-square"/>
+<td align="center" width="25%" height="320">
+  <div style="height: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 15px;">
+    <div>
+      <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
+        <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+      </a>
+      <br/><br/>
+      <h3 style="margin: 8px 0;">🚀 3D Contribution</h3>
+      <p style="margin: 10px 0;"><sub>
+        ✨ Rotating 3D visualization<br/>
+        🎨 6 color themes<br/>
+        🔍 Zoom controls<br/>
+        📸 Export PNG
+      </sub></p>
+    </div>
+    <div>
+      <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/><br/>
+      <img src="https://img.shields.io/badge/3D-Enabled-blue?style=flat-square"/>
+    </div>
+  </div>
 </td>
-<td align="center" width="25%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
-  </a>
-  <br/><br/>
-  <h3>💻 Live Dashboard</h3>
-  <p><sub>
-    ⚡ Real-time metrics<br/>
-    📈 Language breakdown<br/>
-    📅 Activity heatmap<br/>
-    🔥 Streak tracker
-  </sub></p>
-  <br/>
-  <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/><br/>
-  <img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
+<td align="center" width="25%" height="320">
+  <div style="height: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 15px;">
+    <div>
+      <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
+        <img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
+      </a>
+      <br/><br/>
+      <h3 style="margin: 8px 0;">💻 Live Dashboard</h3>
+      <p style="margin: 10px 0;"><sub>
+        ⚡ Real-time metrics<br/>
+        📈 Language breakdown<br/>
+        📅 Activity heatmap<br/>
+        🔥 Streak tracker
+      </sub></p>
+    </div>
+    <div>
+      <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/><br/>
+      <img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
+    </div>
+  </div>
 </td>
-<td align="center" width="25%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-    <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
-  </a>
-  <br/><br/>
-  <h3>📡 Skill Radar</h3>
-  <p><sub>
-    🎨 6-axis radar chart<br/>
-    🌈 4 themes<br/>
-    📊 Skill adjustments<br/>
-    💾 Export PNG
-  </sub></p>
-  <br/>
-  <img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/><br/>
-  <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
+<td align="center" width="25%" height="320">
+  <div style="height: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 15px;">
+    <div>
+      <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
+        <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+      </a>
+      <br/><br/>
+      <h3 style="margin: 8px 0;">📡 Skill Radar</h3>
+      <p style="margin: 10px 0;"><sub>
+        🎨 6-axis radar chart<br/>
+        🌈 4 themes<br/>
+        📊 Skill adjustments<br/>
+        💾 Export PNG
+      </sub></p>
+    </div>
+    <div>
+      <img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/><br/>
+      <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
+    </div>
+  </div>
 </td>
-<td align="center" width="25%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
-    <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
-  </a>
-  <br/><br/>
-  <h3>✨ Banner</h3>
-  <p><sub>
-    🖼 Custom banners<br/>
-    📐 3 export sizes<br/>
-    🎭 Gradients<br/>
-    💾 Download PNG
-  </sub></p>
-  <br/>
-  <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/><br/>
-  <img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
+<td align="center" width="25%" height="320">
+  <div style="height: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 15px;">
+    <div>
+      <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
+        <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
+      </a>
+      <br/><br/>
+      <h3 style="margin: 8px 0;">✨ Banner Generator</h3>
+      <p style="margin: 10px 0;"><sub>
+        🖼 Custom banners<br/>
+        📐 3 export sizes<br/>
+        🎭 Gradients<br/>
+        💾 Download PNG
+      </sub></p>
+    </div>
+    <div>
+      <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/><br/>
+      <img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
+    </div>
+  </div>
 </td>
 </tr>
 </table>
