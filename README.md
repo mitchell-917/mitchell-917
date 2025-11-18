@@ -370,57 +370,6 @@ track_fair_value_gaps()
 
 ---
 
-## 🤝 Let's Connect & Collaborate
-
-<div align="center">
-
-### Open to exciting opportunities in:
-**Algorithmic Trading** • **React Development** • **Full-Stack Engineering** • **Open Source**
-
-<table>
-<tr>
-<td align="center" width="25%">
-  <a href="https://github.com/mitchell-917">
-    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" alt="GitHub"/>
-    <br/>
-    <sub><strong>View Repositories</strong></sub>
-  </a>
-</td>
-<td align="center" width="25%">
-  <a href="mailto:contact@mitchell-dev.com">
-    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-    <br/>
-    <sub><strong>Send Message</strong></sub>
-  </a>
-</td>
-<td align="center" width="25%">
-  <a href="https://www.linkedin.com/in/mitchell-dev">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
-    <br/>
-    <sub><strong>Professional Network</strong></sub>
-  </a>
-</td>
-<td align="center" width="25%">
-  <a href="https://mitchell-917.github.io">
-    <img src="https://img.shields.io/badge/Portfolio-Visit-667EEA?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
-    <br/>
-    <sub><strong>See Full Work</strong></sub>
-  </a>
-</td>
-</tr>
-</table>
-
-<br/>
-
-### 💬 Open to Discussions About:
-`Trading Algorithms` • `React Architecture` • `TypeScript Patterns` • `Testing Strategies` • `CI/CD Pipelines` • `Full-Stack Development` • `Performance Optimization` • `Open Source Collaboration`
-
-</div>
-
----
-
-<br/>
-
 ## 🏆 Achievements & Highlights
 
 <div align="center">
