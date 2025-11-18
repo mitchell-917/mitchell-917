@@ -109,7 +109,7 @@
   <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
-  <strong>📱 Fully Responsive</strong><br/><br/>
+  <strong>📱&nbsp;Fully&nbsp;Responsive</strong><br/><br/>
   <sub>Works on all devices<br/>Mobile-optimized layouts<br/>Touch-friendly interface</sub>
 </td>
 </tr>
