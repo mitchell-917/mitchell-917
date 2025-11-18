@@ -25,75 +25,75 @@
 
 <table>
 <tr>
-<td align="center" width="25%" valign="top">
+<td align="center" width="25%" valign="top" style="padding: 15px;">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
     <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
   <img src="https://img.shields.io/badge/📊-3D-667eea?style=for-the-badge&logo=threedotjs&logoColor=white" width="60" height="60"/>
-  <h3>🚀 3D Contribution Graph</h3>
-  <p><sub>
+  <h3 style="margin: 10px 0;">🚀 3D Contribution Graph</h3>
+  <p style="line-height: 1.8;"><sub>
     ✨ Rotating 3D visualization<br/>
     🎨 6 color themes<br/>
     🔍 Zoom controls<br/>
     📸 Export PNG
   </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/>
+  <p style="margin-top: 10px;">
+    <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/><br/>
     <img src="https://img.shields.io/badge/3D-Enabled-blue?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="25%" valign="top">
+<td align="center" width="25%" valign="top" style="padding: 15px;">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
     <img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
   <img src="https://img.shields.io/badge/⚡-Terminal-764ba2?style=for-the-badge&logo=windowsterminal&logoColor=white" width="60" height="60"/>
-  <h3>💻 Live Dashboard</h3>
-  <p><sub>
+  <h3 style="margin: 10px 0;">💻 Live Dashboard</h3>
+  <p style="line-height: 1.8;"><sub>
     ⚡ Real-time metrics<br/>
     📈 Language breakdown<br/>
     📅 Activity heatmap<br/>
     🔥 Streak tracker
   </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/>
+  <p style="margin-top: 10px;">
+    <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/><br/>
     <img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="25%" valign="top">
+<td align="center" width="25%" valign="top" style="padding: 15px;">
   <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
     <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
   <img src="https://img.shields.io/badge/📊-Radar-667eea?style=for-the-badge&logo=chartdotjs&logoColor=white" width="60" height="60"/>
-  <h3>📡 Skill Radar</h3>
-  <p><sub>
+  <h3 style="margin: 10px 0;">📡 Skill Radar</h3>
+  <p style="line-height: 1.8;"><sub>
     🎨 6-axis radar chart<br/>
     🌈 4 themes<br/>
     📊 Skill adjustments<br/>
     💾 Export PNG
   </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/>
+  <p style="margin-top: 10px;">
+    <img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/><br/>
     <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="25%" valign="top">
+<td align="center" width="25%" valign="top" style="padding: 15px;">
   <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
     <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
   <img src="https://img.shields.io/badge/✨-Design-764ba2?style=for-the-badge&logo=adobe&logoColor=white" width="60" height="60"/>
-  <h3>✨ Banner Generator</h3>
-  <p><sub>
+  <h3 style="margin: 10px 0;">✨ Banner Generator</h3>
+  <p style="line-height: 1.8;"><sub>
     🖼 Custom banners<br/>
     📐 3 export sizes<br/>
     🎭 Gradients<br/>
     💾 Download PNG
   </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/>
+  <p style="margin-top: 10px;">
+    <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/><br/>
     <img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
   </p>
 </td>
@@ -137,10 +137,12 @@
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top" style="padding: 20px;">
 
 ### 🏦 Algorithmic Trading Systems
+
 Building enterprise-grade platforms that trade 24/7:
+
 - ✅ **25+ Pine Script indicators** with real-time alerts
 - ✅ **15+ backtested strategies** with documented performance  
 - ✅ **Automated CI/CD pipelines** updating market data hourly
@@ -148,10 +150,12 @@ Building enterprise-grade platforms that trade 24/7:
 - ✅ **Smart money concepts** (order blocks, FVG, liquidity)
 
 </td>
-<td width="50%">
+<td width="50%" valign="top" style="padding: 20px;">
 
 ### ⚛️ Production-Grade React Apps
+
 Crafting applications that set the bar:
+
 - ✅ **177 passing tests** with 90%+ coverage
 - ✅ **TypeScript strict mode** for type safety
 - ✅ **Zero bugs, zero warnings** deployment-ready code
@@ -161,10 +165,12 @@ Crafting applications that set the bar:
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="50%" valign="top" style="padding: 20px;">
 
 ### 📊 Interactive Data Visualizations
+
 Making complexity beautiful and intuitive:
+
 - 🎨 **3D Canvas graphics** with real-time rendering
 - 🎨 **Custom chart libraries** for trading analysis
 - 🎨 **Terminal-style dashboards** with live metrics
@@ -172,10 +178,12 @@ Making complexity beautiful and intuitive:
 - 🎨 **Animated carousels** with 3D transforms
 
 </td>
-<td width="50%">
+<td width="50%" valign="top" style="padding: 20px;">
 
 ### 🌐 Full-Stack Development
+
 Expanding into backend & cloud:
+
 - 🔧 **Ruby on Rails** for API development
 - 🔧 **Python scripts** for automation & data analysis
 - 🔧 **GitHub Actions** for continuous deployment
