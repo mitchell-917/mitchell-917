@@ -311,8 +311,6 @@ track_fair_value_gaps()
 
 **Tech:** React, JavaScript, Weather API
 
-<br/>
-
 ### 🔧 More Projects
 
 - **Chat GPT Templates** - Curated prompts for business, coding, finance
