@@ -32,7 +32,7 @@
 </td>
 <td align="center" width="25%">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.icons8.com/fluency/96/000000/activity-history.png" width="80" height="80"/>
+    <img src="https://img.icons8.com/fluency/96/000000/dashboard.png" width="80" height="80"/>
     <br/>
     <strong>Live Terminal Dashboard</strong>
     <br/>
