@@ -61,7 +61,7 @@
 <h3>🔮 Skill Radar</h3>
 <sub>
 🎯 6-axis radar chart<br/>
-🌈 4 themes<br/>
+🌈 4 color themes<br/>
 📊 Skill adjustments<br/>
 💾 Export PNG
 </sub>
