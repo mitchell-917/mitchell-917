@@ -21,7 +21,7 @@
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
     <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="80" height="80"/>
     <br/>
@@ -30,7 +30,7 @@
     <sub>Rotating 3D visualization<br/>with mouse control</sub>
   </a>
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
     <img src="https://img.icons8.com/fluency/96/000000/dashboard.png" width="80" height="80"/>
     <br/>
@@ -39,7 +39,7 @@
     <sub>Real-time coding metrics<br/>& activity graphs</sub>
   </a>
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
     <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="80" height="80"/>
     <br/>
@@ -48,7 +48,7 @@
     <sub>Animated skill visualization<br/>with 4 themes</sub>
   </a>
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
     <img src="https://img.icons8.com/fluency/96/000000/design.png" width="80" height="80"/>
     <br/>
