@@ -105,7 +105,7 @@
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
-  <strong>🎨 &nbsp;Stunning&nbsp; UI</strong><br/><br/>
+  <strong>🎨&nbsp;Stunning&nbsp; UI</strong><br/><br/>
   <sub>Glassmorphism<br/>Smooth animations<br/>Production-quality</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
