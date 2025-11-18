@@ -1,83 +1,159 @@
 <div align="center">
 
-# 👋 Hey, I'm Mitchell
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Mitchell&fontSize=80&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20•%20Trading%20Systems%20Architect&descSize=20&descAlignY=55" width="100%"/>
 
-### **Full-Stack Developer • Algorithmic Trading Specialist • Data Visualization Architect**
+<h1>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&multiline=true&width=900&height=100&lines=Building+intelligent+trading+systems;%26+interactive+web+experiences;From+Pine+Script+to+Production-Ready+React" alt="Typing SVG" />
+</h1>
 
-<p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&multiline=true&width=800&height=80&lines=Building+intelligent+trading+systems+%26+interactive+web+experiences;From+algorithmic+strategies+to+production-ready+React+applications" alt="Typing SVG" />
-</p>
+<table align="center">
+<tr>
+<td>
 
 ```javascript
 const mitchell = {
+  title: "Full-Stack Developer & Trading Systems Architect",
   location: "Building the future, one commit at a time",
-  currentFocus: ["Algorithmic Trading Systems", "React Applications", "Data Visualization"],
-  philosophy: "Clean code isn't written, it's refined through iteration",
-  techStack: ["Pine Script", "MQL5", "TypeScript", "React", "Python", "Ruby"],
-  motto: "Every project should be production-ready, not just portfolio-ready"
+  currentlyWorking: [
+    "🏦 Algorithmic Trading Platforms",
+    "⚛️ Production-Ready React Applications", 
+    "📊 Interactive Data Visualizations"
+  ],
+  techStack: {
+    trading: ["Pine Script v5", "MQL5", "TradingView"],
+    frontend: ["React 18", "TypeScript", "Tailwind CSS"],
+    backend: ["Python", "Ruby", "Node.js"],
+    tools: ["Git", "GitHub Actions", "Vite", "Vitest"]
+  },
+  stats: {
+    linesOfCode: "26K+",
+    testsWritten: 177,
+    activeProjects: 12,
+    tradingIndicators: "25+"
+  },
+  philosophy: "Clean code isn't written, it's refined",
+  motto: "Production-ready, not just portfolio-ready"
 };
 ```
 
-[![GitHub followers](https://img.shields.io/github/followers/mitchell-917?style=social)](https://github.com/mitchell-917)
-[![Profile Views](https://komarev.com/ghpvc/?username=mitchell-917&color=667eea&style=flat-square)](https://github.com/mitchell-917)
-
----
-
-### 🎨 Interactive Showcases • Experience My Work in 3D
-
-<table>
-<tr>
-<td align="center" width="33%">
-  <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-    <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="64"/>
-    <br/>
-    <b>3D Contribution Graph</b>
-  </a>
-  <br/>
-  <sub>Rotating 3D visualization with mouse control</sub>
-</td>
-<td align="center" width="33%">
-  <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.icons8.com/fluency/96/000000/activity-history.png" width="64"/>
-    <br/>
-    <b>Live Terminal Dashboard</b>
-  </a>
-  <br/>
-  <sub>Real-time coding metrics & activity graphs</sub>
-</td>
-<td align="center" width="33%">
-  <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-    <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="64"/>
-    <br/>
-    <b>Interactive Skill Radar</b>
-  </a>
-  <br/>
-  <sub>Animated skill visualization with themes</sub>
-</td>
-</tr>
-<tr>
-<td align="center" colspan="3">
-  <br/>
-  <a href="https://mitchell-917.github.io/mitchell-917/project-showcase.html">
-    <img src="https://img.shields.io/badge/🎯-View_Full_Project_Carousel-667eea?style=for-the-badge&logoColor=white" height="40"/>
-  </a>
-  <br/>
-  <sub>Interactive 3D carousel showcasing all projects</sub>
 </td>
 </tr>
 </table>
 
+<p>
+  <a href="https://github.com/mitchell-917">
+    <img src="https://img.shields.io/github/followers/mitchell-917?label=Followers&style=social" alt="GitHub Followers"/>
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=mitchell-917&color=667eea&style=flat-square&label=Profile+Views" alt="Profile Views"/>
+  <img src="https://img.shields.io/badge/Focus-Trading%20Systems%20%26%20React-667eea?style=flat-square" alt="Focus"/>
+  <img src="https://img.shields.io/badge/Open%20To-Collaborations-success?style=flat-square" alt="Open to Collaborations"/>
+</p>
+
+<br/>
+
+## 🎨 Interactive Showcases • Experience My Work in 3D
+
+<table>
+<tr>
+<td align="center" width="25%">
+  <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
+    <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="80" height="80"/>
+    <br/>
+    <strong>3D Contribution Graph</strong>
+    <br/>
+    <sub>Rotating 3D visualization<br/>with mouse control</sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
+    <img src="https://img.icons8.com/fluency/96/000000/activity-history.png" width="80" height="80"/>
+    <br/>
+    <strong>Live Terminal Dashboard</strong>
+    <br/>
+    <sub>Real-time coding metrics<br/>& activity graphs</sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
+    <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="80" height="80"/>
+    <br/>
+    <strong>Interactive Skill Radar</strong>
+    <br/>
+    <sub>Animated skill visualization<br/>with 4 themes</sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
+    <img src="https://img.icons8.com/fluency/96/000000/design.png" width="80" height="80"/>
+    <br/>
+    <strong>Banner Generator</strong>
+    <br/>
+    <sub>Create custom profile<br/>banners instantly</sub>
+  </a>
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <a href="https://mitchell-917.github.io/mitchell-917/project-showcase.html">
+    <img src="https://img.shields.io/badge/🎯_View_Full_Project_Carousel-Interactive_3D_Showcase-667eea?style=for-the-badge&logoColor=white" alt="Project Carousel"/>
+  </a>
+</p>
+
 </div>
 
----
+## 🚀 Current Focus & What I'm Building
 
-## 🚀 What I'm Building Right Now
+<table>
+<tr>
+<td width="50%">
 
-- 🏦 **Architecting algorithmic trading platforms** with automated CI/CD pipelines that update market data 24/7
-- ⚛️ **Crafting production-ready React applications** with 177 passing tests and enterprise-grade architecture
-- 📊 **Designing interactive data visualizations** that make complex algorithms intuitive and accessible
-- 🤖 **Developing smart money concepts indicators** for institutional-grade order flow analysis
-- 🌐 **Exploring Ruby** for backend systems and API integrations
+### 🏦 Algorithmic Trading Systems
+Building enterprise-grade platforms that trade 24/7:
+- ✅ **25+ Pine Script indicators** with real-time alerts
+- ✅ **15+ backtested strategies** with documented performance  
+- ✅ **Automated CI/CD pipelines** updating market data hourly
+- ✅ **Live dashboards** with risk management tools
+- ✅ **Smart money concepts** (order blocks, FVG, liquidity)
+
+</td>
+<td width="50%">
+
+### ⚛️ Production-Grade React Apps
+Crafting applications that set the bar:
+- ✅ **177 passing tests** with 90%+ coverage
+- ✅ **TypeScript strict mode** for type safety
+- ✅ **Zero bugs, zero warnings** deployment-ready code
+- ✅ **Glassmorphism UI** with smooth animations
+- ✅ **Custom hooks & patterns** following SOLID principles
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Interactive Data Visualizations
+Making complexity beautiful and intuitive:
+- 🎨 **3D Canvas graphics** with real-time rendering
+- 🎨 **Custom chart libraries** for trading analysis
+- 🎨 **Terminal-style dashboards** with live metrics
+- 🎨 **Radar charts & skill visualizations**
+- 🎨 **Animated carousels** with 3D transforms
+
+</td>
+<td width="50%">
+
+### 🌐 Full-Stack Development
+Expanding into backend & cloud:
+- 🔧 **Ruby on Rails** for API development
+- 🔧 **Python scripts** for automation & data analysis
+- 🔧 **GitHub Actions** for continuous deployment
+- 🔧 **Responsive design** mobile-first approach
+- 🔧 **Performance optimization** for production
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -236,11 +312,31 @@ track_fair_value_gaps()
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mitchell-917&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=667EEA&icon_color=667EEA&text_color=9f9f9f"/>
+<table>
+<tr>
+<td width="50%">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mitchell-917&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667EEA&text_color=9f9f9f&hide=html,css"/>
+<img src="https://github-readme-stats.vercel.app/api?username=mitchell-917&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=667EEA&icon_color=667EEA&text_color=9f9f9f&ring_color=667EEA" width="100%"/>
 
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=mitchell-917&theme=tokyonight&hide_border=true&background=0D1117&stroke=667EEA&ring=667EEA&fire=FB8C00&currStreakLabel=667EEA"/>
+</td>
+<td width="50%">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=mitchell-917&theme=tokyonight&hide_border=true&background=0D1117&stroke=667EEA&ring=667EEA&fire=FB8C00&currStreakLabel=667EEA" width="100%"/>
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mitchell-917&layout=compact&langs_count=10&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667EEA&text_color=9f9f9f&hide=html,css" width="60%"/>
+
+</td>
+</tr>
+</table>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=mitchell-917&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=667EEA&line=667EEA&point=FB8C00" width="100%"/>
+
+</div>
 
 </div>
 
@@ -248,46 +344,168 @@ track_fair_value_gaps()
 
 ## 💡 Beyond The Code
 
-When I'm not architecting trading systems or building React applications, you'll find me:
+<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" alt="Coding"/>
 
-- 📖 **Reading technical documentation** like it's a thriller novel
-- 🧪 **Experimenting with new frameworks** and languages (currently diving deep into Ruby)
-- 📊 **Analyzing market structure** and institutional order flow patterns
-- 🎮 **Optimizing development workflows** with automation scripts
-- ☕ **Refactoring code** until it sparks joy (yes, I apply Marie Kondo to codebases)
+**When I'm not crafting production-ready code, you'll find me:**
+
+- 📚 **Reading technical docs** like thriller novels (seriously, Pine Script v5 docs are 🔥)
+- 🧪 **Experimenting with Ruby** and building backend APIs
+- 📊 **Analyzing institutional order flow** to spot smart money moves
+- 🎮 **Automating everything** - if I do it twice, I script it
+- ⚡ **Performance tuning** - milliseconds matter in trading systems
+- ☕ **Refactoring code** until it sparks joy (Marie Kondo for codebases!)
+- 🎨 **Designing UI/UX** that makes complex data beautiful
+- 🤝 **Contributing to open source** and helping other developers
+
+<br clear="right"/>
 
 ---
 
-## 🤝 Let's Connect
+## 🤝 Let's Connect & Collaborate
 
 <div align="center">
 
-Looking to collaborate on **algorithmic trading tools**, **data visualization projects**, or **production-ready React applications**? Let's build something exceptional together.
+### Open to exciting opportunities in:
+**Algorithmic Trading** • **React Development** • **Data Visualization** • **Open Source**
 
-[![GitHub](https://img.shields.io/badge/GitHub-mitchell--917-181717?style=for-the-badge&logo=github)](https://github.com/mitchell-917)
-[![Email](https://img.shields.io/badge/Email-Connect-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-667EEA?style=for-the-badge&logo=safari&logoColor=white)](https://YOUR_PORTFOLIO.com)
+<table>
+<tr>
+<td align="center" width="25%">
+  <a href="https://github.com/mitchell-917">
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+    <br/>
+    <sub><strong>View Repositories</strong></sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="mailto:YOUR_EMAIL@example.com">
+    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+    <br/>
+    <sub><strong>Send Message</strong></sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="https://linkedin.com/in/YOUR_LINKEDIN">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
+    <br/>
+    <sub><strong>Professional Network</strong></sub>
+  </a>
+</td>
+<td align="center" width="25%">
+  <a href="https://YOUR_PORTFOLIO.com">
+    <img src="https://img.shields.io/badge/Portfolio-Visit-667EEA?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
+    <br/>
+    <sub><strong>See Full Work</strong></sub>
+  </a>
+</td>
+</tr>
+</table>
+
+<br/>
+
+### 💬 Open to Discussions About:
+`Trading Algorithms` • `React Architecture` • `TypeScript Patterns` • `Testing Strategies` • `CI/CD Pipelines` • `Data Visualization` • `Performance Optimization` • `Open Source Collaboration`
 
 </div>
 
 ---
 
+<br/>
+
+## 🏆 Achievements & Highlights
+
 <div align="center">
 
-### ⚡ Quick Stats
+<table>
+<tr>
+<td align="center">
+  <img src="https://img.shields.io/badge/Code_Quality-A+-brightgreen?style=for-the-badge&logo=codacy" alt="Code Quality"/>
+  <br/>
+  <sub>ESLint: 0 errors, 0 warnings</sub>
+</td>
+<td align="center">
+  <img src="https://img.shields.io/badge/Test_Coverage-90%25+-success?style=for-the-badge&logo=vitest" alt="Coverage"/>
+  <br/>
+  <sub>177 tests passing</sub>
+</td>
+<td align="center">
+  <img src="https://img.shields.io/badge/Production_Ready-12_Projects-blue?style=for-the-badge&logo=github" alt="Projects"/>
+  <br/>
+  <sub>Battle-tested in production</sub>
+</td>
+<td align="center">
+  <img src="https://img.shields.io/badge/Documentation-Comprehensive-orange?style=for-the-badge&logo=markdown" alt="Docs"/>
+  <br/>
+  <sub>Every repo fully documented</sub>
+</td>
+</tr>
+</table>
 
-![](https://img.shields.io/badge/Code_Quality-A+-brightgreen?style=flat-square)
-![](https://img.shields.io/badge/Test_Coverage-90%25+-success?style=flat-square)
-![](https://img.shields.io/badge/Projects-Production_Ready-blue?style=flat-square)
-![](https://img.shields.io/badge/Documentation-Comprehensive-orange?style=flat-square)
+<br/>
 
-**"Every repository tells a story. Mine tells the story of obsessive attention to detail, production-grade quality, and a relentless pursuit of excellence."**
+### 🌟 My Philosophy
 
-⭐ **Star my repos if you find them valuable** • 🍴 **Fork them to build something amazing** • 💬 **Open an issue to collaborate**
+<table>
+<tr>
+<td align="center" width="33%">
+  <img src="https://img.icons8.com/fluency/96/000000/code.png" width="60"/>
+  <br/>
+  <strong>Clean Code</strong>
+  <br/>
+  <sub>"Code is read 10x more than written.<br/>Make it beautiful."</sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.icons8.com/fluency/96/000000/test-passed.png" width="60"/>
+  <br/>
+  <strong>Test-Driven</strong>
+  <br/>
+  <sub>"Tests aren't overhead,<br/>they're freedom."</sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.icons8.com/fluency/96/000000/rocket.png" width="60"/>
+  <br/>
+  <strong>Production-Ready</strong>
+  <br/>
+  <sub>"Every commit should be<br/>deploy-ready."</sub>
+</td>
+</tr>
+</table>
+
+<br/>
+
+### 💝 Support My Work
+
+<table>
+<tr>
+<td align="center">⭐</td>
+<td><strong>Star</strong> repositories you find valuable</td>
+</tr>
+<tr>
+<td align="center">🍴</td>
+<td><strong>Fork</strong> projects to build something amazing</td>
+</tr>
+<tr>
+<td align="center">💬</td>
+<td><strong>Open issues</strong> to collaborate or discuss</td>
+</tr>
+<tr>
+<td align="center">🤝</td>
+<td><strong>Contribute</strong> PRs are always welcome!</td>
+</tr>
+<tr>
+<td align="center">📢</td>
+<td><strong>Share</strong> spread the word if you find value</td>
+</tr>
+</table>
+
+<br/>
 
 ---
 
-*Last updated: Auto-generated via GitHub Actions*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
+
+**"Every repository tells a story of obsessive attention to detail, production-grade quality, and relentless pursuit of excellence."**
+
+<sub>Last updated: November 2025 | Auto-maintained via GitHub Actions | Made with 💜 and ☕</sub>
 
 </div>
