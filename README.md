@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,6,12,20&height=220&section=header&text=Mitchell&fontSize=85&fontColor=fff&fontAlignY=32&desc=Full-Stack%20Developer%20•%20Trading%20Systems%20Architect%20•%20Data%20Visualization%20Expert&descSize=22&descAlignY=52" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,6,12,20&height=220&section=header&text=Mitchell&fontSize=85&fontColor=fff&fontAlignY=32&desc=Full-Stack%20Developer%20•%20Trading%20Systems%20Architect%20•%20React%20Specialist&descSize=22&descAlignY=52" width="100%"/>
 
 <h1>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&multiline=true&width=900&height=120&lines=Building+intelligent+trading+systems;%26+interactive+web+experiences;From+Pine+Script+to+Production-Ready+React" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&multiline=true&width=900&height=120&lines=Architecting+intelligent+trading+systems;Crafting+scalable+React+applications;Full-stack+solutions+from+concept+to+production" alt="Typing SVG" />
 </h1>
 
 <p>
@@ -151,14 +151,14 @@ Crafting applications that set the bar:
 <tr>
 <td width="50%" valign="top">
 
-### 📊 Interactive Data Visualizations
-Making complexity beautiful and intuitive:
+### ⚡ React Ecosystem Mastery
+Building modern, performant web applications:
 
-- 🎨 **3D Canvas graphics** with real-time rendering
-- 🎨 **Custom chart libraries** for trading analysis
-- 🎨 **Terminal-style dashboards** with live metrics
-- 🎨 **Radar charts & skill visualizations**
-- 🎨 **Animated carousels** with 3D transforms
+- 🚀 **React 18+ features** - Server components, concurrent rendering
+- 🎯 **State management** - Zustand, Context API, custom hooks
+- 🎨 **Modern styling** - Tailwind CSS, CSS-in-JS, glassmorphism
+- ⚡ **Performance optimization** - Code splitting, lazy loading, memoization
+- 🧪 **Testing excellence** - Vitest, Testing Library, 90%+ coverage
 
 </td>
 <td width="50%" valign="top">
@@ -367,7 +367,8 @@ track_fair_value_gaps()
 - 🎮 **Automating everything** - if I do it twice, I script it
 - ⚡ **Performance tuning** - milliseconds matter in trading systems
 - ☕ **Refactoring code** until it sparks joy (Marie Kondo for codebases!)
-- 🎨 **Designing UI/UX** that makes complex data beautiful
+- 🎨 **Crafting pixel-perfect UIs** with React and modern CSS
+- 🏗️ **Building scalable architectures** that stand the test of time
 - 🤝 **Contributing to open source** and helping other developers
 
 <br clear="right"/>
@@ -379,7 +380,7 @@ track_fair_value_gaps()
 <div align="center">
 
 ### Open to exciting opportunities in:
-**Algorithmic Trading** • **React Development** • **Data Visualization** • **Open Source**
+**Algorithmic Trading** • **React Development** • **Full-Stack Engineering** • **Open Source**
 
 <table>
 <tr>
@@ -417,7 +418,7 @@ track_fair_value_gaps()
 <br/>
 
 ### 💬 Open to Discussions About:
-`Trading Algorithms` • `React Architecture` • `TypeScript Patterns` • `Testing Strategies` • `CI/CD Pipelines` • `Data Visualization` • `Performance Optimization` • `Open Source Collaboration`
+`Trading Algorithms` • `React Architecture` • `TypeScript Patterns` • `Testing Strategies` • `CI/CD Pipelines` • `Full-Stack Development` • `Performance Optimization` • `Open Source Collaboration`
 
 </div>
 
