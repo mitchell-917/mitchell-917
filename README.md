@@ -100,17 +100,17 @@
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center" width="33%" valign="top">
   <strong>⚡ Zero Dependencies</strong><br/>
-  <sub>Pure HTML/CSS/JS • No frameworks needed<br/>Lightning fast load times</sub>
+  <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
-<td align="center" width="33%">
+<td align="center" width="33%" valign="top">
   <strong>🎨 Stunning UI</strong><br/>
-  <sub>Glassmorphism • Smooth animations<br/>Production-quality design</sub>
+  <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
 </td>
-<td align="center" width="33%">
+<td align="center" width="33%" valign="top">
   <strong>📱 Fully Responsive</strong><br/>
-  <sub>Works on all devices<br/>Mobile-optimized layouts</sub>
+  <sub>Works on all devices<br/>Mobile-optimized layouts<br/>Touch-friendly interface</sub>
 </td>
 </tr>
 </table>
