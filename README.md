@@ -98,18 +98,18 @@
 
 ### 🌟 What Makes These Tools Special?
 
-<table>
+<table width="95%">
 <tr>
 <td align="center" width="33%" valign="top">
-  <strong>⚡ Zero Dependencies</strong><br/>
+  <strong>⚡ Zero Dependencies</strong><br/><br/>
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top">
-  <strong>🎨 Stunning UI</strong><br/>
+  <strong>🎨 Stunning UI</strong><br/><br/>
   <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
 </td>
 <td align="center" width="33%" valign="top">
-  <strong>📱 Fully Responsive</strong><br/>
+  <strong>📱 Fully Responsive</strong><br/><br/>
   <sub>Works on all devices<br/>Mobile-optimized layouts<br/>Touch-friendly interface</sub>
 </td>
 </tr>
