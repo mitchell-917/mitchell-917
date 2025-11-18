@@ -30,7 +30,6 @@
     <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://img.shields.io/badge/📊-3D-667eea?style=for-the-badge&logo=threedotjs&logoColor=white" width="60" height="60"/>
   <h3 style="margin: 10px 0;">🚀 3D Contribution Graph</h3>
   <p style="line-height: 1.8;"><sub>
     ✨ Rotating 3D visualization<br/>
@@ -48,7 +47,6 @@
     <img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://img.shields.io/badge/⚡-Terminal-764ba2?style=for-the-badge&logo=windowsterminal&logoColor=white" width="60" height="60"/>
   <h3 style="margin: 10px 0;">💻 Live Dashboard</h3>
   <p style="line-height: 1.8;"><sub>
     ⚡ Real-time metrics<br/>
@@ -66,7 +64,6 @@
     <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://img.shields.io/badge/📊-Radar-667eea?style=for-the-badge&logo=chartdotjs&logoColor=white" width="60" height="60"/>
   <h3 style="margin: 10px 0;">📡 Skill Radar</h3>
   <p style="line-height: 1.8;"><sub>
     🎨 6-axis radar chart<br/>
@@ -84,7 +81,6 @@
     <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://img.shields.io/badge/✨-Design-764ba2?style=for-the-badge&logo=adobe&logoColor=white" width="60" height="60"/>
   <h3 style="margin: 10px 0;">✨ Banner Generator</h3>
   <p style="line-height: 1.8;"><sub>
     🖼 Custom banners<br/>
