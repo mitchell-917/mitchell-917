@@ -157,7 +157,7 @@ Building modern, performant web applications:
 - 🚀 **React 18+ features** - Server components
 - 🎯 **State management** - Context API, custom hooks
 - 🎨 **Modern styling** - Tailwind CSS, CSS-in-JS
-- ⚡ **Performance optimization** - Code splitting, lazy loading, memoization
+- ⚡ **Performance optimization** - Code splitting
 - 🧪 **Testing excellence** - Testing Library, 90%+ coverage
 
 </td>
