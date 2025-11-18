@@ -253,7 +253,6 @@ track_fair_value_gaps()
 
 - ⚛️ **177 passing tests** with comprehensive coverage
 - 🌓 **Dark/light mode** with smooth theme switching
-- 📊 **Real-time statistics** tracking comparisons & swaps
 - 💻 **Live code viewer** with syntax highlighting
 - 🎵 **Audio feedback** using Web Audio API
 - 🎭 **6 sorting algorithms** with step-by-step visualization
