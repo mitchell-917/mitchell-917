@@ -110,7 +110,7 @@
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>📱 Responsive</strong><br/><br/>
-  <sub>Works on all devices<br/>Mobile-optimized<br/>Touch-friendly interface</sub>
+  <sub>Works on all devices<br/>Mobile-optimized<br/>Friendly interface</sub>
 </td>
 </tr>
 </table>
