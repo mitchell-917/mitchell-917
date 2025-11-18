@@ -129,10 +129,10 @@
 
 <table>
 <tr>
-<td width="50%" valign="top" style="padding: 20px;">
+<td width="50%" valign="top">
+<br/>
 
 ### 🏦 Algorithmic Trading Systems
-
 Building enterprise-grade platforms that trade 24/7:
 
 - ✅ **25+ Pine Script indicators** with real-time alerts
@@ -141,11 +141,13 @@ Building enterprise-grade platforms that trade 24/7:
 - ✅ **Live dashboards** with risk management tools
 - ✅ **Smart money concepts** (order blocks, FVG, liquidity)
 
+<br/>
+
 </td>
-<td width="50%" valign="top" style="padding: 20px;">
+<td width="50%" valign="top">
+<br/>
 
 ### ⚛️ Production-Grade React Apps
-
 Crafting applications that set the bar:
 
 - ✅ **177 passing tests** with 90%+ coverage
@@ -154,13 +156,15 @@ Crafting applications that set the bar:
 - ✅ **Glassmorphism UI** with smooth animations
 - ✅ **Custom hooks & patterns** following SOLID principles
 
+<br/>
+
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top" style="padding: 20px;">
+<td width="50%" valign="top">
+<br/>
 
 ### 📊 Interactive Data Visualizations
-
 Making complexity beautiful and intuitive:
 
 - 🎨 **3D Canvas graphics** with real-time rendering
@@ -169,11 +173,13 @@ Making complexity beautiful and intuitive:
 - 🎨 **Radar charts & skill visualizations**
 - 🎨 **Animated carousels** with 3D transforms
 
+<br/>
+
 </td>
-<td width="50%" valign="top" style="padding: 20px;">
+<td width="50%" valign="top">
+<br/>
 
 ### 🌐 Full-Stack Development
-
 Expanding into backend & cloud:
 
 - 🔧 **Ruby on Rails** for API development
@@ -181,6 +187,8 @@ Expanding into backend & cloud:
 - 🔧 **GitHub Actions** for continuous deployment
 - 🔧 **Responsive design** mobile-first approach
 - 🔧 **Performance optimization** for production
+
+<br/>
 
 </td>
 </tr>
@@ -230,9 +238,9 @@ Expanding into backend & cloud:
 <table>
 <tr>
 <td width="50%" valign="top">
+<br/>
 
 ### 📊 [Trading Systems Platform](https://github.com/mitchell-917/trading-systems)
-
 **Enterprise-grade algorithmic trading for MT5 & TradingView**
 
 - 🤖 **Fully Automated**: GitHub Actions update charts & reports 24/7
@@ -256,11 +264,13 @@ track_fair_value_gaps()
 - Professional EA templates
 - Battle-tested algorithms
 
+<br/>
+
 </td>
 <td width="50%" valign="top">
+<br/>
 
 ### 🎨 [Algorithm Visualizer 2.0](https://github.com/mitchell-917/algorithm-visualizer)
-
 **The most advanced sorting algorithm visualization platform**
 
 - ⚛️ **177 passing tests** with comprehensive coverage
@@ -286,14 +296,16 @@ track_fair_value_gaps()
 - Keyboard shortcuts & controls
 - Mobile-responsive
 
+<br/>
+
 </td>
 </tr>
 
 <tr>
 <td width="50%" valign="top">
+<br/>
 
 ### 📚 [TradingView Pine Script Lab](https://github.com/mitchell-917/tradingview-pinescript-lab)
-
 **Comprehensive Pine Script v5 learning resource**
 
 - 🎓 **Educational-first** approach with extensive docs
@@ -311,27 +323,31 @@ track_fair_value_gaps()
 
 **Tech:** Pine Script v5, TradingView Platform
 
+<br/>
+
 </td>
 <td width="50%" valign="top">
+<br/>
 
 ### 🌦️ [Weather Application](https://github.com/mitchell-917/weather-app)
-
 **Clean, responsive weather dashboard**
 
-- 🌍 Real-time weather data integration
-- 📱 Mobile-first responsive design
-- 🎨 Modern UI with smooth animations
-- 🔍 Location search & geolocation
+- 🌍 **Real-time weather data** integration
+- 📱 **Mobile-first** responsive design
+- 🎨 **Modern UI** with smooth animations
+- 🔍 **Location search** & geolocation
 
 **Tech:** React, JavaScript, Weather API
 
----
+<br/>
 
 ### 🔧 More Projects
 
 - **Chat GPT Templates** - Curated prompts for business, coding, finance
 - **Development Scripts** - PowerShell automation for dev workflows
 - **Portfolio Projects** - Various experiments & learning exercises
+
+<br/>
 
 </td>
 </tr>
