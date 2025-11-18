@@ -25,79 +25,80 @@
 
 <table>
 <tr>
-<td align="center" width="50%" valign="top">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-    <img src="https://img.shields.io/badge/🎯_3D_CONTRIBUTION_GRAPH-Explore_Live-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
+    <img src="https://img.shields.io/badge/🎯_3D_GRAPH-Explore-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" width="100" height="100" alt="3D Visualization"/>
+  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/threedotjs.svg" width="80" height="80" alt="3D" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
   <h3>🚀 3D Contribution Graph</h3>
   <p><sub>
-    ✨ Rotating 3D visualization with mouse control<br/>
-    🎨 6 stunning color themes (Purple, Ocean, Fire, Matrix)<br/>
-    🔍 Zoom in/out controls • ⏸ Pause/play rotation<br/>
-    📸 Export as PNG • 📊 Real-time stats dashboard<br/>
-    💫 Animated particles background
+    ✨ Rotating 3D visualization<br/>
+    🎨 6 color themes<br/>
+    🔍 Zoom controls<br/>
+    📸 Export PNG
   </sub></p>
   <p>
-    <img src="https://img.shields.io/badge/Canvas_API-Advanced-success?style=flat-square"/>
-    <img src="https://img.shields.io/badge/3D_Graphics-Enabled-blue?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Interactive-Yes-brightgreen?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/3D-Enabled-blue?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="50%" valign="top">
+<td align="center" width="25%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.shields.io/badge/📊_LIVE_TERMINAL-View_Dashboard-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
+    <img src="https://img.shields.io/badge/📊_TERMINAL-View-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg" width="100" height="100" alt="Dashboard"/>
-  <h3>💻 Live Terminal Dashboard</h3>
+  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/windowsterminal.svg" width="80" height="80" alt="Terminal" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <h3>💻 Live Dashboard</h3>
   <p><sub>
-    ⚡ Real-time coding metrics with animated counters<br/>
-    📈 Language breakdown with progress bars<br/>
-    📅 Weekly activity heatmap visualization<br/>
-    🔥 Code streak tracker • ⏱ Time statistics<br/>
-    🎭 Terminal-style retro UI aesthetic
+    ⚡ Real-time metrics<br/>
+    📈 Language breakdown<br/>
+    📅 Activity heatmap<br/>
+    🔥 Streak tracker
   </sub></p>
   <p>
-    <img src="https://img.shields.io/badge/Animations-Smooth-success?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Updates-Real_Time-blue?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Design-Glassmorphism-brightgreen?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
+  </p>
+</td>
+<td align="center" width="25%" valign="top">
+  <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
+    <img src="https://img.shields.io/badge/🎯_RADAR-Chart-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+  </a>
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/chartdotjs.svg" width="80" height="80" alt="Chart" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <h3>📡 Skill Radar</h3>
+  <p><sub>
+    🎨 6-axis radar chart<br/>
+    🌈 4 themes<br/>
+    📊 Skill adjustments<br/>
+    💾 Export PNG
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
+  </p>
+</td>
+<td align="center" width="25%" valign="top">
+  <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
+    <img src="https://img.shields.io/badge/🎨_BANNER-Create-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
+  </a>
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/adobe.svg" width="80" height="80" alt="Design" style="filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(220deg) brightness(98%) contrast(119%);"/>
+  <h3>✨ Banner Generator</h3>
+  <p><sub>
+    🖼 Custom banners<br/>
+    📐 3 export sizes<br/>
+    🎭 Gradients<br/>
+    💾 Download PNG
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
   </p>
 </td>
 </tr>
-<tr>
-<td align="center" width="50%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-    <img src="https://img.shields.io/badge/🎯_SKILL_RADAR-Interactive_Chart-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
-  </a>
-  <br/><br/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg" width="100" height="100" alt="Radar Chart"/>
-  <h3>📡 Interactive Skill Radar</h3>
-  <p><sub>
-    🎨 Animated 6-axis radar chart visualization<br/>
-    🌈 4 beautiful themes (Dark, Light, Neon, Gradient)<br/>
-    📊 Real-time skill level adjustments<br/>
-    💾 Export chart as PNG image<br/>
-    📱 Fully responsive mobile design
-  </sub></p>
-  <p>
-    <img src="https://img.shields.io/badge/Chart_Type-Radar-success?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
-    <img src="https://img.shields.io/badge/Export-PNG-brightgreen?style=flat-square"/>
-  </p>
-</td>
-<td align="center" width="50%" valign="top">
-  <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
-    <img src="https://img.shields.io/badge/🎨_BANNER_GENERATOR-Create_Now-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
-  </a>
-  <br/><br/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" width="100" height="100" alt="Design Tool"/>
-  <h3>✨ Banner Generator</h3>
-  <p><sub>
-    🖼 Create custom profile banners instantly<br/>
-    📐 3 export sizes (1200×400, 1500×500, 1920×640)<br/>
-    🎭 Animated gradient backgrounds<br/>
+</table>
     ✏️ Customizable text and stats display<br/>
     💾 Download as high-quality PNG
   </sub></p>
