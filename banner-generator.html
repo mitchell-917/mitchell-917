@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Profile Banner</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #0d1117;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-20px) translateX(20px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover {
+            background: white;
+            color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .download-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .download-btn {
+            margin: 10px;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container" id="banner">
+        <div class="particles" id="particles"></div>
+        
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgba(255,255,255,0.1)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,128C672,107,768,85,864,90.7C960,96,1056,128,1152,133.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+
+        <div class="content">
+            <div class="title floating">👋 Hey, I'm Mitchell</div>
+            <div class="subtitle">Full-Stack Developer • Trading Systems Architect • Data Viz Specialist</div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value">26K+</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">177</div>
+                    <div class="stat-label">Tests Passing</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">25+</div>
+                    <div class="stat-label">Indicators Built</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+            </div>
+
+            <button onclick="window.open('https://github.com/mitchell-917', '_blank')">
+                View My Work →
+            </button>
+        </div>
+    </div>
+
+    <div class="download-section">
+        <h2 style="color: white; text-align: center; margin-bottom: 20px;">📸 Download Banner</h2>
+        <div style="text-align: center;">
+            <button class="download-btn" onclick="downloadBanner('1200x400')">1200×400 (Standard)</button>
+            <button class="download-btn" onclick="downloadBanner('1500x500')">1500×500 (Large)</button>
+            <button class="download-btn" onclick="downloadBanner('1920x640')">1920×640 (HD)</button>
+        </div>
+        <p style="color: rgba(255,255,255,0.7); text-align: center; margin-top: 20px;">
+            Download and use as your GitHub profile banner!
+        </p>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 60 + 20;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                const duration = Math.random() * 10 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Download banner function
+        async function downloadBanner(size) {
+            const banner = document.getElementById('banner');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            const [width, height] = size.split('x').map(Number);
+            canvas.width = width;
+            canvas.height = height;
+
+            // Scale factor
+            const scale = width / banner.offsetWidth;
+
+            // Draw gradient background
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw particles
+            for (let i = 0; i < 30; i++) {
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                const radius = Math.random() * 30 + 10;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.fill();
+            }
+
+            // Draw text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+            ctx.shadowBlur = 10;
+
+            // Title
+            ctx.font = `bold ${height * 0.15}px Segoe UI`;
+            ctx.fillText('👋 Hey, I\'m Mitchell', width / 2, height * 0.35);
+
+            // Subtitle
+            ctx.font = `${height * 0.06}px Segoe UI`;
+            ctx.fillText('Full-Stack Developer • Trading Systems Architect • Data Viz Specialist', width / 2, height * 0.48);
+
+            // Stats
+            ctx.font = `bold ${height * 0.08}px Segoe UI`;
+            const stats = [
+                { value: '26K+', label: 'Lines' },
+                { value: '177', label: 'Tests' },
+                { value: '25+', label: 'Indicators' },
+                { value: '12', label: 'Projects' }
+            ];
+
+            const statWidth = width / (stats.length + 1);
+            stats.forEach((stat, index) => {
+                const x = statWidth * (index + 1);
+                ctx.fillText(stat.value, x, height * 0.68);
+                
+                ctx.font = `${height * 0.04}px Segoe UI`;
+                ctx.fillText(stat.label, x, height * 0.76);
+                ctx.font = `bold ${height * 0.08}px Segoe UI`;
+            });
+
+            // Download
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = `github-banner-${size}.png`;
+            link.href = dataURL;
+            link.click();
+        }
+    </script>
+</body>
+</html>

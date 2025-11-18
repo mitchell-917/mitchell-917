@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Contribution Graph - Mitchell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #canvas-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 10px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 3D Contribution Graph</h1>
+        
+        <div id="canvas-container">
+            <canvas id="contribution-canvas"></canvas>
+            <div class="loading" id="loading">Generating 3D visualization...</div>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-value" id="total-commits">0</div>
+                <div class="stat-label">Total Contributions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="longest-streak">0</div>
+                <div class="stat-label">Longest Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="current-streak">0</div>
+                <div class="stat-label">Current Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="best-day">0</div>
+                <div class="stat-label">Most Productive Day</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="rotateView()">🔄 Rotate View</button>
+            <button onclick="changeColorScheme()">🎨 Change Colors</button>
+            <button onclick="toggleAnimation()">⏯️ Toggle Animation</button>
+            <button onclick="resetView()">🔁 Reset View</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('contribution-canvas');
+        const ctx = canvas.getContext('2d');
+        const loading = document.getElementById('loading');
+
+        let rotationX = 0.6;
+        let rotationY = 0.3;
+        let animating = true;
+        let colorScheme = 0;
+
+        const colorSchemes = [
+            { name: 'GitHub', colors: ['#0e4429', '#006d32', '#26a641', '#39d353'] },
+            { name: 'Fire', colors: ['#ff4500', '#ff6347', '#ff7f50', '#ffa500'] },
+            { name: 'Ocean', colors: ['#1e3a8a', '#2563eb', '#3b82f6', '#60a5fa'] },
+            { name: 'Purple', colors: ['#581c87', '#7c3aed', '#a78bfa', '#c4b5fd'] }
+        ];
+
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+        }
+
+        // Generate realistic contribution data
+        function generateContributionData() {
+            const weeks = 52;
+            const daysPerWeek = 7;
+            const data = [];
+            
+            for (let week = 0; week < weeks; week++) {
+                const weekData = [];
+                for (let day = 0; day < daysPerWeek; day++) {
+                    // Create realistic patterns with more activity on weekdays
+                    const isWeekday = day < 5;
+                    const baseChance = isWeekday ? 0.7 : 0.4;
+                    const hasActivity = Math.random() < baseChance;
+                    const count = hasActivity ? Math.floor(Math.random() * 15) + 1 : 0;
+                    weekData.push(count);
+                }
+                data.push(weekData);
+            }
+            return data;
+        }
+
+        const contributionData = generateContributionData();
+
+        function calculateStats() {
+            let total = 0;
+            let currentStreak = 0;
+            let longestStreak = 0;
+            let tempStreak = 0;
+            let maxDay = 0;
+
+            contributionData.forEach(week => {
+                week.forEach(day => {
+                    total += day;
+                    if (day > maxDay) maxDay = day;
+                    
+                    if (day > 0) {
+                        tempStreak++;
+                        if (tempStreak > longestStreak) longestStreak = tempStreak;
+                    } else {
+                        tempStreak = 0;
+                    }
+                });
+            });
+
+            currentStreak = tempStreak;
+
+            document.getElementById('total-commits').textContent = total.toLocaleString();
+            document.getElementById('longest-streak').textContent = longestStreak + ' days';
+            document.getElementById('current-streak').textContent = currentStreak + ' days';
+            document.getElementById('best-day').textContent = maxDay + ' commits';
+        }
+
+        function project3D(x, y, z) {
+            const scale = 300;
+            const distance = 500;
+            
+            // Rotation
+            let tempY = y * Math.cos(rotationX) - z * Math.sin(rotationX);
+            let tempZ = y * Math.sin(rotationX) + z * Math.cos(rotationX);
+            y = tempY;
+            z = tempZ;
+
+            let tempX = x * Math.cos(rotationY) + z * Math.sin(rotationY);
+            tempZ = -x * Math.sin(rotationY) + z * Math.cos(rotationY);
+            x = tempX;
+            z = tempZ;
+
+            // Perspective projection
+            const factor = scale / (distance - z);
+            const projX = x * factor + canvas.width / 2;
+            const projY = y * factor + canvas.height / 2;
+
+            return { x: projX, y: projY, z: z, factor: factor };
+        }
+
+        function getColor(value) {
+            const scheme = colorSchemes[colorScheme].colors;
+            if (value === 0) return 'rgba(100, 100, 100, 0.3)';
+            if (value < 4) return scheme[0];
+            if (value < 8) return scheme[1];
+            if (value < 12) return scheme[2];
+            return scheme[3];
+        }
+
+        function drawCube(x, y, height, color, alpha = 1) {
+            const size = 8;
+            const spacing = 2;
+            const totalSize = size + spacing;
+
+            // Define cube vertices
+            const vertices = [
+                { x: x - size/2, y: y - size/2, z: -height },
+                { x: x + size/2, y: y - size/2, z: -height },
+                { x: x + size/2, y: y + size/2, z: -height },
+                { x: x - size/2, y: y + size/2, z: -height },
+                { x: x - size/2, y: y - size/2, z: 0 },
+                { x: x + size/2, y: y - size/2, z: 0 },
+                { x: x + size/2, y: y + size/2, z: 0 },
+                { x: x - size/2, y: y + size/2, z: 0 }
+            ];
+
+            const projected = vertices.map(v => project3D(v.x, v.y, v.z));
+
+            // Draw faces
+            const faces = [
+                [0, 1, 2, 3], // top
+                [4, 5, 6, 7], // bottom
+                [0, 1, 5, 4], // front
+                [2, 3, 7, 6], // back
+                [1, 2, 6, 5], // right
+                [0, 3, 7, 4]  // left
+            ];
+
+            const avgZ = faces.map(face => {
+                const faceZ = face.reduce((sum, i) => sum + projected[i].z, 0) / face.length;
+                return { face, z: faceZ };
+            });
+
+            avgZ.sort((a, b) => a.z - b.z);
+
+            avgZ.forEach(({ face, z }, index) => {
+                const brightness = index < 3 ? 0.6 : 1;
+                ctx.fillStyle = color.replace(')', `, ${brightness * alpha})`).replace('rgb', 'rgba');
+                ctx.strokeStyle = `rgba(0, 0, 0, ${0.3 * alpha})`;
+                ctx.lineWidth = 0.5;
+
+                ctx.beginPath();
+                ctx.moveTo(projected[face[0]].x, projected[face[0]].y);
+                for (let i = 1; i < face.length; i++) {
+                    ctx.lineTo(projected[face[i]].x, projected[face[i]].y);
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const cubes = [];
+            const weeks = contributionData.length;
+            const days = 7;
+            const spacing = 10;
+
+            for (let w = 0; w < weeks; w++) {
+                for (let d = 0; d < days; d++) {
+                    const value = contributionData[w][d];
+                    const height = value * 3;
+                    const x = (w - weeks / 2) * spacing;
+                    const y = (d - days / 2) * spacing;
+                    const color = getColor(value);
+
+                    const projected = project3D(x, y, 0);
+                    cubes.push({ x, y, height, color, z: projected.z });
+                }
+            }
+
+            cubes.sort((a, b) => a.z - b.z);
+            cubes.forEach(cube => drawCube(cube.x, cube.y, cube.height, cube.color));
+
+            if (animating) {
+                rotationY += 0.005;
+            }
+        }
+
+        function animate() {
+            draw();
+            requestAnimationFrame(animate);
+        }
+
+        function rotateView() {
+            rotationX += 0.2;
+            rotationY += 0.2;
+        }
+
+        function changeColorScheme() {
+            colorScheme = (colorScheme + 1) % colorSchemes.length;
+        }
+
+        function toggleAnimation() {
+            animating = !animating;
+        }
+
+        function resetView() {
+            rotationX = 0.6;
+            rotationY = 0.3;
+            colorScheme = 0;
+            animating = true;
+        }
+
+        // Initialize
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        calculateStats();
+        
+        setTimeout(() => {
+            loading.style.display = 'none';
+            animate();
+        }, 500);
+
+        // Mouse interaction
+        let isDragging = false;
+        let lastX, lastY;
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            lastX = e.clientX;
+            lastY = e.clientY;
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const deltaX = e.clientX - lastX;
+                const deltaY = e.clientY - lastY;
+                rotationY += deltaX * 0.01;
+                rotationX += deltaY * 0.01;
+                lastX = e.clientX;
+                lastY = e.clientY;
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Radar - Mitchell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #c026d3 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .radar-container {
+            position: relative;
+            aspect-ratio: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+        }
+
+        #radar-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .skills-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .category-title {
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .skill-name {
+            font-size: 1.1em;
+        }
+
+        .skill-level {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .dot.filled {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+        }
+
+        .skill-percentage {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 45px;
+            text-align: right;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .metric-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .metric-value {
+            color: white;
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95em;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .pulsing {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Technical Skills Radar</h1>
+        <p class="subtitle">Interactive visualization of expertise across multiple domains</p>
+
+        <div class="content-grid">
+            <div class="radar-container">
+                <canvas id="radar-canvas"></canvas>
+            </div>
+
+            <div class="skills-panel">
+                <div class="skill-category">
+                    <div class="category-title">
+                        ⚛️ Frontend Development
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React/TypeScript</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">State Management</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">UI/UX Design</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-title">
+                        📊 Trading & Finance
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Pine Script</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                            </div>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MQL5</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Algorithmic Trading</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-title">
+                        🔧 Backend & Tools
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Ruby</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">72%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CI/CD & Automation</span>
+                        <div class="skill-level">
+                            <div class="skill-dots">
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot filled"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="skill-percentage">86%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">🏆</div>
+                <div class="metric-value">177</div>
+                <div class="metric-label">Tests Passing</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-value">25+</div>
+                <div class="metric-label">Indicators Built</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⚡</div>
+                <div class="metric-value">26K+</div>
+                <div class="metric-label">Lines of Code</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🎯</div>
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Trading Strategies</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🚀</div>
+                <div class="metric-value">12</div>
+                <div class="metric-label">Active Projects</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="animateRadar()">🔄 Animate Radar</button>
+            <button onclick="changeTheme()">🎨 Change Theme</button>
+            <button onclick="exportImage()">📸 Export Image</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('radar-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let animationProgress = 0;
+        let currentTheme = 0;
+
+        const themes = [
+            { primary: '#667eea', secondary: '#764ba2', accent: '#58a6ff' },
+            { primary: '#10b981', secondary: '#059669', accent: '#34d399' },
+            { primary: '#f59e0b', secondary: '#d97706', accent: '#fbbf24' },
+            { primary: '#ef4444', secondary: '#dc2626', accent: '#f87171' }
+        ];
+
+        const skills = {
+            labels: ['Frontend\nDev', 'Trading\nSystems', 'Backend\nDev', 'Data Viz', 'Testing &\nQuality', 'DevOps &\nCI/CD'],
+            values: [95, 92, 80, 88, 94, 86]
+        };
+
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const size = Math.min(container.clientWidth, container.clientHeight) - 80;
+            canvas.width = size;
+            canvas.height = size;
+        }
+
+        function drawRadar() {
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const maxRadius = Math.min(centerX, centerY) - 60;
+            const levels = 5;
+            const theme = themes[currentTheme];
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw concentric circles
+            for (let i = 1; i <= levels; i++) {
+                const radius = (maxRadius / levels) * i;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 + (i * 0.02)})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // Level percentage
+                if (i < levels) {
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                    ctx.font = '10px Segoe UI';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`${i * 20}%`, centerX, centerY - radius + 5);
+                }
+            }
+
+            const numPoints = skills.labels.length;
+            const angleStep = (Math.PI * 2) / numPoints;
+
+            // Draw axes
+            for (let i = 0; i < numPoints; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                const x = centerX + Math.cos(angle) * maxRadius;
+                const y = centerY + Math.sin(angle) * maxRadius;
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(x, y);
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // Labels
+                const labelX = centerX + Math.cos(angle) * (maxRadius + 30);
+                const labelY = centerY + Math.sin(angle) * (maxRadius + 30);
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 12px Segoe UI';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                const lines = skills.labels[i].split('\n');
+                lines.forEach((line, index) => {
+                    ctx.fillText(line, labelX, labelY + (index * 14) - ((lines.length - 1) * 7));
+                });
+            }
+
+            // Draw skill polygon with animation
+            ctx.beginPath();
+            const animatedValues = skills.values.map(v => v * animationProgress);
+            
+            for (let i = 0; i < numPoints; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                const value = animatedValues[i] / 100;
+                const radius = maxRadius * value;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+            ctx.closePath();
+
+            // Fill with gradient
+            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
+            gradient.addColorStop(0, `${theme.primary}80`);
+            gradient.addColorStop(1, `${theme.secondary}40`);
+            ctx.fillStyle = gradient;
+            ctx.fill();
+
+            // Stroke
+            ctx.strokeStyle = theme.accent;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Draw points
+            for (let i = 0; i < numPoints; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                const value = animatedValues[i] / 100;
+                const radius = maxRadius * value;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+
+                ctx.beginPath();
+                ctx.arc(x, y, 6, 0, Math.PI * 2);
+                ctx.fillStyle = theme.accent;
+                ctx.fill();
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Glow effect
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = theme.accent;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        function animate() {
+            if (animationProgress < 1) {
+                animationProgress += 0.02;
+                drawRadar();
+                requestAnimationFrame(animate);
+            }
+        }
+
+        function animateRadar() {
+            animationProgress = 0;
+            animate();
+        }
+
+        function changeTheme() {
+            currentTheme = (currentTheme + 1) % themes.length;
+            drawRadar();
+        }
+
+        function exportImage() {
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = 'skill-radar.png';
+            link.href = dataURL;
+            link.click();
+        }
+
+        // Initialize
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            drawRadar();
+        });
+
+        resizeCanvas();
+        setTimeout(() => {
+            animate();
+        }, 500);
+    </script>
+</body>
+</html>
