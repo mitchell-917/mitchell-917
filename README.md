@@ -30,7 +30,7 @@
     <img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
   </a>
   <br/><br/>
-  <h3>🚀 3D Contribution Graph</h3>
+  <h3>🚀 3D Contribution</h3>
   <p><sub>
     ✨ Rotating 3D visualization<br/>
     🎨 6 color themes<br/>
