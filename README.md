@@ -98,17 +98,17 @@
 
 ### 🌟 What Makes These Tools Special?
 
-<table width="95%">
+<table width="100%" style="table-layout: fixed;">
 <tr>
-<td align="center" width="33%" valign="top">
+<td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>⚡ Zero Dependencies</strong><br/><br/>
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
-<td align="center" width="33%" valign="top">
+<td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>🎨 Stunning UI</strong><br/><br/>
   <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
 </td>
-<td align="center" width="33%" valign="top">
+<td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>📱 Fully Responsive</strong><br/><br/>
   <sub>Works on all devices<br/>Mobile-optimized layouts<br/>Touch-friendly interface</sub>
 </td>
