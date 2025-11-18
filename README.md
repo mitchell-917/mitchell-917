@@ -129,8 +129,8 @@
 Building enterprise-grade platforms that trade 24/7:
 
 - ✅ **25+ Pine Script indicators** with real-time alerts
-- ✅ **15+ backtested strategies** with documented performance
-- ✅ **Automated CI/CD pipelines** updating market data hourly
+- ✅ **15+ backtested strategies** with performance
+- ✅ **Automated CI/CD pipelines** updating market data
 - ✅ **Live dashboards** with risk management tools
 - ✅ **Smart money concepts** (order blocks, FVG, liquidity)
 
@@ -154,11 +154,11 @@ Crafting applications that set the bar:
 ### ⚡ React Ecosystem Mastery
 Building modern, performant web applications:
 
-- 🚀 **React 18+ features** - Server components, concurrent rendering
-- 🎯 **State management** - Zustand, Context API, custom hooks
-- 🎨 **Modern styling** - Tailwind CSS, CSS-in-JS, glassmorphism
+- 🚀 **React 18+ features** - Server components
+- 🎯 **State management** - Context API, custom hooks
+- 🎨 **Modern styling** - Tailwind CSS, CSS-in-JS
 - ⚡ **Performance optimization** - Code splitting, lazy loading, memoization
-- 🧪 **Testing excellence** - Vitest, Testing Library, 90%+ coverage
+- 🧪 **Testing excellence** - Testing Library, 90%+ coverage
 
 </td>
 <td width="50%" valign="top">
