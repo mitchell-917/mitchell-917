@@ -19,81 +19,79 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=3" width="100%"/>
 
-## \ud83c\udfa8 Interactive Showcases \u2022 Experience My Work in 3D
-
 <table>
 <tr>
 <td align="center" width="25%">
 <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-<img src="https://img.shields.io/badge/\ud83c\udfaf_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+<img src="https://img.shields.io/badge/🎯_3D_GRAPH-EXPLORE-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>\ud83d\ude80 3D Contribution</h3>
+<h3>🚀 3D Contribution</h3>
 <sub>
-\u2728 Rotating 3D visualization<br/>
-\ud83c\udfa8 6 color themes<br/>
-\ud83d\udd0d Zoom controls<br/>
-\ud83d\udcf8 Export PNG
+✨ Rotating 3D visualization<br/>
+🎨 6 color themes<br/>
+🔍 Zoom controls<br/>
+📸 Export PNG
 </sub>
 <br/><br/>
 <img src="https://img.shields.io/badge/Canvas-Advanced-success?style=flat-square"/>
 <img src="https://img.shields.io/badge/3D-Enabled-blue?style=flat-square"/>
 </td>
-<td align=\"center\" width=\"25%\">
-<a href=\"https://mitchell-917.github.io/mitchell-917/live-coding-stats.html\">
-<img src=\"https://img.shields.io/badge/\ud83d\udcbb_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29\" height=\"40\"/>
+<td align="center" width="25%">
+<a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
+<img src="https://img.shields.io/badge/💻_TERMINAL-VIEW-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>\ud83d\udcbb Live Dashboard</h3>
+<h3>💻 Live Dashboard</h3>
 <sub>
-\u26a1 Real-time metrics<br/>
-\ud83d\udcc8 Language breakdown<br/>
-\ud83d\udcc5 Activity heatmap<br/>
-\ud83d\udd25 Streak tracker
+⚡ Real-time metrics<br/>
+📈 Language breakdown<br/>
+📅 Activity heatmap<br/>
+🔥 Streak tracker
 </sub>
 <br/><br/>
-<img src=\"https://img.shields.io/badge/Live-Updates-success?style=flat-square\"/>
-<img src=\"https://img.shields.io/badge/Terminal-Style-blue?style=flat-square\"/>
+<img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/>
+<img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
 </td>
-<td align=\"center\" width=\"25%\">
-<a href=\"https://mitchell-917.github.io/mitchell-917/skill-radar.html\">
-<img src=\"https://img.shields.io/badge/\ud83d\udce1_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29\" height=\"40\"/>
+<td align="center" width="25%">
+<a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
+<img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>\ud83d\udce1 Skill Radar</h3>
+<h3>📡 Skill Radar</h3>
 <sub>
-\ud83c\udfa8 6-axis radar chart<br/>
-\ud83c\udf08 4 themes<br/>
-\ud83d\udcca Skill adjustments<br/>
-\ud83d\udcbe Export PNG
+🎨 6-axis radar chart<br/>
+🌈 4 themes<br/>
+📊 Skill adjustments<br/>
+💾 Export PNG
 </sub>
 <br/><br/>
-<img src=\"https://img.shields.io/badge/Interactive-Chart-success?style=flat-square\"/>
-<img src=\"https://img.shields.io/badge/Themes-4-blue?style=flat-square\"/>
+<img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/>
+<img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
 </td>
-<td align=\"center\" width=\"25%\">
-<a href=\"https://mitchell-917.github.io/mitchell-917/banner-generator.html\">
-<img src=\"https://img.shields.io/badge/\ud83c\udfa8_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29\" height=\"40\"/>
+<td align="center" width="25%">
+<a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
+<img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>\u2728 Banner Generator</h3>
+<h3>✨ Banner</h3>
 <sub>
-\ud83d\uddbc Custom banners<br/>
-\ud83d\udcd0 3 export sizes<br/>
-\ud83c\udfad Gradients<br/>
-\ud83d\udcbe Download PNG
+🖼 Custom banners<br/>
+📐 3 export sizes<br/>
+🎭 Gradients<br/>
+💾 Download PNG
 </sub>
 <br/><br/>
-<img src=\"https://img.shields.io/badge/Templates-Multiple-success?style=flat-square\"/>
-<img src=\"https://img.shields.io/badge/Custom-Design-blue?style=flat-square\"/>
+<img src="https://img.shields.io/badge/Templates-Multiple-success?style=flat-square"/>
+<img src="https://img.shields.io/badge/Custom-Design-blue?style=flat-square"/>
 </td>
 </tr>
 </table>
 
 <br/>
 
-<a href=\"https://mitchell-917.github.io/mitchell-917/project-showcase.html\">
-  <img src=\"https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=120&section=header&text=\ud83c\udfaf%20VIEW%20FULL%20PROJECT%20CAROUSEL&fontSize=35&fontColor=fff&desc=Interactive%203D%20Showcase%20\u2022%20All%20Projects%20in%20One%20Place&descSize=16&descAlignY=75\" width=\"80%\"/>
+<a href="https://mitchell-917.github.io/mitchell-917/project-showcase.html">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=120&section=header&text=🎯%20VIEW%20FULL%20PROJECT%20CAROUSEL&fontSize=35&fontColor=fff&desc=Interactive%203D%20Showcase%20•%20All%20Projects%20in%20One%20Place&descSize=16&descAlignY=75" width="80%"/>
 </a>
 
 <br/><br/>
@@ -118,8 +116,6 @@
 </table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=3" width="100%"/>
-
-</div>
 
 </div>
 
@@ -359,8 +355,6 @@ track_fair_value_gaps()
 
 </div>
 
-</div>
-
 ---
 
 ## 💡 Beyond The Code
@@ -399,21 +393,21 @@ track_fair_value_gaps()
   </a>
 </td>
 <td align="center" width="25%">
-  <a href="mailto:YOUR_EMAIL@example.com">
+  <a href="mailto:contact@mitchell-dev.com">
     <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
     <br/>
     <sub><strong>Send Message</strong></sub>
   </a>
 </td>
 <td align="center" width="25%">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN">
+  <a href="https://www.linkedin.com/in/mitchell-dev">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
     <br/>
     <sub><strong>Professional Network</strong></sub>
   </a>
 </td>
 <td align="center" width="25%">
-  <a href="https://YOUR_PORTFOLIO.com">
+  <a href="https://mitchell-917.github.io">
     <img src="https://img.shields.io/badge/Portfolio-Visit-667EEA?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
     <br/>
     <sub><strong>See Full Work</strong></sub>
