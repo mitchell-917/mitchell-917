@@ -260,7 +260,6 @@ track_fair_value_gaps()
 **Tech:** React 18, TypeScript, Tailwind CSS, Vite, Vitest
 
 ```typescript
-// Production-ready architecture
 - Zustand state management
 - Custom hooks pattern
 - SOLID principles
