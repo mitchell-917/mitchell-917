@@ -6,40 +6,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&multiline=true&width=900&height=100&lines=Building+intelligent+trading+systems;%26+interactive+web+experiences;From+Pine+Script+to+Production-Ready+React" alt="Typing SVG" />
 </h1>
 
-<table align="center">
-<tr>
-<td>
-
-```javascript
-const mitchell = {
-  title: "Full-Stack Developer & Trading Systems Architect",
-  location: "Building the future, one commit at a time",
-  currentlyWorking: [
-    "🏦 Algorithmic Trading Platforms",
-    "⚛️ Production-Ready React Applications", 
-    "📊 Interactive Data Visualizations"
-  ],
-  techStack: {
-    trading: ["Pine Script v5", "MQL5", "TradingView"],
-    frontend: ["React 18", "TypeScript", "Tailwind CSS"],
-    backend: ["Python", "Ruby", "Node.js"],
-    tools: ["Git", "GitHub Actions", "Vite", "Vitest"]
-  },
-  stats: {
-    linesOfCode: "26K+",
-    testsWritten: 177,
-    activeProjects: 12,
-    tradingIndicators: "25+"
-  },
-  philosophy: "Clean code isn't written, it's refined",
-  motto: "Production-ready, not just portfolio-ready"
-};
-```
-
-</td>
-</tr>
-</table>
-
 <p>
   <a href="https://github.com/mitchell-917">
     <img src="https://img.shields.io/github/followers/mitchell-917?label=Followers&style=social" alt="GitHub Followers"/>
