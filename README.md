@@ -106,7 +106,7 @@
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>🎨&nbsp;Stunning&nbsp;UI</strong><br/><br/>
-  <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
+  <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
   <strong>📱&nbsp;Fully&nbsp;Responsive</strong><br/><br/>
