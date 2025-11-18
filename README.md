@@ -19,8 +19,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=3" width="100%"/>
 
-## 🎨 Interactive Showcases • Experience My Work in 3D
-
 <div align="center">
 
 <table>
@@ -124,17 +122,23 @@
 
 <table>
 <tr>
-<td align="center" width="33%">
-  <strong>⚡ Zero Dependencies</strong><br/>
-  <sub>Pure HTML/CSS/JS • No frameworks needed<br/>Lightning fast load times</sub>
+<td align="center" width="33%" height="120">
+  <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
+    <strong>⚡ Zero Dependencies</strong><br/>
+    <sub>Pure HTML/CSS/JS • No frameworks needed<br/>Lightning fast load times</sub>
+  </div>
 </td>
-<td align="center" width="33%">
-  <strong>🎨 Stunning UI</strong><br/>
-  <sub>Glassmorphism • Smooth animations<br/>Production-quality design</sub>
+<td align="center" width="33%" height="120">
+  <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
+    <strong>🎨 Stunning UI</strong><br/>
+    <sub>Glassmorphism • Smooth animations<br/>Production-quality design</sub>
+  </div>
 </td>
-<td align="center" width="33%">
-  <strong>📱 Fully Responsive</strong><br/>
-  <sub>Works on all devices<br/>Mobile-optimized layouts</sub>
+<td align="center" width="33%" height="120">
+  <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
+    <strong>📱 Fully Responsive</strong><br/>
+    <sub>Works on all devices<br/>Mobile-optimized layouts</sub>
+  </div>
 </td>
 </tr>
 </table>
@@ -149,67 +153,59 @@
 
 <table>
 <tr>
-<td width="50%" valign="top">
-<br/>
-
-### 🏦 Algorithmic Trading Systems
-Building enterprise-grade platforms that trade 24/7:
-
-- ✅ **25+ Pine Script indicators** with real-time alerts
-- ✅ **15+ backtested strategies** with documented performance  
-- ✅ **Automated CI/CD pipelines** updating market data hourly
-- ✅ **Live dashboards** with risk management tools
-- ✅ **Smart money concepts** (order blocks, FVG, liquidity)
-
-<br/>
-
+<td width="50%" height="280">
+  <div style="height: 280px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>🏦 Algorithmic Trading Systems</h3>
+    <p>Building enterprise-grade platforms that trade 24/7:</p>
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>✅ <strong>25+ Pine Script indicators</strong> with real-time alerts</li>
+      <li>✅ <strong>15+ backtested strategies</strong> with documented performance</li>
+      <li>✅ <strong>Automated CI/CD pipelines</strong> updating market data hourly</li>
+      <li>✅ <strong>Live dashboards</strong> with risk management tools</li>
+      <li>✅ <strong>Smart money concepts</strong> (order blocks, FVG, liquidity)</li>
+    </ul>
+  </div>
 </td>
-<td width="50%" valign="top">
-<br/>
-
-### ⚛️ Production-Grade React Apps
-Crafting applications that set the bar:
-
-- ✅ **177 passing tests** with 90%+ coverage
-- ✅ **TypeScript strict mode** for type safety
-- ✅ **Zero bugs, zero warnings** deployment-ready code
-- ✅ **Glassmorphism UI** with smooth animations
-- ✅ **Custom hooks & patterns** following SOLID principles
-
-<br/>
-
+<td width="50%" height="280">
+  <div style="height: 280px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>⚛️ Production-Grade React Apps</h3>
+    <p>Crafting applications that set the bar:</p>
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>✅ <strong>177 passing tests</strong> with 90%+ coverage</li>
+      <li>✅ <strong>TypeScript strict mode</strong> for type safety</li>
+      <li>✅ <strong>Zero bugs, zero warnings</strong> deployment-ready code</li>
+      <li>✅ <strong>Glassmorphism UI</strong> with smooth animations</li>
+      <li>✅ <strong>Custom hooks & patterns</strong> following SOLID principles</li>
+    </ul>
+  </div>
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-<br/>
-
-### 📊 Interactive Data Visualizations
-Making complexity beautiful and intuitive:
-
-- 🎨 **3D Canvas graphics** with real-time rendering
-- 🎨 **Custom chart libraries** for trading analysis
-- 🎨 **Terminal-style dashboards** with live metrics
-- 🎨 **Radar charts & skill visualizations**
-- 🎨 **Animated carousels** with 3D transforms
-
-<br/>
-
+<td width="50%" height="280">
+  <div style="height: 280px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>📊 Interactive Data Visualizations</h3>
+    <p>Making complexity beautiful and intuitive:</p>
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>🎨 <strong>3D Canvas graphics</strong> with real-time rendering</li>
+      <li>🎨 <strong>Custom chart libraries</strong> for trading analysis</li>
+      <li>🎨 <strong>Terminal-style dashboards</strong> with live metrics</li>
+      <li>🎨 <strong>Radar charts & skill visualizations</strong></li>
+      <li>🎨 <strong>Animated carousels</strong> with 3D transforms</li>
+    </ul>
+  </div>
 </td>
-<td width="50%" valign="top">
-<br/>
-
-### 🌐 Full-Stack Development
-Expanding into backend & cloud:
-
-- 🔧 **Ruby on Rails** for API development
-- 🔧 **Python scripts** for automation & data analysis
-- 🔧 **GitHub Actions** for continuous deployment
-- 🔧 **Responsive design** mobile-first approach
-- 🔧 **Performance optimization** for production
-
-<br/>
-
+<td width="50%" height="280">
+  <div style="height: 280px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>🌐 Full-Stack Development</h3>
+    <p>Expanding into backend & cloud:</p>
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>🔧 <strong>Ruby on Rails</strong> for API development</li>
+      <li>🔧 <strong>Python scripts</strong> for automation & data analysis</li>
+      <li>🔧 <strong>GitHub Actions</strong> for continuous deployment</li>
+      <li>🔧 <strong>Responsive design</strong> mobile-first approach</li>
+      <li>🔧 <strong>Performance optimization</strong> for production</li>
+    </ul>
+  </div>
 </td>
 </tr>
 </table>
@@ -257,118 +253,117 @@ Expanding into backend & cloud:
 
 <table>
 <tr>
-<td width="50%" valign="top">
-<br/>
-
-### 📊 [Trading Systems Platform](https://github.com/mitchell-917/trading-systems)
-**Enterprise-grade algorithmic trading for MT5 & TradingView**
-
-- 🤖 **Fully Automated**: GitHub Actions update charts & reports 24/7
-- 📈 **25+ Pine Script indicators** with real-time alerts
-- 🏆 **15+ trading strategies** with documented performance
-- 📊 **Live market dashboard** with auto-updating Nasdaq 100 charts
-- ⚙️ **CI/CD automation** for health monitoring & deployments
-
-**Tech:** Pine Script v5, MQL5, Python, GitHub Actions
-
-```pine
-// Smart money concepts in action
+<td width="50%" height="600">
+  <div style="height: 600px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>📊 <a href="https://github.com/mitchell-917/trading-systems">Trading Systems Platform</a></h3>
+    <p><strong>Enterprise-grade algorithmic trading for MT5 & TradingView</strong></p>
+    
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>🤖 <strong>Fully Automated</strong>: GitHub Actions update charts & reports 24/7</li>
+      <li>📈 <strong>25+ Pine Script indicators</strong> with real-time alerts</li>
+      <li>🏆 <strong>15+ trading strategies</strong> with documented performance</li>
+      <li>📊 <strong>Live market dashboard</strong> with auto-updating Nasdaq 100 charts</li>
+      <li>⚙️ <strong>CI/CD automation</strong> for health monitoring & deployments</li>
+    </ul>
+    
+    <p><strong>Tech:</strong> Pine Script v5, MQL5, Python, GitHub Actions</p>
+    
+    <pre><code>// Smart money concepts in action
 detect_order_blocks()
 identify_liquidity_sweeps()
-track_fair_value_gaps()
-```
-
-**Highlights:**
-- 26K+ lines of production code
-- Interactive web-based risk dashboards
-- Professional EA templates
-- Battle-tested algorithms
-
-<br/>
-
+track_fair_value_gaps()</code></pre>
+    
+    <p><strong>Highlights:</strong></p>
+    <ul style="text-align: left;">
+      <li>26K+ lines of production code</li>
+      <li>Interactive web-based risk dashboards</li>
+      <li>Professional EA templates</li>
+      <li>Battle-tested algorithms</li>
+    </ul>
+  </div>
 </td>
-<td width="50%" valign="top">
-<br/>
-
-### 🎨 [Algorithm Visualizer 2.0](https://github.com/mitchell-917/algorithm-visualizer)
-**The most advanced sorting algorithm visualization platform**
-
-- ⚛️ **177 passing tests** with comprehensive coverage
-- 🌓 **Dark/light mode** with smooth theme switching
-- 📊 **Real-time statistics** tracking comparisons & swaps
-- 💻 **Live code viewer** with syntax highlighting
-- 🎵 **Audio feedback** using Web Audio API
-- 🎭 **6 sorting algorithms** with step-by-step visualization
-
-**Tech:** React 18, TypeScript, Tailwind CSS, Vite, Vitest
-
-```typescript
-// Production-ready architecture
+<td width="50%" height="600">
+  <div style="height: 600px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>🎨 <a href="https://github.com/mitchell-917/algorithm-visualizer">Algorithm Visualizer 2.0</a></h3>
+    <p><strong>The most advanced sorting algorithm visualization platform</strong></p>
+    
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>⚛️ <strong>177 passing tests</strong> with comprehensive coverage</li>
+      <li>🌓 <strong>Dark/light mode</strong> with smooth theme switching</li>
+      <li>📊 <strong>Real-time statistics</strong> tracking comparisons & swaps</li>
+      <li>💻 <strong>Live code viewer</strong> with syntax highlighting</li>
+      <li>🎵 <strong>Audio feedback</strong> using Web Audio API</li>
+      <li>🎭 <strong>6 sorting algorithms</strong> with step-by-step visualization</li>
+    </ul>
+    
+    <p><strong>Tech:</strong> React 18, TypeScript, Tailwind CSS, Vite, Vitest</p>
+    
+    <pre><code>// Production-ready architecture
 - Zustand state management
 - Custom hooks pattern
 - SOLID principles
-- Zero errors/warnings
-```
-
-**Highlights:**
-- Enterprise-grade code quality
-- Glassmorphism UI design
-- Keyboard shortcuts & controls
-- Mobile-responsive
-
-<br/>
-
+- Zero errors/warnings</code></pre>
+    
+    <p><strong>Highlights:</strong></p>
+    <ul style="text-align: left;">
+      <li>Enterprise-grade code quality</li>
+      <li>Glassmorphism UI design</li>
+      <li>Keyboard shortcuts & controls</li>
+      <li>Mobile-responsive</li>
+    </ul>
+  </div>
 </td>
 </tr>
 
 <tr>
-<td width="50%" valign="top">
-<br/>
-
-### 📚 [TradingView Pine Script Lab](https://github.com/mitchell-917/tradingview-pinescript-lab)
-**Comprehensive Pine Script v5 learning resource**
-
-- 🎓 **Educational-first** approach with extensive docs
-- 📊 **Production-ready indicators** for real trading
-- 🧪 **Progressive learning path** from basics to advanced
-- 🛠️ **Copy-paste ready** code that works out-of-the-box
-- 📖 **Detailed guides** for indicator & strategy development
-
-**Indicators include:**
-- Smart money concepts (order blocks, FVG, BOS/CHoCH)
-- Multi-timeframe trend analysis with dashboards
-- Liquidity sweep detection
-- RSI divergence detector
-- Market structure tracking
-
-**Tech:** Pine Script v5, TradingView Platform
-
-<br/>
-
+<td width="50%" height="480">
+  <div style="height: 480px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>📚 <a href="https://github.com/mitchell-917/tradingview-pinescript-lab">TradingView Pine Script Lab</a></h3>
+    <p><strong>Comprehensive Pine Script v5 learning resource</strong></p>
+    
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>🎓 <strong>Educational-first</strong> approach with extensive docs</li>
+      <li>📊 <strong>Production-ready indicators</strong> for real trading</li>
+      <li>🧪 <strong>Progressive learning path</strong> from basics to advanced</li>
+      <li>🛠️ <strong>Copy-paste ready</strong> code that works out-of-the-box</li>
+      <li>📖 <strong>Detailed guides</strong> for indicator & strategy development</li>
+    </ul>
+    
+    <p><strong>Indicators include:</strong></p>
+    <ul style="text-align: left;">
+      <li>Smart money concepts (order blocks, FVG, BOS/CHoCH)</li>
+      <li>Multi-timeframe trend analysis with dashboards</li>
+      <li>Liquidity sweep detection</li>
+      <li>RSI divergence detector</li>
+      <li>Market structure tracking</li>
+    </ul>
+    
+    <p><strong>Tech:</strong> Pine Script v5, TradingView Platform</p>
+  </div>
 </td>
-<td width="50%" valign="top">
-<br/>
-
-### 🌦️ [Weather Application](https://github.com/mitchell-917/weather-app)
-**Clean, responsive weather dashboard**
-
-- 🌍 **Real-time weather data** integration
-- 📱 **Mobile-first** responsive design
-- 🎨 **Modern UI** with smooth animations
-- 🔍 **Location search** & geolocation
-
-**Tech:** React, JavaScript, Weather API
-
-<br/>
-
-### 🔧 More Projects
-
-- **Chat GPT Templates** - Curated prompts for business, coding, finance
-- **Development Scripts** - PowerShell automation for dev workflows
-- **Portfolio Projects** - Various experiments & learning exercises
-
-<br/>
-
+<td width="50%" height="480">
+  <div style="height: 480px; display: flex; flex-direction: column; padding: 20px;">
+    <h3>🌦️ <a href="https://github.com/mitchell-917/weather-app">Weather Application</a></h3>
+    <p><strong>Clean, responsive weather dashboard</strong></p>
+    
+    <ul style="text-align: left; margin: 10px 0;">
+      <li>🌍 <strong>Real-time weather data</strong> integration</li>
+      <li>📱 <strong>Mobile-first</strong> responsive design</li>
+      <li>🎨 <strong>Modern UI</strong> with smooth animations</li>
+      <li>🔍 <strong>Location search</strong> & geolocation</li>
+    </ul>
+    
+    <p><strong>Tech:</strong> React, JavaScript, Weather API</p>
+    
+    <br/>
+    
+    <h3>🔧 More Projects</h3>
+    <ul style="text-align: left;">
+      <li><strong>Chat GPT Templates</strong> - Curated prompts for business, coding, finance</li>
+      <li><strong>Development Scripts</strong> - PowerShell automation for dev workflows</li>
+      <li><strong>Portfolio Projects</strong> - Various experiments & learning exercises</li>
+    </ul>
+  </div>
 </td>
 </tr>
 </table>
