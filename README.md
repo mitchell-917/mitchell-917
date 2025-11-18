@@ -470,8 +470,4 @@ track_fair_value_gaps()
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
 
-**"Every repository tells a story of obsessive attention to detail, production-grade quality, and relentless pursuit of excellence."**
-
-<sub>Last updated: November 2025 | Auto-maintained via GitHub Actions | Made with 💜 and ☕</sub>
-
 </div>
