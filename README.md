@@ -25,12 +25,12 @@
 
 <table>
 <tr>
-<td align="center" width="50%">
+<td align="center" width="50%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
     <img src="https://img.shields.io/badge/🎯_3D_CONTRIBUTION_GRAPH-Explore_Live-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
   <br/><br/>
-  <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="100" height="100"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" width="100" height="100" alt="3D Visualization"/>
   <h3>🚀 3D Contribution Graph</h3>
   <p><sub>
     ✨ Rotating 3D visualization with mouse control<br/>
@@ -45,12 +45,12 @@
     <img src="https://img.shields.io/badge/Interactive-Yes-brightgreen?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="50%">
+<td align="center" width="50%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
     <img src="https://img.shields.io/badge/📊_LIVE_TERMINAL-View_Dashboard-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
   <br/><br/>
-  <img src="https://img.icons8.com/fluency/96/000000/dashboard.png" width="100" height="100"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg" width="100" height="100" alt="Dashboard"/>
   <h3>💻 Live Terminal Dashboard</h3>
   <p><sub>
     ⚡ Real-time coding metrics with animated counters<br/>
@@ -67,12 +67,12 @@
 </td>
 </tr>
 <tr>
-<td align="center" width="50%">
+<td align="center" width="50%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
     <img src="https://img.shields.io/badge/🎯_SKILL_RADAR-Interactive_Chart-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
   <br/><br/>
-  <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="100" height="100"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg" width="100" height="100" alt="Radar Chart"/>
   <h3>📡 Interactive Skill Radar</h3>
   <p><sub>
     🎨 Animated 6-axis radar chart visualization<br/>
@@ -87,12 +87,12 @@
     <img src="https://img.shields.io/badge/Export-PNG-brightgreen?style=flat-square"/>
   </p>
 </td>
-<td align="center" width="50%">
+<td align="center" width="50%" valign="top">
   <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
     <img src="https://img.shields.io/badge/🎨_BANNER_GENERATOR-Create_Now-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
   <br/><br/>
-  <img src="https://img.icons8.com/fluency/96/000000/design.png" width="100" height="100"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" width="100" height="100" alt="Design Tool"/>
   <h3>✨ Banner Generator</h3>
   <p><sub>
     🖼 Create custom profile banners instantly<br/>
