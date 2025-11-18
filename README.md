@@ -66,7 +66,7 @@
 💾 Export PNG
 </sub>
 <br/><br/>
-<img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/>
+<img src="https://img.shields.io/badge/Interactive-Chart-success?style=flat-square"/><br/>
 <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
 </td>
 <td align="center" width="25%">
