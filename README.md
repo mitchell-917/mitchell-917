@@ -224,11 +224,11 @@ Expanding into backend & cloud:
 ### 📊 [Trading Systems Platform](https://github.com/mitchell-917/trading-systems)
 **Enterprise-grade algorithmic trading for MT5 & TradingView**
 
-- 🤖 **Fully Automated**: GitHub Actions update charts & reports 24/7
+- 🤖 **Fully Automated**: GitHub Actions & reports 24/7
 - 📈 **25+ Pine Script indicators** with real-time alerts
 - 🏆 **15+ trading strategies** with documented performance
-- 📊 **Live market dashboard** with auto-updating Nasdaq 100 charts
-- ⚙️ **CI/CD automation** for health monitoring & deployments
+- 📊 **Live market dashboard** with Nasdaq 100 charts
+- ⚙️ **CI/CD automation** for health & deployments
 
 **Tech:** Pine Script v5, MQL5, Python, GitHub Actions
 
