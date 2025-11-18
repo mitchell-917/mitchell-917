@@ -53,7 +53,7 @@
 <img src="https://img.shields.io/badge/Live-Updates-success?style=flat-square"/>
 <img src="https://img.shields.io/badge/Terminal-Style-blue?style=flat-square"/>
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
 <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
 <img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
