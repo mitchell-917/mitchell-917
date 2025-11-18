@@ -17,54 +17,129 @@
 
 <br/>
 
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=3" width="100%"/>
+
 ## 🎨 Interactive Showcases • Experience My Work in 3D
+
+<div align="center">
 
 <table>
 <tr>
-<td align="center" width="25%" valign="top">
+<td align="center" width="50%">
   <a href="https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html">
-    <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="80" height="80"/>
-    <br/>
-    <strong>3D Contribution Graph</strong>
-    <br/>
-    <sub>Rotating 3D visualization<br/>with mouse control</sub>
+    <img src="https://img.shields.io/badge/🎯_3D_CONTRIBUTION_GRAPH-Explore_Live-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
+  <br/><br/>
+  <img src="https://img.icons8.com/fluency/96/000000/3d-rotate.png" width="100" height="100"/>
+  <h3>🚀 3D Contribution Graph</h3>
+  <p><sub>
+    ✨ Rotating 3D visualization with mouse control<br/>
+    🎨 6 stunning color themes (Purple, Ocean, Fire, Matrix)<br/>
+    🔍 Zoom in/out controls • ⏸ Pause/play rotation<br/>
+    📸 Export as PNG • 📊 Real-time stats dashboard<br/>
+    💫 Animated particles background
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Canvas_API-Advanced-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/3D_Graphics-Enabled-blue?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Interactive-Yes-brightgreen?style=flat-square"/>
+  </p>
 </td>
-<td align="center" width="25%" valign="top">
+<td align="center" width="50%">
   <a href="https://mitchell-917.github.io/mitchell-917/live-coding-stats.html">
-    <img src="https://img.icons8.com/fluency/96/000000/dashboard.png" width="80" height="80"/>
-    <br/>
-    <strong>Live Terminal Dashboard</strong>
-    <br/>
-    <sub>Real-time coding metrics<br/>& activity graphs</sub>
+    <img src="https://img.shields.io/badge/📊_LIVE_TERMINAL-View_Dashboard-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
+  <br/><br/>
+  <img src="https://img.icons8.com/fluency/96/000000/dashboard.png" width="100" height="100"/>
+  <h3>💻 Live Terminal Dashboard</h3>
+  <p><sub>
+    ⚡ Real-time coding metrics with animated counters<br/>
+    📈 Language breakdown with progress bars<br/>
+    📅 Weekly activity heatmap visualization<br/>
+    🔥 Code streak tracker • ⏱ Time statistics<br/>
+    🎭 Terminal-style retro UI aesthetic
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Animations-Smooth-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Updates-Real_Time-blue?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Design-Glassmorphism-brightgreen?style=flat-square"/>
+  </p>
 </td>
-<td align="center" width="25%" valign="top">
+</tr>
+<tr>
+<td align="center" width="50%">
   <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-    <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="80" height="80"/>
-    <br/>
-    <strong>Interactive Skill Radar</strong>
-    <br/>
-    <sub>Animated skill visualization<br/>with 4 themes</sub>
+    <img src="https://img.shields.io/badge/🎯_SKILL_RADAR-Interactive_Chart-667eea?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
+  <br/><br/>
+  <img src="https://img.icons8.com/fluency/96/000000/compass.png" width="100" height="100"/>
+  <h3>📡 Interactive Skill Radar</h3>
+  <p><sub>
+    🎨 Animated 6-axis radar chart visualization<br/>
+    🌈 4 beautiful themes (Dark, Light, Neon, Gradient)<br/>
+    📊 Real-time skill level adjustments<br/>
+    💾 Export chart as PNG image<br/>
+    📱 Fully responsive mobile design
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Chart_Type-Radar-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Themes-4-blue?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Export-PNG-brightgreen?style=flat-square"/>
+  </p>
 </td>
-<td align="center" width="25%" valign="top">
+<td align="center" width="50%">
   <a href="https://mitchell-917.github.io/mitchell-917/banner-generator.html">
-    <img src="https://img.icons8.com/fluency/96/000000/design.png" width="80" height="80"/>
-    <br/>
-    <strong>Banner Generator</strong>
-    <br/>
-    <sub>Create custom profile<br/>banners instantly</sub>
+    <img src="https://img.shields.io/badge/🎨_BANNER_GENERATOR-Create_Now-764ba2?style=for-the-badge&labelColor=0f0c29&logoColor=white" height="50"/>
   </a>
+  <br/><br/>
+  <img src="https://img.icons8.com/fluency/96/000000/design.png" width="100" height="100"/>
+  <h3>✨ Banner Generator</h3>
+  <p><sub>
+    🖼 Create custom profile banners instantly<br/>
+    📐 3 export sizes (1200×400, 1500×500, 1920×640)<br/>
+    🎭 Animated gradient backgrounds<br/>
+    ✏️ Customizable text and stats display<br/>
+    💾 Download as high-quality PNG
+  </sub></p>
+  <p>
+    <img src="https://img.shields.io/badge/Sizes-3_Options-success?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Quality-High_Res-blue?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Particles-Animated-brightgreen?style=flat-square"/>
+  </p>
 </td>
 </tr>
 </table>
 
-<p align="center">
-  <a href="https://mitchell-917.github.io/mitchell-917/project-showcase.html">
-    <img src="https://img.shields.io/badge/🎯_View_Full_Project_Carousel-Interactive_3D_Showcase-667eea?style=for-the-badge&logoColor=white" alt="Project Carousel"/>
-  </a>
-</p>
+<br/>
+
+<a href="https://mitchell-917.github.io/mitchell-917/project-showcase.html">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=120&section=header&text=🎯%20VIEW%20FULL%20PROJECT%20CAROUSEL&fontSize=35&fontColor=fff&desc=Interactive%203D%20Showcase%20•%20All%20Projects%20in%20One%20Place&descSize=16&descAlignY=75" width="80%"/>
+</a>
+
+<br/><br/>
+
+### 🌟 What Makes These Tools Special?
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <strong>⚡ Zero Dependencies</strong><br/>
+  <sub>Pure HTML/CSS/JS • No frameworks needed<br/>Lightning fast load times</sub>
+</td>
+<td align="center" width="33%">
+  <strong>🎨 Stunning UI</strong><br/>
+  <sub>Glassmorphism • Smooth animations<br/>Production-quality design</sub>
+</td>
+<td align="center" width="33%">
+  <strong>📱 Fully Responsive</strong><br/>
+  <sub>Works on all devices<br/>Mobile-optimized layouts</sub>
+</td>
+</tr>
+</table>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,6,12,20&height=3" width="100%"/>
+
+</div>
 
 </div>
 
