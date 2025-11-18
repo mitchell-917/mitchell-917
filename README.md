@@ -74,7 +74,7 @@
 <img src="https://img.shields.io/badge/🎨_BANNER-CREATE-764ba2?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>✨ Banner</h3>
+<h3>✨ Banner Generator</h3>
 <sub>
 🖼 Custom banners<br/>
 📐 3 export sizes<br/>
