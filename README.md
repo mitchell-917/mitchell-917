@@ -105,12 +105,12 @@
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
-  <strong>🎨&nbsp;Stunning&nbsp; UI</strong><br/><br/>
-  <sub>Glassmorphism<br/>Smooth animations<br/>Production-quality</sub>
+  <strong>🎨&nbsp;Stunning&nbsp;UI</strong><br/><br/>
+  <sub>Glassmorphism design<br/>Smooth animations<br/>Production-quality design</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
-  <strong>📱 Responsive</strong><br/><br/>
-  <sub>Works on all devices<br/>Mobile-optimized<br/>Friendly interface</sub>
+  <strong>📱&nbsp;Fully&nbsp;Responsive</strong><br/><br/>
+  <sub>Works on all devices<br/>Mobile-optimized layouts<br/>Touch-friendly interface</sub>
 </td>
 </tr>
 </table>
