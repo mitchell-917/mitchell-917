@@ -55,12 +55,12 @@
 </td>
 <td align="center" width="25%">
 <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-<img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
+<img src="https://img.shields.io/badge/🔮_RADAR-CHART-667eea?style=for-the-badge&labelColor=0f0c29" height="40"/>
 </a>
 <br/><br/>
-<h3>📡 Skill Radar</h3>
+<h3>🔮 Skill Radar</h3>
 <sub>
-🎨 6-axis radar chart<br/>
+🎯 6-axis radar chart<br/>
 🌈 4 themes<br/>
 📊 Skill adjustments<br/>
 💾 Export PNG
