@@ -101,7 +101,7 @@
 <table>
 <tr>
 <td align="center" width="33%" valign="top">
-  <strong>⚡ Zero Dependencies</strong><br/>
+  <strong>⚡ No Dependencies</strong><br/>
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top">
@@ -329,25 +329,20 @@ track_fair_value_gaps()
 
 <table>
 <tr>
-<td width="50%">
-
+<td width="50%" align="center" valign="top">
 <img src="https://github-readme-stats.vercel.app/api?username=mitchell-917&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=667EEA&icon_color=667EEA&text_color=9f9f9f&ring_color=667EEA" width="100%"/>
-
 </td>
-<td width="50%">
-
+<td width="50%" align="center" valign="top">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=mitchell-917&theme=tokyonight&hide_border=true&background=0D1117&stroke=667EEA&ring=667EEA&fire=FB8C00&currStreakLabel=667EEA" width="100%"/>
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mitchell-917&layout=compact&langs_count=10&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667EEA&text_color=9f9f9f&hide=html,css" width="60%"/>
-
 </td>
 </tr>
 </table>
+
+<br/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mitchell-917&layout=compact&langs_count=10&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667EEA&text_color=9f9f9f&hide=html,css" width="50%"/>
+
+<br/><br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=mitchell-917&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=667EEA&line=667EEA&point=FB8C00" width="100%"/>
 
