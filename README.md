@@ -101,7 +101,7 @@
 <table width="100%" style="table-layout: fixed;">
 <tr>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
-  <strong>⚡ Zero Dependencies</strong><br/><br/>
+  <strong>⚡&nbsp;Zero&nbsp;Dependencies</strong><br/><br/>
   <sub>Pure HTML/CSS/JS<br/>No frameworks needed<br/>Lightning fast load times</sub>
 </td>
 <td align="center" width="33%" valign="top" style="padding: 20px;">
