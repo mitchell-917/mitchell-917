@@ -396,6 +396,9 @@ track_fair_value_gaps()
 <a href="https://github.com/mitchell-917/tradingview-pinescript-lab">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
+<a href="https://github.com/mitchell-917/tradingview-pinescript-lab#readme">
+<img src="https://img.shields.io/badge/DOCS-764ba2?style=for-the-badge&logo=bookstack&logoColor=white"/>
+</a>
 </p>
 
 **Comprehensive Pine Script v5 learning resource**
@@ -408,6 +411,7 @@ track_fair_value_gaps()
 | 📊 **Indicators** | Production-ready |
 | 🧪 **Learning** | Progressive path |
 | 📖 **Docs** | Extensive guides |
+| 🛠️ **Code** | Copy-paste ready |
 
 <br/>
 
@@ -424,6 +428,9 @@ track_fair_value_gaps()
 <a href="https://github.com/mitchell-917/weather-app">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
+<a href="https://mitchell-917.github.io/weather-app">
+<img src="https://img.shields.io/badge/LIVE_DEMO-764ba2?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
 </p>
 
 **Clean, responsive weather application**
@@ -436,12 +443,11 @@ track_fair_value_gaps()
 | 📱 **Design** | Mobile-first |
 | 🎨 **UI** | Modern animations |
 | 📍 **Location** | Search & geolocation |
+| ⚡ **Performance** | Fast & lightweight |
 
 <br/>
 
 **Tech:** `React` `JavaScript` `Weather API` `CSS`
-
-<br/>
 
 </td>
 </tr>
