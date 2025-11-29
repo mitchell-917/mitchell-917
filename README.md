@@ -330,8 +330,8 @@ track_fair_value_gaps()
 <a href="https://github.com/mitchell-917/trading-systems">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-<a href="https://mitchell-917.github.io/trading-systems">
-<img src="https://img.shields.io/badge/LIVE_DEMO-764ba2?style=for-the-badge&logo=vercel&logoColor=white"/>
+<a href="https://github.com/mitchell-917/trading-systems#readme">
+<img src="https://img.shields.io/badge/README-764ba2?style=for-the-badge&logo=readme&logoColor=white"/>
 </a>
 </p>
 
@@ -362,8 +362,8 @@ track_fair_value_gaps()
 <a href="https://github.com/mitchell-917/algorithm-visualizer">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-<a href="https://mitchell-917.github.io/algorithm-visualizer">
-<img src="https://img.shields.io/badge/LIVE_DEMO-764ba2?style=for-the-badge&logo=vercel&logoColor=white"/>
+<a href="https://github.com/mitchell-917/algorithm-visualizer#readme">
+<img src="https://img.shields.io/badge/README-764ba2?style=for-the-badge&logo=readme&logoColor=white"/>
 </a>
 </p>
 
@@ -428,8 +428,8 @@ track_fair_value_gaps()
 <a href="https://github.com/mitchell-917/weather-app">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-<a href="https://mitchell-917.github.io/weather-app">
-<img src="https://img.shields.io/badge/LIVE_DEMO-764ba2?style=for-the-badge&logo=vercel&logoColor=white"/>
+<a href="https://github.com/mitchell-917/weather-app#readme">
+<img src="https://img.shields.io/badge/README-764ba2?style=for-the-badge&logo=readme&logoColor=white"/>
 </a>
 </p>
 
