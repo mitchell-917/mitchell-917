@@ -367,7 +367,7 @@ track_fair_value_gaps()
 </a>
 </p>
 
-**The most advanced sorting algorithm visualization platform**
+**Advanced sorting algorithm visualization platform**
 
 <br/>
 
@@ -408,7 +408,6 @@ track_fair_value_gaps()
 | 📊 **Indicators** | Production-ready |
 | 🧪 **Learning** | Progressive path |
 | 📖 **Docs** | Extensive guides |
-| 🛠️ **Code** | Copy-paste ready |
 
 <br/>
 
