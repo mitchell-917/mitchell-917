@@ -100,10 +100,10 @@
 </td>
 <td align="center" width="25%">
 <a href="https://mitchell-917.github.io/mitchell-917/skill-radar.html">
-<img src="https://img.shields.io/badge/📡_RADAR-CHART-667eea?style=for-the-badge&labelColor=1a1b27" height="40"/>
+<img src="https://img.shields.io/badge/📊_SKILL_RADAR-EXPLORE-667eea?style=for-the-badge&labelColor=1a1b27" height="40"/>
 </a>
 <br/><br/>
-<img src="https://img.icons8.com/fluency/80/radar-plot.png" width="55"/>
+<img src="https://img.icons8.com/fluency/80/pie-chart.png" width="55"/>
 <br/><br/>
 <b>Skill Radar Chart</b>
 <br/><br/>
@@ -227,7 +227,6 @@ track_fair_value_gaps()
 <br/>
 
 ```typescript
-// Enterprise code quality
 ✓ Zustand state management
 ✓ Custom hooks pattern  
 ✓ Full test coverage
@@ -336,7 +335,7 @@ track_fair_value_gaps()
 </a>
 </p>
 
-**Enterprise-grade algorithmic trading for MT5 & TradingView**
+**Enterprise-grade algorithmic trading systems**
 
 <br/>
 
@@ -455,7 +454,7 @@ track_fair_value_gaps()
 
 <div align="center">
 
-## <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ber/giphy.gif" width="28"/> &nbsp;GitHub Stats
+## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="28"/> &nbsp;GitHub Stats
 
 <br/>
 
