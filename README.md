@@ -15,7 +15,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=85&lines=Full-Stack+Developer+%7C+Trading+Systems+Architect;Building+intelligent+systems+that+trade+24%2F7;React+%E2%80%A2+TypeScript+%E2%80%A2+Pine+Script+%E2%80%A2+Python" alt="Subtitle" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=85&lines=Full-Stack+Developer+%7C+Trading+Systems+Architect;Creator+of+Trading+Hub+Pro+%7C+1%2C769%2B+Tests+Passing;React+%E2%80%A2+TypeScript+%E2%80%A2+Pine+Script+%E2%80%A2+Python" alt="Subtitle" />
 
 <br/><br/>
 
@@ -36,16 +36,16 @@
 <table>
 <tr>
 <td align="center">
-<img src="https://img.shields.io/badge/26K+-Lines_of_Code-667eea?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
+<img src="https://img.shields.io/badge/60K+-Lines_of_Code-667eea?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 </td>
 <td align="center">
-<img src="https://img.shields.io/badge/177-Tests_Passing-27c93f?style=for-the-badge&logo=vitest&logoColor=white"/>
+<img src="https://img.shields.io/badge/1,769+-Tests_Passing-27c93f?style=for-the-badge&logo=vitest&logoColor=white"/>
 </td>
 <td align="center">
 <img src="https://img.shields.io/badge/25+-Trading_Indicators-764ba2?style=for-the-badge&logo=tradingview&logoColor=white"/>
 </td>
 <td align="center">
-<img src="https://img.shields.io/badge/12-Active_Projects-f093fb?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/13-Active_Projects-f093fb?style=for-the-badge&logo=github&logoColor=white"/>
 </td>
 </tr>
 </table>
@@ -141,6 +141,13 @@
 
 <br/><br/>
 
+<!-- Trading Hub Pro Demo -->
+<a href="https://mitchell-917.github.io/trading-hub-pro/">
+<img src="https://img.shields.io/badge/💹_TRADING_HUB_PRO-Live_Demo-00c853?style=for-the-badge&labelColor=1a1b27&logo=tradingview&logoColor=white" height="45"/>
+</a>
+
+<br/><br/>
+
 <!-- Tool Highlights -->
 <table>
 <tr>
@@ -164,6 +171,106 @@
 <b>Fully Responsive</b>
 <br/>
 <sub>All devices<br/>Touch-friendly</sub>
+</td>
+</tr>
+</table>
+
+<br/>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+<br/>
+
+<!-- ═══════════════════════════════════ FLAGSHIP PROJECT ═══════════════════════════════════ -->
+
+## <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30"/> &nbsp;Flagship Project: Trading Hub Pro
+
+<br/>
+
+<table>
+<tr>
+<td align="center">
+
+<a href="https://mitchell-917.github.io/trading-hub-pro/">
+<img src="https://img.shields.io/badge/🚀_TRADING_HUB_PRO-The_Ultimate_Trading_Dashboard-00c853?style=for-the-badge&labelColor=0D1117&logo=react&logoColor=white" height="50"/>
+</a>
+
+<br/><br/>
+
+**Enterprise-grade trading platform with real-time data, AI-powered signals, and institutional-grade analytics**
+
+<br/>
+
+<table>
+<tr>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/test-passed.png" width="40"/>
+<br/><b>1,592</b><br/><sub>Tests Passing</sub>
+</td>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/code.png" width="40"/>
+<br/><b>34K+</b><br/><sub>Lines of Code</sub>
+</td>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/combo-chart.png" width="40"/>
+<br/><b>Real-time</b><br/><sub>Market Data</sub>
+</td>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" width="40"/>
+<br/><b>AI</b><br/><sub>Trading Signals</sub>
+</td>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/globe.png" width="40"/>
+<br/><b>20+</b><br/><sub>Currencies</sub>
+</td>
+<td align="center" width="16%">
+<img src="https://img.icons8.com/fluency/48/lightning-bolt.png" width="40"/>
+<br/><b>React 19</b><br/><sub>Latest Tech</sub>
+</td>
+</tr>
+</table>
+
+<br/>
+
+<a href="https://mitchell-917.github.io/trading-hub-pro/">
+<img src="https://img.shields.io/badge/🌐_LIVE_DEMO-Try_It_Now-667eea?style=for-the-badge&labelColor=1a1b27"/>
+</a>
+&nbsp;
+<a href="https://github.com/mitchell-917/trading-hub-pro">
+<img src="https://img.shields.io/badge/📦_SOURCE_CODE-View_on_GitHub-764ba2?style=for-the-badge&labelColor=1a1b27&logo=github&logoColor=white"/>
+</a>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<table>
+<tr>
+<td width="50%">
+
+**✨ Key Features**
+- 📊 Real-time candlestick charts with RSI indicators
+- 🤖 AI-powered trading signals with confidence scores
+- 💼 Portfolio management with P&L tracking
+- 📈 Market scanner with customizable filters
+- 🌍 Global currency support (auto-detection)
+- ⌨️ Power user keyboard shortcuts
+- 🌙 Beautiful dark mode UI
+
+</td>
+<td width="50%">
+
+**🛠️ Tech Stack**
+- ⚛️ React 19.2 + TypeScript 5.9
+- ⚡ Vite 7.2 (lightning fast builds)
+- 🎨 Tailwind CSS 4.1 + Framer Motion
+- 🐻 Zustand + React Query
+- 📊 Recharts for visualizations
+- 🧪 Vitest + Testing Library
+- 🔄 GitHub Actions CI/CD
+
 </td>
 </tr>
 </table>
@@ -218,7 +325,7 @@ track_fair_value_gaps()
 
 | Achievement | Status |
 |------------|--------|
-| **177 passing tests** | ✅ 90%+ coverage |
+| **1,769+ passing tests** | ✅ 95%+ coverage |
 | **TypeScript strict mode** | ✅ Type safety |
 | **Zero bugs, zero warnings** | ✅ Deploy-ready |
 | **Glassmorphism UI** | ✅ Modern design |
@@ -228,9 +335,9 @@ track_fair_value_gaps()
 
 ```typescript
 ✓ Zustand state management
+✓ React Query data fetching
 ✓ Custom hooks pattern  
 ✓ Full test coverage
-✓ Performance optimized
 ```
 
 </td>
@@ -421,33 +528,33 @@ track_fair_value_gaps()
 <td width="50%" valign="top">
 
 <h3 align="center">
-<a href="https://github.com/mitchell-917/weather-app">🌦️ Weather Dashboard</a>
+<a href="https://github.com/mitchell-917/trading-hub-pro">💹 Trading Hub Pro</a>
 </h3>
 
 <p align="center">
-<a href="https://github.com/mitchell-917/weather-app">
+<a href="https://github.com/mitchell-917/trading-hub-pro">
 <img src="https://img.shields.io/badge/VIEW_PROJECT-667eea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-<a href="https://github.com/mitchell-917/weather-app#readme">
-<img src="https://img.shields.io/badge/README-764ba2?style=for-the-badge&logo=readme&logoColor=white"/>
+<a href="https://mitchell-917.github.io/trading-hub-pro/">
+<img src="https://img.shields.io/badge/LIVE_DEMO-00c853?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 </p>
 
-**Clean, responsive weather application**
+**The Ultimate Professional Trading Dashboard**
 
 <br/>
 
 | Feature | Details |
 |---------|---------|
-| 🌍 **Data** | Real-time weather |
-| 📱 **Design** | Mobile-first |
-| 🎨 **UI** | Modern animations |
-| 📍 **Location** | Search & geolocation |
-| ⚡ **Performance** | Fast & lightweight |
+| 🧪 **Tests** | 1,592 passing |
+| 📊 **Charts** | Real-time candlesticks |
+| 🤖 **AI Signals** | Smart trading alerts |
+| 🌍 **Currency** | 20+ global currencies |
+| ⚡ **Tech** | React 19 + TypeScript |
 
 <br/>
 
-**Tech:** `React` `JavaScript` `Weather API` `CSS`
+**Tech:** `React 19` `TypeScript` `Zustand` `Vite` `Tailwind`
 
 </td>
 </tr>
@@ -526,14 +633,14 @@ track_fair_value_gaps()
 <sub>ESLint: 0 errors</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://img.shields.io/badge/90%25+-Coverage-667eea?style=for-the-badge&logo=vitest&logoColor=white"/>
+<img src="https://img.shields.io/badge/95%25+-Coverage-667eea?style=for-the-badge&logo=vitest&logoColor=white"/>
 <br/><br/>
-<b>177 Tests</b>
+<b>1,769+ Tests</b>
 <br/>
 <sub>All passing</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://img.shields.io/badge/12-Projects-764ba2?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/13-Projects-764ba2?style=for-the-badge&logo=github&logoColor=white"/>
 <br/><br/>
 <b>Production Ready</b>
 <br/>
@@ -621,7 +728,7 @@ track_fair_value_gaps()
 <br/>
 
 <sub>
-<b>Last updated:</b> November 2025 &nbsp;•&nbsp; 
+<b>Last updated:</b> November 30, 2025 &nbsp;•&nbsp; 
 <b>Auto-maintained via:</b> GitHub Actions &nbsp;•&nbsp; 
 Made with 💜 and ☕
 </sub>
