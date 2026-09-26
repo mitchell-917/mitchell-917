@@ -1,675 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Radar - Mitchell</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0D1117 0%, #161b22 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(ellipse at 20% 30%, rgba(102, 126, 234, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(118, 75, 162, 0.12) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1300px;
-            background: rgba(22, 27, 34, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(102, 126, 234, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            position: relative;
-            z-index: 1;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 24px;
-        }
-
-        .back-link:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateX(-4px);
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            color: rgba(255, 255, 255, 0.6);
-            text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 40px;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-bottom: 32px;
-        }
-
-        .radar-container {
-            position: relative;
-            aspect-ratio: 1;
-            background: rgba(13, 17, 23, 0.6);
-            border-radius: 16px;
-            border: 1px solid rgba(102, 126, 234, 0.15);
-            padding: 32px;
-        }
-
-        #radar-canvas {
-            width: 100%;
-            height: 100%;
-        }
-
-        .skills-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .skill-category {
-            background: rgba(13, 17, 23, 0.6);
-            border-radius: 14px;
-            padding: 22px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            background: rgba(22, 27, 34, 0.9);
-            border-color: rgba(102, 126, 234, 0.25);
-            transform: translateX(4px);
-        }
-
-        .category-title {
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            font-size: 1.15em;
-            font-weight: 600;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .skill-name {
-            font-size: 0.95em;
-            font-weight: 500;
-        }
-
-        .skill-level {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-dots {
-            display: flex;
-            gap: 4px;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .dot.filled {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
-        }
-
-        .skill-percentage {
-            font-weight: 600;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            min-width: 42px;
-            text-align: right;
-            font-size: 0.9em;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-        }
-
-        .metric-card {
-            background: rgba(13, 17, 23, 0.6);
-            border-radius: 14px;
-            padding: 22px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .metric-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .metric-card:hover::before {
-            opacity: 1;
-        }
-
-        .metric-card:hover {
-            transform: translateY(-4px);
-            background: rgba(22, 27, 34, 0.9);
-            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
-        }
-
-        .metric-icon {
-            font-size: 2.2em;
-            margin-bottom: 12px;
-        }
-
-        .metric-value {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2em;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .metric-label {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 28px;
-            flex-wrap: wrap;
-        }
-
-        button {
-            background: rgba(102, 126, 234, 0.15);
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        button:hover {
-            background: rgba(102, 126, 234, 0.25);
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.2);
-        }
-
-        @media (max-width: 968px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .container {
-                padding: 24px;
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-
-        .pulsing {
-            animation: pulse 2s ease-in-out infinite;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill Radar · Mitchell</title>
+  <meta name="description" content="Six-axis skill radar with live sliders, four palettes, shareable links and PNG export.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c8cf8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='18' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/lab.css">
+  <style>
+    .layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 16px; align-items: start; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+    .radar-wrap { display: grid; place-items: center; padding: 18px; }
+    .skill { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
+    .skill:last-child { border-bottom: 0; }
+    .skill .name { font-weight: 700; font-size: 14px; }
+    .skill .pct { font-family: var(--mono); font-size: 13px; color: var(--primary); font-weight: 700; min-width: 5ch; text-align: right; }
+    .skill input { grid-column: 1 / -1; }
+    .swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+    .swatch { width: 34px; height: 34px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; background: linear-gradient(135deg, var(--a), var(--b)); }
+    .swatch[aria-pressed="true"] { border-color: var(--text); box-shadow: 0 0 0 3px color-mix(in srgb, var(--text) 15%, transparent); }
+    .metrics { margin-top: 16px; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="https://github.com/mitchell-917" class="back-link">
-            ← Back to Profile
-        </a>
-        
-        <h1>🎯 Technical Skills Radar</h1>
-        <p class="subtitle">Interactive visualization of expertise across multiple domains</p>
+<div class="wrap">
+  <nav id="lab-nav" aria-label="Lab navigation"></nav>
 
-        <div class="content-grid">
-            <div class="radar-container">
-                <canvas id="radar-canvas"></canvas>
-            </div>
+  <header class="page-head rise">
+    <p class="eyebrow">skill-radar</p>
+    <h1>Skill <span class="grad">radar</span></h1>
+    <p>Six axes, self-assessed and honest. Drag the sliders to reshape the polygon, pick a palette, then share the link or export a PNG. Metrics underneath are live from the profile snapshot.</p>
+  </header>
 
-            <div class="skills-panel">
-                <div class="skill-category">
-                    <div class="category-title">
-                        ⚛️ Frontend Development
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">React/TypeScript</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                            </div>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">State Management</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">UI/UX Design</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-title">
-                        📊 Trading & Finance
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Pine Script</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                            </div>
-                            <span class="skill-percentage">98%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">MQL5</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">88%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Algorithmic Trading</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                            </div>
-                            <span class="skill-percentage">92%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-title">
-                        🔧 Backend & Tools
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">82%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Ruby</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">72%</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">CI/CD & Automation</span>
-                        <div class="skill-level">
-                            <div class="skill-dots">
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot filled"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span class="skill-percentage">86%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="layout">
+    <section class="card rise d1">
+      <div class="radar-wrap"><canvas id="radar" aria-label="Skill radar chart"></canvas></div>
+      <div class="card-body" style="padding-top: 0;">
+        <div class="toolbar">
+          <button class="btn" id="animate">Animate</button>
+          <button class="btn ghost" id="share">Copy share link</button>
+          <button class="btn ghost" id="export">Export PNG</button>
+          <button class="btn ghost" id="reset">Reset</button>
         </div>
+      </div>
+    </section>
 
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-icon">🏆</div>
-                <div class="metric-value">177</div>
-                <div class="metric-label">Tests Passing</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-icon">📊</div>
-                <div class="metric-value">25+</div>
-                <div class="metric-label">Indicators Built</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-icon">⚡</div>
-                <div class="metric-value">26K+</div>
-                <div class="metric-label">Lines of Code</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-icon">🎯</div>
-                <div class="metric-value">15+</div>
-                <div class="metric-label">Trading Strategies</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-icon">🚀</div>
-                <div class="metric-value">12</div>
-                <div class="metric-label">Active Projects</div>
-            </div>
-        </div>
+    <aside class="card rise d2">
+      <div class="card-body">
+        <p class="eyebrow">Palette</p>
+        <div class="swatches" id="swatches" role="group" aria-label="Palette"></div>
+        <p class="eyebrow" style="margin-top: 20px;">Skills</p>
+        <div id="skills"></div>
+      </div>
+    </aside>
+  </div>
 
-        <div class="controls">
-            <button onclick="animateRadar()">🔄 Animate Radar</button>
-            <button onclick="changeTheme()">🎨 Change Theme</button>
-            <button onclick="exportImage()">📸 Export Image</button>
-        </div>
-    </div>
+  <section class="grid cols-4 metrics rise d3" id="metrics">
+    <div class="stat"><div class="bar"></div><div class="value" data-m="contrib">—</div><div class="label">Contributions</div><div class="sub">last 12 months</div></div>
+    <div class="stat"><div class="bar" style="background: var(--secondary)"></div><div class="value" data-m="repos">—</div><div class="label">Public repos</div><div class="sub" data-m="reposSub"></div></div>
+    <div class="stat"><div class="bar" style="background: var(--accent)"></div><div class="value" data-m="streak">—</div><div class="label">Longest streak</div><div class="sub">days</div></div>
+    <div class="stat"><div class="bar" style="background: var(--amber)"></div><div class="value" data-m="stars">—</div><div class="label">Stars earned</div><div class="sub">across public repos</div></div>
+  </section>
 
-    <script>
-        const canvas = document.getElementById('radar-canvas');
-        const ctx = canvas.getContext('2d');
+  <footer id="lab-footer"></footer>
+</div>
 
-        let animationProgress = 0;
-        let currentTheme = 0;
+<script src="assets/js/lab.js"></script>
+<script>
+(async function () {
+  Lab.nav('skill-radar.html');
+  const profile = await Lab.load();
+  Lab.footer(profile);
 
-        const themes = [
-            { primary: '#667eea', secondary: '#764ba2', accent: '#58a6ff' },
-            { primary: '#10b981', secondary: '#059669', accent: '#34d399' },
-            { primary: '#f59e0b', secondary: '#d97706', accent: '#fbbf24' },
-            { primary: '#ef4444', secondary: '#dc2626', accent: '#f87171' }
-        ];
+  const DEFAULT_SKILLS = [
+    { label: 'Frontend', value: 92 }, { label: 'Trading systems', value: 90 }, { label: 'Testing', value: 88 },
+    { label: 'Data viz', value: 85 }, { label: 'DevOps / CI', value: 80 }, { label: 'Backend', value: 72 },
+  ];
+  const skills = (profile.config && profile.config.skills && profile.config.skills.length ? profile.config.skills : DEFAULT_SKILLS).map((s) => ({ ...s }));
+  const defaults = skills.map((s) => s.value);
+  const fromUrl = new URLSearchParams(location.search).get('v');
+  if (fromUrl) fromUrl.split(',').map(Number).forEach((v, i) => { if (skills[i] && v >= 0 && v <= 100) skills[i].value = v; });
 
-        const skills = {
-            labels: ['Frontend\nDev', 'Trading\nSystems', 'Backend\nDev', 'Data Viz', 'Testing &\nQuality', 'DevOps &\nCI/CD'],
-            values: [95, 92, 80, 88, 94, 86]
-        };
+  const PALETTES = [
+    { name: 'Indigo', a: '#7c8cf8', b: '#a78bfa', c: '#f472b6' },
+    { name: 'Emerald', a: '#34d399', b: '#059669', c: '#a7f3d0' },
+    { name: 'Amber', a: '#fbbf24', b: '#f97316', c: '#fde68a' },
+    { name: 'Rose', a: '#fb7185', b: '#e11d48', c: '#fecdd3' },
+  ];
+  let palette = Math.max(0, Math.min(3, +(new URLSearchParams(location.search).get('p') || 0)));
 
-        function resizeCanvas() {
-            const container = canvas.parentElement;
-            const size = Math.min(container.clientWidth, container.clientHeight) - 80;
-            canvas.width = size;
-            canvas.height = size;
-        }
+  const canvas = document.getElementById('radar');
+  let ctx, size = 0;
+  const shown = skills.map(() => 0);           // animated values currently drawn
+  let target = skills.map((s) => s.value);
 
-        function drawRadar() {
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const maxRadius = Math.min(centerX, centerY) - 60;
-            const levels = 5;
-            const theme = themes[currentTheme];
+  function resize() {
+    const host = canvas.parentElement;
+    size = Math.max(280, Math.min(560, host.clientWidth - 36));
+    ctx = Lab.hidpi(canvas, size, size);
+    draw();
+  }
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+  function drawRadar(c, w, values, opts = {}) {
+    const theme = Lab.theme();
+    const p = PALETTES[palette];
+    const cx = w / 2, cy = w / 2, R = w * 0.34, n = skills.length, step = (Math.PI * 2) / n;
+    const angle = (i) => i * step - Math.PI / 2;
+    if (opts.background) { c.fillStyle = theme.card; c.fillRect(0, 0, w, opts.height || w); }
+    // Rings
+    for (let r = 1; r <= 5; r++) {
+      const rr = (R / 5) * r;
+      c.beginPath();
+      for (let i = 0; i < n; i++) { const x = cx + Math.cos(angle(i)) * rr, y = cy + Math.sin(angle(i)) * rr; i ? c.lineTo(x, y) : c.moveTo(x, y); }
+      c.closePath();
+      c.strokeStyle = theme.isDark ? `rgba(255,255,255,${0.06 + r * 0.02})` : `rgba(31,35,40,${0.06 + r * 0.02})`;
+      c.lineWidth = 1; c.stroke();
+      if (r < 5) { c.fillStyle = theme.faint; c.font = `500 ${w * 0.02}px ${getComputedStyle(document.body).fontFamily}`; c.textAlign = 'center'; c.fillText(`${r * 20}`, cx, cy - rr - 3); }
+    }
+    // Axes + labels
+    c.font = `700 ${Math.max(11, w * 0.026)}px ${getComputedStyle(document.body).fontFamily}`;
+    for (let i = 0; i < n; i++) {
+      const a = angle(i);
+      c.beginPath(); c.moveTo(cx, cy); c.lineTo(cx + Math.cos(a) * R, cy + Math.sin(a) * R);
+      c.strokeStyle = theme.isDark ? 'rgba(255,255,255,0.12)' : 'rgba(31,35,40,0.12)'; c.stroke();
+      const lx = cx + Math.cos(a) * (R + w * 0.085), ly = cy + Math.sin(a) * (R + w * 0.085);
+      c.fillStyle = theme.text; c.textAlign = 'center'; c.textBaseline = 'middle';
+      const words = skills[i].label.split(' ');
+      const lines = words.length > 1 && skills[i].label.length > 10 ? [words.slice(0, Math.ceil(words.length / 2)).join(' '), words.slice(Math.ceil(words.length / 2)).join(' ')] : [skills[i].label];
+      lines.forEach((t, li) => c.fillText(t, lx, ly + (li - (lines.length - 1) / 2) * (w * 0.03)));
+      c.fillStyle = p.a; c.font = `600 ${Math.max(10, w * 0.022)}px ${getComputedStyle(document.body).fontFamily}`;
+      c.fillText(`${Math.round(values[i])}%`, lx, ly + lines.length * (w * 0.03) * 0.5 + w * 0.02);
+      c.font = `700 ${Math.max(11, w * 0.026)}px ${getComputedStyle(document.body).fontFamily}`;
+    }
+    // Polygon
+    const pts = values.map((v, i) => [cx + Math.cos(angle(i)) * R * (v / 100), cy + Math.sin(angle(i)) * R * (v / 100)]);
+    c.beginPath(); pts.forEach(([x, y], i) => (i ? c.lineTo(x, y) : c.moveTo(x, y))); c.closePath();
+    const g = c.createRadialGradient(cx, cy, 0, cx, cy, R);
+    g.addColorStop(0, hexA(p.a, 0.55)); g.addColorStop(1, hexA(p.b, 0.25));
+    c.fillStyle = g; c.fill();
+    c.shadowColor = hexA(p.a, 0.55); c.shadowBlur = 18;
+    c.strokeStyle = p.a; c.lineWidth = 2.5; c.lineJoin = 'round'; c.stroke();
+    c.shadowBlur = 0;
+    pts.forEach(([x, y]) => { c.beginPath(); c.arc(x, y, 5, 0, Math.PI * 2); c.fillStyle = p.c; c.fill(); c.lineWidth = 2; c.strokeStyle = theme.card; c.stroke(); });
+    if (opts.title) {
+      c.fillStyle = theme.text; c.textAlign = 'left'; c.textBaseline = 'alphabetic';
+      c.font = `800 ${w * 0.04}px ${getComputedStyle(document.body).fontFamily}`; c.fillText(opts.title, w * 0.05, w * 0.08);
+      c.fillStyle = theme.muted; c.font = `500 ${w * 0.022}px ${getComputedStyle(document.body).fontFamily}`; c.fillText(opts.subtitle || '', w * 0.05, w * 0.115);
+    }
+  }
+  function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`; }
+  function draw() { ctx.clearRect(0, 0, size, size); drawRadar(ctx, size, shown); }
 
-            // Draw concentric circles
-            for (let i = 1; i <= levels; i++) {
-                const radius = (maxRadius / levels) * i;
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-                ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 + (i * 0.02)})`;
-                ctx.lineWidth = 1;
-                ctx.stroke();
+  // Tween shown -> target
+  let raf = 0;
+  function tick() {
+    let moving = false;
+    for (let i = 0; i < shown.length; i++) {
+      const d = target[i] - shown[i];
+      if (Math.abs(d) > 0.05) { shown[i] += d * 0.12; moving = true; } else shown[i] = target[i];
+    }
+    draw();
+    raf = moving ? requestAnimationFrame(tick) : 0;
+  }
+  function kick() { if (!raf) raf = requestAnimationFrame(tick); }
 
-                // Level percentage
-                if (i < levels) {
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-                    ctx.font = '10px Segoe UI';
-                    ctx.textAlign = 'center';
-                    ctx.fillText(`${i * 20}%`, centerX, centerY - radius + 5);
-                }
-            }
+  // Sliders
+  const list = document.getElementById('skills');
+  skills.forEach((s, i) => {
+    const row = document.createElement('div'); row.className = 'skill';
+    row.innerHTML = `<span class="name">${s.label}</span><span class="pct" id="pct${i}">${s.value}%</span><input type="range" min="0" max="100" value="${s.value}" aria-label="${s.label}">`;
+    row.querySelector('input').addEventListener('input', (e) => { target[i] = +e.target.value; document.getElementById('pct' + i).textContent = `${target[i]}%`; kick(); });
+    list.appendChild(row);
+  });
+  const sw = document.getElementById('swatches');
+  PALETTES.forEach((p, i) => {
+    const b = document.createElement('button'); b.className = 'swatch'; b.title = p.name; b.style.setProperty('--a', p.a); b.style.setProperty('--b', p.b);
+    b.setAttribute('aria-pressed', String(i === palette));
+    b.addEventListener('click', () => { palette = i; [...sw.children].forEach((el, j) => el.setAttribute('aria-pressed', String(j === i))); draw(); });
+    sw.appendChild(b);
+  });
 
-            const numPoints = skills.labels.length;
-            const angleStep = (Math.PI * 2) / numPoints;
+  document.getElementById('animate').addEventListener('click', () => { shown.fill(0); kick(); });
+  document.getElementById('reset').addEventListener('click', () => {
+    target = [...defaults];
+    [...list.querySelectorAll('input')].forEach((inp, i) => { inp.value = defaults[i]; document.getElementById('pct' + i).textContent = `${defaults[i]}%`; });
+    kick();
+  });
+  document.getElementById('share').addEventListener('click', async () => {
+    const url = `${location.origin}${location.pathname}?v=${target.join(',')}&p=${palette}`;
+    try { await navigator.clipboard.writeText(url); Lab.toast('Share link copied'); } catch { prompt('Copy this link', url); }
+  });
+  document.getElementById('export').addEventListener('click', () => {
+    const w = 1200, h = 1200;
+    const off = document.createElement('canvas'); off.width = w; off.height = h;
+    const c = off.getContext('2d');
+    drawRadar(c, w, target, { background: true, height: h, title: `${profile.user.name || 'Mitchell'} · skill radar`, subtitle: `github.com/${profile.user.login} · ${Lab.longDate(new Date().toISOString().slice(0, 10))}` });
+    Lab.download(off, 'skill-radar.png');
+  });
+  Lab.onThemeChange(draw);
+  new ResizeObserver(resize).observe(canvas.parentElement);
 
-            // Draw axes
-            for (let i = 0; i < numPoints; i++) {
-                const angle = i * angleStep - Math.PI / 2;
-                const x = centerX + Math.cos(angle) * maxRadius;
-                const y = centerY + Math.sin(angle) * maxRadius;
+  // Metrics
+  const m = (k) => document.querySelector(`[data-m="${k}"]`);
+  Lab.animateNumber(m('contrib'), profile.calendar.total);
+  Lab.animateNumber(m('repos'), profile.totals.publicRepos);
+  Lab.animateNumber(m('streak'), profile.calendar.longestStreak);
+  Lab.animateNumber(m('stars'), profile.totals.stars);
+  m('reposSub').textContent = `${profile.user.followers} followers`;
 
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(x, y);
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-
-                // Labels
-                const labelX = centerX + Math.cos(angle) * (maxRadius + 30);
-                const labelY = centerY + Math.sin(angle) * (maxRadius + 30);
-                ctx.fillStyle = 'white';
-                ctx.font = 'bold 12px Segoe UI';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                
-                const lines = skills.labels[i].split('\n');
-                lines.forEach((line, index) => {
-                    ctx.fillText(line, labelX, labelY + (index * 14) - ((lines.length - 1) * 7));
-                });
-            }
-
-            // Draw skill polygon with animation
-            ctx.beginPath();
-            const animatedValues = skills.values.map(v => v * animationProgress);
-            
-            for (let i = 0; i < numPoints; i++) {
-                const angle = i * angleStep - Math.PI / 2;
-                const value = animatedValues[i] / 100;
-                const radius = maxRadius * value;
-                const x = centerX + Math.cos(angle) * radius;
-                const y = centerY + Math.sin(angle) * radius;
-
-                if (i === 0) {
-                    ctx.moveTo(x, y);
-                } else {
-                    ctx.lineTo(x, y);
-                }
-            }
-            ctx.closePath();
-
-            // Fill with gradient
-            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
-            gradient.addColorStop(0, `${theme.primary}80`);
-            gradient.addColorStop(1, `${theme.secondary}40`);
-            ctx.fillStyle = gradient;
-            ctx.fill();
-
-            // Stroke
-            ctx.strokeStyle = theme.accent;
-            ctx.lineWidth = 3;
-            ctx.stroke();
-
-            // Draw points
-            for (let i = 0; i < numPoints; i++) {
-                const angle = i * angleStep - Math.PI / 2;
-                const value = animatedValues[i] / 100;
-                const radius = maxRadius * value;
-                const x = centerX + Math.cos(angle) * radius;
-                const y = centerY + Math.sin(angle) * radius;
-
-                ctx.beginPath();
-                ctx.arc(x, y, 6, 0, Math.PI * 2);
-                ctx.fillStyle = theme.accent;
-                ctx.fill();
-                ctx.strokeStyle = 'white';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-
-                // Glow effect
-                ctx.shadowBlur = 15;
-                ctx.shadowColor = theme.accent;
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            }
-        }
-
-        function animate() {
-            if (animationProgress < 1) {
-                animationProgress += 0.02;
-                drawRadar();
-                requestAnimationFrame(animate);
-            }
-        }
-
-        function animateRadar() {
-            animationProgress = 0;
-            animate();
-        }
-
-        function changeTheme() {
-            currentTheme = (currentTheme + 1) % themes.length;
-            drawRadar();
-        }
-
-        function exportImage() {
-            const dataURL = canvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.download = 'skill-radar.png';
-            link.href = dataURL;
-            link.click();
-        }
-
-        // Initialize
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            drawRadar();
-        });
-
-        resizeCanvas();
-        setTimeout(() => {
-            animate();
-        }, 500);
-    </script>
+  resize();
+  setTimeout(kick, 200);
+})();
+</script>
 </body>
 </html>

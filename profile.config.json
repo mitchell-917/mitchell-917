@@ -1,0 +1,156 @@
+{
+  "$schema": "./scripts/config.schema.json",
+  "login": "mitchell-917",
+  "name": "Mitchell",
+  "title": "Software Engineer",
+  "location": "London, UK",
+  "taglines": [
+    "Building algorithmic trading systems in MQL5 and Pine Script",
+    "Shipping production React + TypeScript applications",
+    "Turning market data into decisions, with tests to prove it"
+  ],
+  "heroChips": [
+    "{contributions} contributions in the last year",
+    "London, UK",
+    "Open to opportunities"
+  ],
+  "links": {
+    "github": "https://github.com/mitchell-917",
+    "lab": "https://mitchell-917.github.io/mitchell-917/",
+    "tradingHubDemo": "https://mitchell-917.github.io/trading-hub-pro/"
+  },
+  "languages": {
+    "excludeRepos": ["ig_web_api", "weather-app", "mitchell-917"],
+    "excludePaths": ["node_modules/", "dist/", "build/", "coverage/", "vendor/", ".next/", "out/", ".min."],
+    "extensions": {
+      ".ts": "TypeScript", ".tsx": "TypeScript", ".mts": "TypeScript", ".cts": "TypeScript",
+      ".js": "JavaScript", ".jsx": "JavaScript", ".mjs": "JavaScript", ".cjs": "JavaScript",
+      ".pine": "Pine Script",
+      ".mq5": "MQL5", ".mqh": "MQL5", ".mql5": "MQL5", ".mq4": "MQL4",
+      ".py": "Python",
+      ".rb": "Ruby",
+      ".html": "HTML",
+      ".css": "CSS", ".scss": "CSS",
+      ".sh": "Shell", ".bash": "Shell",
+      ".sql": "SQL",
+      "Dockerfile": "Dockerfile"
+    },
+    "colors": {
+      "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Pine Script": "#2962ff", "MQL5": "#4a76b8",
+      "MQL4": "#62a8d6", "Python": "#3572a5", "Ruby": "#701516", "HTML": "#e34c26", "CSS": "#663399",
+      "Shell": "#89e051", "SQL": "#e38c00", "Dockerfile": "#384d54"
+    }
+  },
+  "projects": [
+    {
+      "repo": "trading-hub-pro",
+      "title": "Trading Hub Pro",
+      "icon": "chart",
+      "accent": "#22c55e",
+      "description": "Professional trading dashboard: real-time candlesticks, portfolio P&L, a market scanner and signal widgets. Backed by 1,500+ Vitest tests.",
+      "tech": ["React 19", "TypeScript", "Zustand", "Vite", "Tailwind 4"],
+      "demo": "https://mitchell-917.github.io/trading-hub-pro/",
+      "language": "TypeScript"
+    },
+    {
+      "repo": "tradingview-pinescript-lab",
+      "title": "Pine Script Lab",
+      "icon": "code",
+      "accent": "#2962ff",
+      "description": "{files:.pine} production-quality Pine Script v5 indicators, strategies and templates, documented as a progressive learning path.",
+      "tech": ["Pine Script v5", "TradingView", "Smart Money Concepts"],
+      "language": "Pine Script"
+    },
+    {
+      "repo": "algorithm-visualizer",
+      "title": "Algorithm Visualizer 2.0",
+      "icon": "bars",
+      "accent": "#a78bfa",
+      "description": "Six sorting algorithms brought to life: step-through visualisation, live code viewer, statistics, audio feedback and dark mode. 177 tests.",
+      "tech": ["React 18", "TypeScript", "Tailwind", "Vitest"],
+      "language": "TypeScript"
+    },
+    {
+      "repo": "mitchell-917",
+      "title": "Profile Engine & Interactive Lab",
+      "icon": "spark",
+      "accent": "#f472b6",
+      "description": "This page. A zero-dependency Node generator renders every graphic as SVG from live GitHub data, refreshed daily by GitHub Actions.",
+      "tech": ["Node.js", "SVG", "GitHub Actions", "Canvas"],
+      "demo": "https://mitchell-917.github.io/mitchell-917/",
+      "language": "JavaScript"
+    }
+  ],
+  "privateWork": {
+    "title": "Behind closed doors",
+    "text": "A private trading-systems repo holds the day-to-day work: about 30 MQL5 expert advisors and indicators for MetaTrader 5, another 28 Pine Script studies, and Python chart automation that GitHub Actions runs every four hours. Current focus: a multi-timeframe Nasdaq-100 EA built for prop-firm risk limits."
+  },
+  "techStack": [
+    {
+      "group": "Languages",
+      "items": [
+        { "icon": "typescript", "label": "TypeScript", "color": "#3178C6" },
+        { "icon": "javascript", "label": "JavaScript", "color": "#F7DF1E" },
+        { "icon": "python", "label": "Python", "color": "#3776AB" },
+        { "icon": "ruby", "label": "Ruby", "color": "#CC342D" },
+        { "icon": "tradingview", "label": "Pine Script", "color": "#2962FF" },
+        { "icon": "mql5", "label": "MQL5", "color": "#4A76B8" }
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        { "icon": "react", "label": "React", "color": "#61DAFB" },
+        { "icon": "nextdotjs", "label": "Next.js", "color": "#000000" },
+        { "icon": "vite", "label": "Vite", "color": "#646CFF" },
+        { "icon": "tailwindcss", "label": "Tailwind CSS", "color": "#06B6D4" },
+        { "icon": "framer", "label": "Framer Motion", "color": "#0055FF" },
+        { "icon": "reactquery", "label": "TanStack Query", "color": "#FF4154" },
+        { "icon": "radixui", "label": "Radix UI", "color": "#161618" },
+        { "icon": "zustand", "label": "Zustand", "color": "#764ABC" },
+        { "icon": "recharts", "label": "Recharts", "color": "#22B5BF" }
+      ]
+    },
+    {
+      "group": "Backend, data and trading",
+      "items": [
+        { "icon": "nodedotjs", "label": "Node.js", "color": "#5FA04E" },
+        { "icon": "prisma", "label": "Prisma", "color": "#2D3748" },
+        { "icon": "sqlite", "label": "SQLite", "color": "#003B57" },
+        { "icon": "pandas", "label": "pandas", "color": "#150458" },
+        { "icon": "matplotlib", "label": "Matplotlib", "color": "#11557C" },
+        { "icon": "metatrader", "label": "MetaTrader 5", "color": "#0A7BC2" },
+        { "icon": "binance", "label": "Binance API", "color": "#F0B90B" }
+      ]
+    },
+    {
+      "group": "Testing and delivery",
+      "items": [
+        { "icon": "vitest", "label": "Vitest", "color": "#6E9F18" },
+        { "icon": "jest", "label": "Jest", "color": "#C21325" },
+        { "icon": "testinglibrary", "label": "Testing Library", "color": "#E33332" },
+        { "icon": "eslint", "label": "ESLint", "color": "#4B32C3" },
+        { "icon": "prettier", "label": "Prettier", "color": "#F7B93E" },
+        { "icon": "git", "label": "Git", "color": "#F05032" },
+        { "icon": "githubactions", "label": "GitHub Actions", "color": "#2088FF" },
+        { "icon": "docker", "label": "Docker", "color": "#2496ED" },
+        { "icon": "visualstudiocode", "label": "VS Code", "color": "#007ACC" }
+      ]
+    }
+  ],
+  "skills": [
+    { "label": "Frontend", "value": 92 },
+    { "label": "Trading systems", "value": 90 },
+    { "label": "Testing", "value": 88 },
+    { "label": "Data viz", "value": 85 },
+    { "label": "DevOps / CI", "value": 80 },
+    { "label": "Backend", "value": 72 }
+  ],
+  "tools": [
+    { "file": "contribution-graph-3d.html", "title": "3D Contribution Graph", "blurb": "Your last 371 days of commits as a rotating isometric city, drawn on Canvas from live data.", "icon": "cube" },
+    { "file": "live-coding-stats.html", "title": "Terminal Dashboard", "blurb": "A typed-out terminal session that streams real streaks, weekday patterns and language splits.", "icon": "terminal" },
+    { "file": "skill-radar.html", "title": "Skill Radar", "blurb": "Six-axis radar with live sliders and PNG export. Drag the values, watch the shape breathe.", "icon": "radar" },
+    { "file": "project-showcase.html", "title": "Project Carousel", "blurb": "A 3D carousel of featured repositories with live stars, languages and demo links.", "icon": "layers" },
+    { "file": "banner-generator.html", "title": "Banner Generator", "blurb": "Compose a profile banner from live stats and export it at three sizes.", "icon": "image" }
+  ]
+}

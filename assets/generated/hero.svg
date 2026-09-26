@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-labelledby="t d" >
+<title id="t">Mitchell — Software Engineer</title>
+<desc id="d">Mitchell, Software Engineer · London. Building algorithmic trading systems in MQL5 and Pine Script Shipping production React + TypeScript applications Turning market data into decisions, with tests to prove it</desc>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+  
+  .tl { opacity: 0; animation: cycle 9s ease-in-out infinite; }
+  .tl0 { opacity: 1; }
+  .tl0 { animation-delay: 0s; }
+  .tl1 { animation-delay: 3s; }
+  .tl2 { animation-delay: 6s; }
+  @keyframes cycle {
+    0% { opacity: 0; transform: translateY(6px); }
+    4% { opacity: 1; transform: translateY(0); }
+    29% { opacity: 1; transform: translateY(0); }
+    33% { opacity: 0; transform: translateY(-6px); }
+    100% { opacity: 0; }
+  }
+  .orb { animation: drift 14s ease-in-out infinite alternate; }
+  .orb2 { animation-duration: 18s; animation-delay: -6s; }
+  .orb3 { animation-duration: 22s; animation-delay: -11s; }
+  @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(40px, -24px); } }
+  .line { stroke-dasharray: 1200; animation: draw 2.6s cubic-bezier(.4,0,.2,1) both; }
+  .area { animation: fade 1.4s ease-out 1.6s both; }
+  .tip { animation: fade .6s ease-out 2.4s both; }
+  .ring { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-out 2.6s infinite; }
+  @keyframes draw { from { stroke-dashoffset: 1200; } to { stroke-dashoffset: 0; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+  .fade-in { animation: fade .8s ease-out both; }
+  .d1 { animation-delay: .15s } .d2 { animation-delay: .35s } .d3 { animation-delay: .55s } .d4 { animation-delay: .75s }
+  
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0b1020"/><stop offset="55%" stop-color="#141a3a"/><stop offset="100%" stop-color="#2a1650"/>
+  </linearGradient>
+  <radialGradient id="o1"><stop offset="0%" stop-color="#6e7ff3" stop-opacity=".55"/><stop offset="100%" stop-color="#6e7ff3" stop-opacity="0"/></radialGradient>
+  <radialGradient id="o2"><stop offset="0%" stop-color="#a78bfa" stop-opacity=".5"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <radialGradient id="o3"><stop offset="0%" stop-color="#f472b6" stop-opacity=".45"/><stop offset="100%" stop-color="#f472b6" stop-opacity="0"/></radialGradient>
+  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c8cf8"/><stop offset="60%" stop-color="#c4b5fd"/><stop offset="100%" stop-color="#f472b6"/></linearGradient>
+  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa" stop-opacity=".35"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern>
+  <clipPath id="frame"><rect width="900" height="280" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+  <rect width="900" height="280" fill="url(#bg)"/>
+  <rect width="900" height="280" fill="url(#grid)"/>
+  <g class="orb"><circle cx="150" cy="60" r="220" fill="url(#o1)"/></g>
+  <g class="orb orb2"><circle cx="700" cy="260" r="240" fill="url(#o2)"/></g>
+  <g class="orb orb3"><circle cx="860" cy="40" r="200" fill="url(#o3)"/></g>
+  <g>
+  <line x1="546.5" y1="97.8" x2="546.5" y2="113.3" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="542.9" y="104.4" width="7.3" height="4.1" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="559.6" y1="98.4" x2="559.6" y2="112.7" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="556.0" y="103.8" width="7.3" height="4.7" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="572.7" y1="97.6" x2="572.7" y2="106.8" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="569.0" y="99.4" width="7.3" height="4.4" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="585.8" y1="92.6" x2="585.8" y2="100.6" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="582.1" y="94.9" width="7.3" height="4.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="598.8" y1="90.0" x2="598.8" y2="97.2" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="595.2" y="90.9" width="7.3" height="4.0" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="611.9" y1="75.9" x2="611.9" y2="91.1" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="608.3" y="84.4" width="7.3" height="6.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="625.0" y1="84.0" x2="625.0" y2="91.7" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="621.3" y="84.4" width="7.3" height="3.1" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="638.1" y1="79.2" x2="638.1" y2="93.3" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="634.4" y="83.2" width="7.3" height="4.3" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="651.2" y1="78.3" x2="651.2" y2="91.2" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="647.5" y="82.3" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="664.2" y1="79.3" x2="664.2" y2="89.9" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="660.6" y="80.1" width="7.3" height="2.2" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="677.3" y1="72.3" x2="677.3" y2="84.4" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="673.6" y="80.1" width="7.3" height="1.5" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="690.4" y1="62.5" x2="690.4" y2="83.1" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="686.7" y="67.0" width="7.3" height="13.7" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="703.5" y1="58.1" x2="703.5" y2="75.8" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="699.8" y="67.0" width="7.3" height="5.7" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="716.5" y1="66.9" x2="716.5" y2="77.7" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="712.9" y="72.7" width="7.3" height="1.5" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="729.6" y1="58.6" x2="729.6" y2="79.5" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="726.0" y="60.8" width="7.3" height="13.1" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="742.7" y1="54.8" x2="742.7" y2="73.8" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="739.0" y="60.8" width="7.3" height="6.7" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="755.8" y1="53.5" x2="755.8" y2="74.7" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="752.1" y="59.5" width="7.3" height="8.0" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="768.8" y1="57.4" x2="768.8" y2="68.5" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="765.2" y="59.5" width="7.3" height="2.8" rx="1" fill="#f472b6" fill-opacity=".28"/><line x1="781.9" y1="48.8" x2="781.9" y2="67.0" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="778.3" y="51.8" width="7.3" height="10.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="795.0" y1="48.0" x2="795.0" y2="55.1" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="791.3" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="808.1" y1="49.5" x2="808.1" y2="55.3" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="804.4" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="821.2" y1="49.2" x2="821.2" y2="59.5" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="817.5" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="834.2" y1="50.9" x2="834.2" y2="54.0" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="830.6" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="847.3" y1="48.0" x2="847.3" y2="58.2" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="843.6" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="860.4" y1="48.0" x2="860.4" y2="54.3" stroke="#3fb950" stroke-opacity=".28" stroke-width="1"/><rect x="856.7" y="51.8" width="7.3" height="1.5" rx="1" fill="#3fb950" fill-opacity=".28"/><line x1="873.5" y1="48.0" x2="873.5" y2="57.3" stroke="#f472b6" stroke-opacity=".28" stroke-width="1"/><rect x="869.8" y="51.8" width="7.3" height="2.3" rx="1" fill="#f472b6" fill-opacity=".28"/>
+  <path d="M 546.5 98.9 L 559.6 98.6 L 572.7 94.1 L 585.8 89.6 L 598.8 85.4 L 611.9 80.1 L 625.0 78.4 L 638.1 77.8 L 651.2 75.3 L 664.2 73.7 L 677.3 72.9 L 690.4 66.3 L 703.5 62.3 L 716.5 65.8 L 729.6 59.9 L 742.7 56.6 L 755.8 56.0 L 768.8 53.3 L 781.9 49.5 L 795.0 44.2 L 808.1 44.2 L 821.2 44.2 L 834.2 44.2 L 847.3 44.2 L 860.4 44.2 L 873.5 45.4 L 873.5 236 L 546.5 236 Z" fill="url(#areaGrad)" class="area"/>
+  <path d="M 546.5 98.9 L 559.6 98.6 L 572.7 94.1 L 585.8 89.6 L 598.8 85.4 L 611.9 80.1 L 625.0 78.4 L 638.1 77.8 L 651.2 75.3 L 664.2 73.7 L 677.3 72.9 L 690.4 66.3 L 703.5 62.3 L 716.5 65.8 L 729.6 59.9 L 742.7 56.6 L 755.8 56.0 L 768.8 53.3 L 781.9 49.5 L 795.0 44.2 L 808.1 44.2 L 821.2 44.2 L 834.2 44.2 L 847.3 44.2 L 860.4 44.2 L 873.5 45.4" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" class="line"/>
+  <g class="tip">
+    <circle cx="873.5" cy="45.4" r="5" fill="#f472b6" class="ring" opacity=".7"/>
+    <circle cx="873.5" cy="45.4" r="4" fill="#ffffff"/>
+  </g>
+</g>
+  <rect x=".5" y=".5" width="899" height="279" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+</g><text x="48" y="96" font-size="54" font-weight="800" fill="#ffffff" letter-spacing="-1.5" class="fade-in d1">Mitchell</text><text x="48" y="130" font-size="18" font-weight="500" fill="#ffffff" opacity="0.78" class="fade-in d2">Software Engineer · London</text><rect x="48" y="158" width="3" height="18" rx="1.5" fill="#f472b6" class="fade-in d3"/><text x="60" y="172" font-size="15" font-weight="500" fill="#d8d3ff" class="tl tl0">Building algorithmic trading systems in MQL5 and Pine Script</text><text x="60" y="172" font-size="15" font-weight="500" fill="#d8d3ff" class="tl tl1">Shipping production React + TypeScript applications</text><text x="60" y="172" font-size="15" font-weight="500" fill="#d8d3ff" class="tl tl2">Turning market data into decisions, with tests to prove it</text><g class="fade-in d4" transform="translate(48 210)">
+  <rect width="212" height="26" rx="13" fill="#ffffff" fill-opacity=".09" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="106" y="17.2" font-size="11.5" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.92">2,696 contributions in the last year</text>
+</g><g class="fade-in d4" transform="translate(270 210)">
+  <rect width="85" height="26" rx="13" fill="#ffffff" fill-opacity=".09" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="42.5" y="17.2" font-size="11.5" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.92">London, UK</text>
+</g><g class="fade-in d4" transform="translate(365 210)">
+  <rect width="137" height="26" rx="13" fill="#ffffff" fill-opacity=".09" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="68.5" y="17.2" font-size="11.5" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.92">Open to opportunities</text>
+</g><text x="872" y="30" font-size="12" fill="#ffffff" text-anchor="end" opacity="0.45" class="mono">github.com/mitchell-917</text></svg>

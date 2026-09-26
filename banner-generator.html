@@ -1,365 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Profile Banner Generator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 24px;
-            background: linear-gradient(135deg, #0D1117 0%, #161b22 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 24px;
-            align-self: flex-start;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .back-link:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateX(-4px);
-        }
-
-        .banner-container {
-            width: 100%;
-            max-width: 1100px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 52px 36px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(255, 255, 255, 0.1);
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: white;
-        }
-
-        .title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .subtitle {
-            font-size: 1.3em;
-            margin-bottom: 28px;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 36px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2em;
-            font-weight: 700;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .stat-label {
-            font-size: 0.95em;
-            opacity: 0.9;
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        .wave {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0.25;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-            }
-            50% {
-                transform: translateY(-20px) translateX(20px);
-            }
-        }
-
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        button {
-            margin-top: 28px;
-            padding: 14px 36px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            color: white;
-            font-size: 1em;
-            font-weight: 600;
-            border-radius: 28px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        button:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .download-section {
-            margin-top: 36px;
-            padding: 28px;
-            background: rgba(22, 27, 34, 0.9);
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            max-width: 1100px;
-            width: 100%;
-        }
-
-        .download-section h2 {
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-
-        .download-btn {
-            margin: 8px;
-            padding: 12px 28px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .download-section p {
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            margin-top: 16px;
-            font-size: 0.9em;
-        }
-
-        #canvas {
-            display: none;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banner Generator · Mitchell</title>
+  <meta name="description" content="Compose a GitHub profile banner from live stats, pick a palette and export it as PNG at three sizes.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c8cf8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='18' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/lab.css">
+  <style>
+    .layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr); gap: 16px; align-items: start; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+    .preview { padding: 18px; }
+    .preview canvas { width: 100%; border-radius: 14px; box-shadow: var(--shadow); }
+    .controls { display: flex; flex-direction: column; gap: 14px; }
+    .check { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .check input { accent-color: var(--primary); width: 16px; height: 16px; }
+    .sizes { display: flex; gap: 8px; flex-wrap: wrap; }
+  </style>
 </head>
 <body>
-    <a href="https://github.com/mitchell-917" class="back-link">
-        ← Back to Profile
-    </a>
+<div class="wrap">
+  <nav id="lab-nav" aria-label="Lab navigation"></nav>
 
-    <div class="banner-container" id="banner">
-        <div class="particles" id="particles"></div>
-        
-        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="rgba(255,255,255,0.1)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,128C672,107,768,85,864,90.7C960,96,1056,128,1152,133.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+  <header class="page-head rise">
+    <p class="eyebrow">banner-generator</p>
+    <h1>Banner <span class="grad">generator</span></h1>
+    <p>Compose a banner from live profile stats. What you see is what you download: the preview and the export share one drawing routine.</p>
+  </header>
 
-        <div class="content">
-            <div class="title floating">👋 Hey, I'm Mitchell</div>
-            <div class="subtitle">Full-Stack Developer • Trading Systems Architect • Data Viz Specialist</div>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-value">26K+</div>
-                    <div class="stat-label">Lines of Code</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">177</div>
-                    <div class="stat-label">Tests Passing</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">25+</div>
-                    <div class="stat-label">Indicators Built</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">12</div>
-                    <div class="stat-label">Active Projects</div>
-                </div>
-            </div>
-
-            <button onclick="window.open('https://github.com/mitchell-917', '_blank')">
-                View My Work →
-            </button>
+  <div class="layout">
+    <section class="card rise d1">
+      <div class="preview"><canvas id="banner" aria-label="Banner preview"></canvas></div>
+      <div class="card-body" style="padding-top: 0;">
+        <p class="eyebrow">Download</p>
+        <div class="sizes">
+          <button class="btn" data-size="1200x400">1200 × 400</button>
+          <button class="btn ghost" data-size="1500x500">1500 × 500</button>
+          <button class="btn ghost" data-size="1920x640">1920 × 640</button>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="download-section">
-        <h2 style="color: white; text-align: center; margin-bottom: 20px;">📸 Download Banner</h2>
-        <div style="text-align: center;">
-            <button class="download-btn" onclick="downloadBanner('1200x400')">1200×400 (Standard)</button>
-            <button class="download-btn" onclick="downloadBanner('1500x500')">1500×500 (Large)</button>
-            <button class="download-btn" onclick="downloadBanner('1920x640')">1920×640 (HD)</button>
+    <aside class="card rise d2">
+      <div class="card-body controls">
+        <div class="field"><label for="name">Name</label><input class="input" id="name" value="Mitchell"></div>
+        <div class="field"><label for="tagline">Tagline</label><input class="input" id="tagline" value="Software Engineer · London"></div>
+        <div class="field"><label for="palette">Palette</label>
+          <select class="select" id="palette">
+            <option value="indigo" selected>Indigo Night</option>
+            <option value="ocean">Ocean</option>
+            <option value="ember">Ember</option>
+            <option value="emerald">Emerald</option>
+            <option value="mono">Monochrome</option>
+          </select></div>
+        <div class="field"><label>Elements</label>
+          <label class="check"><input type="checkbox" id="showStats" checked> Live stat chips</label>
+          <label class="check"><input type="checkbox" id="showChart" checked> Market line art</label>
+          <label class="check"><input type="checkbox" id="showGrid" checked> Grid texture</label>
+          <label class="check"><input type="checkbox" id="showHandle" checked> GitHub handle</label>
         </div>
-        <p style="color: rgba(255,255,255,0.7); text-align: center; margin-top: 20px;">
-            Download and use as your GitHub profile banner!
-        </p>
-    </div>
+        <p class="note" id="statsNote"></p>
+      </div>
+    </aside>
+  </div>
 
-    <canvas id="canvas"></canvas>
+  <footer id="lab-footer"></footer>
+</div>
 
-    <script>
-        // Create floating particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const size = Math.random() * 60 + 20;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                
-                const duration = Math.random() * 10 + 10;
-                const delay = Math.random() * 5;
-                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
-                
-                container.appendChild(particle);
-            }
-        }
+<script src="assets/js/lab.js"></script>
+<script>
+(async function () {
+  Lab.nav('banner-generator.html');
+  const profile = await Lab.load();
+  Lab.footer(profile);
+  const cal = profile.calendar;
 
-        createParticles();
+  const PALETTES = {
+    indigo: { bg: ['#0b1020', '#141a3a', '#2a1650'], orbs: ['#6e7ff3', '#a78bfa', '#f472b6'], line: ['#7c8cf8', '#c4b5fd', '#f472b6'], up: '#3fb950', down: '#f472b6' },
+    ocean: { bg: ['#061423', '#0b2a44', '#0e4a6b'], orbs: ['#38bdf8', '#2dd4bf', '#818cf8'], line: ['#38bdf8', '#a5f3fc', '#2dd4bf'], up: '#34d399', down: '#fb7185' },
+    ember: { bg: ['#1a0b0b', '#3b1010', '#5a1e0f'], orbs: ['#f97316', '#ef4444', '#fbbf24'], line: ['#fb923c', '#fde68a', '#f43f5e'], up: '#fbbf24', down: '#f43f5e' },
+    emerald: { bg: ['#06130f', '#0b2a22', '#0f4034'], orbs: ['#34d399', '#22d3ee', '#a3e635'], line: ['#34d399', '#a7f3d0', '#22d3ee'], up: '#a3e635', down: '#fb7185' },
+    mono: { bg: ['#0a0a0a', '#171717', '#262626'], orbs: ['#737373', '#a3a3a3', '#525252'], line: ['#a3a3a3', '#f5f5f5', '#d4d4d4'], up: '#e5e5e5', down: '#737373' },
+  };
 
-        // Download banner function
-        async function downloadBanner(size) {
-            const banner = document.getElementById('banner');
-            const canvas = document.getElementById('canvas');
-            const ctx = canvas.getContext('2d');
+  const inputs = {
+    name: document.getElementById('name'), tagline: document.getElementById('tagline'), palette: document.getElementById('palette'),
+    showStats: document.getElementById('showStats'), showChart: document.getElementById('showChart'), showGrid: document.getElementById('showGrid'), showHandle: document.getElementById('showHandle'),
+  };
+  inputs.name.value = profile.user.name || 'Mitchell';
+  inputs.tagline.value = `${(profile.config && profile.config.title) || 'Software Engineer'} · ${profile.user.location || 'London'}`;
 
-            const [width, height] = size.split('x').map(Number);
-            canvas.width = width;
-            canvas.height = height;
+  const chips = [
+    `${Lab.fmt(cal.total)} contributions · last 12 months`,
+    `${cal.activeDays} active days`,
+    `${cal.longestStreak}-day longest streak`,
+    `${profile.totals.publicRepos} public repos`,
+  ];
+  document.getElementById('statsNote').textContent = profile.demo ? 'Demo data: the live snapshot could not be loaded.' : `Stats from the snapshot generated ${Lab.longDate(profile.generatedAt.slice(0, 10))}.`;
 
-            // Scale factor
-            const scale = width / banner.offsetWidth;
+  function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  const font = getComputedStyle(document.body).fontFamily;
+  const mono = getComputedStyle(document.documentElement).getPropertyValue('--mono');
 
-            // Draw gradient background
-            const gradient = ctx.createLinearGradient(0, 0, width, height);
-            gradient.addColorStop(0, '#667eea');
-            gradient.addColorStop(1, '#764ba2');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, width, height);
+  function drawBanner(ctx, W, H) {
+    const p = PALETTES[inputs.palette.value];
+    const u = H / 400; // scale unit relative to the 1200x400 reference
+    ctx.clearRect(0, 0, W, H);
+    // Background
+    const bg = ctx.createLinearGradient(0, 0, W, H); p.bg.forEach((c, i) => bg.addColorStop(i / (p.bg.length - 1), c));
+    roundRect(ctx, 0, 0, W, H, 24 * u); ctx.fillStyle = bg; ctx.fill();
+    ctx.save(); roundRect(ctx, 0, 0, W, H, 24 * u); ctx.clip();
+    if (inputs.showGrid.checked) {
+      ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 1;
+      for (let x = 0; x < W; x += 40 * u) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+      for (let y = 0; y < H; y += 40 * u) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+    }
+    // Orbs
+    [[0.15, 0.2, 0.55, p.orbs[0]], [0.8, 0.95, 0.5, p.orbs[1]], [0.95, 0.1, 0.45, p.orbs[2]]].forEach(([fx, fy, a, col]) => {
+      const g = ctx.createRadialGradient(W * fx, H * fy, 0, W * fx, H * fy, H * 0.85);
+      g.addColorStop(0, hexA(col, a)); g.addColorStop(1, hexA(col, 0));
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    });
+    // Market art
+    if (inputs.showChart.checked) {
+      const r = rng(917), x0 = W * 0.58, x1 = W * 0.96, yTop = H * 0.16, yBot = H * 0.84, n = 26, step = (x1 - x0) / n;
+      let price = 0.7; const pts = [];
+      const y = (v) => yTop + (1 - v) * (yBot - yTop);
+      for (let i = 0; i < n; i++) {
+        const open = price, close = Math.min(0.98, Math.max(0.05, price + 0.018 + (r() - 0.5) * 0.12));
+        const hi = Math.min(1, Math.max(open, close) + r() * 0.05), lo = Math.max(0, Math.min(open, close) - r() * 0.05);
+        const cx = x0 + i * step + step / 2, up = close >= open, col = up ? p.up : p.down;
+        ctx.strokeStyle = hexA(col, 0.3); ctx.lineWidth = Math.max(1, u); ctx.beginPath(); ctx.moveTo(cx, y(hi)); ctx.lineTo(cx, y(lo)); ctx.stroke();
+        ctx.fillStyle = hexA(col, 0.3); ctx.fillRect(cx - step * 0.28, y(Math.max(open, close)), step * 0.56, Math.max(1.5 * u, Math.abs(y(open) - y(close))));
+        pts.push([cx, y((open + close) / 2 + 0.04)]); price = close;
+      }
+      const lg = ctx.createLinearGradient(x0, 0, x1, 0); p.line.forEach((c, i) => lg.addColorStop(i / (p.line.length - 1), c));
+      ctx.beginPath(); pts.forEach(([x, yy], i) => (i ? ctx.lineTo(x, yy) : ctx.moveTo(x, yy)));
+      ctx.lineTo(pts[pts.length - 1][0], yBot); ctx.lineTo(pts[0][0], yBot); ctx.closePath();
+      const ag = ctx.createLinearGradient(0, yTop, 0, yBot); ag.addColorStop(0, hexA(p.line[1], 0.28)); ag.addColorStop(1, hexA(p.line[1], 0));
+      ctx.fillStyle = ag; ctx.fill();
+      ctx.beginPath(); pts.forEach(([x, yy], i) => (i ? ctx.lineTo(x, yy) : ctx.moveTo(x, yy)));
+      ctx.strokeStyle = lg; ctx.lineWidth = 3 * u; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.stroke();
+      const [ex, ey] = pts[pts.length - 1];
+      ctx.beginPath(); ctx.arc(ex, ey, 6 * u, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+      ctx.beginPath(); ctx.arc(ex, ey, 12 * u, 0, Math.PI * 2); ctx.strokeStyle = hexA(p.line[2], 0.6); ctx.lineWidth = 2 * u; ctx.stroke();
+    }
+    // Text
+    const left = W * 0.055;
+    ctx.fillStyle = '#fff'; ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
+    ctx.font = `800 ${76 * u}px ${font}`; ctx.fillText(inputs.name.value || 'Mitchell', left, H * 0.36);
+    ctx.font = `500 ${26 * u}px ${font}`; ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fillText(inputs.tagline.value, left, H * 0.47);
+    if (inputs.showStats.checked) {
+      let cx = left; const cy = H * 0.62, ch = 40 * u;
+      ctx.font = `600 ${16 * u}px ${font}`;
+      for (const label of chips) {
+        const w = ctx.measureText(label).width + 30 * u;
+        if (cx + w > W * (inputs.showChart.checked ? 0.56 : 0.95) && cx > left) break;
+        roundRect(ctx, cx, cy, w, ch, ch / 2); ctx.fillStyle = 'rgba(255,255,255,0.1)'; ctx.fill(); ctx.strokeStyle = 'rgba(255,255,255,0.2)'; ctx.lineWidth = u; ctx.stroke();
+        ctx.fillStyle = 'rgba(255,255,255,0.95)'; ctx.textBaseline = 'middle'; ctx.fillText(label, cx + 15 * u, cy + ch / 2 + u);
+        ctx.textBaseline = 'alphabetic';
+        cx += w + 12 * u;
+      }
+    }
+    if (inputs.showHandle.checked) {
+      ctx.font = `500 ${16 * u}px ${mono}`; ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.textAlign = 'right';
+      ctx.fillText(`github.com/${profile.user.login}`, W - left, H * 0.9);
+    }
+    ctx.restore();
+    roundRect(ctx, 0.5, 0.5, W - 1, H - 1, 24 * u); ctx.strokeStyle = 'rgba(255,255,255,0.14)'; ctx.lineWidth = 1; ctx.stroke();
+  }
+  function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`; }
 
-            // Draw particles
-            for (let i = 0; i < 30; i++) {
-                const x = Math.random() * width;
-                const y = Math.random() * height;
-                const radius = Math.random() * 30 + 10;
-                
-                ctx.beginPath();
-                ctx.arc(x, y, radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-                ctx.fill();
-            }
-
-            // Draw text
-            ctx.fillStyle = 'white';
-            ctx.textAlign = 'center';
-            ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
-            ctx.shadowBlur = 10;
-
-            // Title
-            ctx.font = `bold ${height * 0.15}px Segoe UI`;
-            ctx.fillText('👋 Hey, I\'m Mitchell', width / 2, height * 0.35);
-
-            // Subtitle
-            ctx.font = `${height * 0.06}px Segoe UI`;
-            ctx.fillText('Full-Stack Developer • Trading Systems Architect • Data Viz Specialist', width / 2, height * 0.48);
-
-            // Stats
-            ctx.font = `bold ${height * 0.08}px Segoe UI`;
-            const stats = [
-                { value: '26K+', label: 'Lines' },
-                { value: '177', label: 'Tests' },
-                { value: '25+', label: 'Indicators' },
-                { value: '12', label: 'Projects' }
-            ];
-
-            const statWidth = width / (stats.length + 1);
-            stats.forEach((stat, index) => {
-                const x = statWidth * (index + 1);
-                ctx.fillText(stat.value, x, height * 0.68);
-                
-                ctx.font = `${height * 0.04}px Segoe UI`;
-                ctx.fillText(stat.label, x, height * 0.76);
-                ctx.font = `bold ${height * 0.08}px Segoe UI`;
-            });
-
-            // Download
-            const dataURL = canvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.download = `github-banner-${size}.png`;
-            link.href = dataURL;
-            link.click();
-        }
-    </script>
+  const canvas = document.getElementById('banner');
+  function preview() {
+    const w = canvas.parentElement.clientWidth - 36, h = Math.round(w / 3);
+    const ctx = Lab.hidpi(canvas, w, h);
+    drawBanner(ctx, w, h);
+  }
+  Object.values(inputs).forEach((el) => el.addEventListener('input', preview));
+  new ResizeObserver(preview).observe(canvas.parentElement);
+  document.querySelectorAll('[data-size]').forEach((b) => b.addEventListener('click', () => {
+    const [w, h] = b.dataset.size.split('x').map(Number);
+    const off = document.createElement('canvas'); off.width = w; off.height = h;
+    drawBanner(off.getContext('2d'), w, h);
+    Lab.download(off, `github-banner-${w}x${h}.png`);
+  }));
+  preview();
+})();
+</script>
 </body>
 </html>

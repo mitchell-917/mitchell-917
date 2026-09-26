@@ -1,590 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Terminal Dashboard - Mitchell's Coding Stats</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'JetBrains Mono', 'Courier New', monospace;
-            background: linear-gradient(135deg, #0D1117 0%, #161b22 100%);
-            color: #c9d1d9;
-            min-height: 100vh;
-            padding: 24px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .back-link:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateX(-4px);
-        }
-
-        .terminal-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(22, 27, 34, 0.95);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(102, 126, 234, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .terminal-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 14px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .terminal-button {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            transition: transform 0.2s ease;
-        }
-
-        .terminal-button:hover {
-            transform: scale(1.1);
-        }
-
-        .terminal-button.close { background: #ff5f56; }
-        .terminal-button.minimize { background: #ffbd2e; }
-        .terminal-button.maximize { background: #27c93f; }
-
-        .terminal-title {
-            font-family: 'Inter', sans-serif;
-            color: white;
-            font-weight: 600;
-            margin-left: 10px;
-            font-size: 0.95em;
-        }
-
-        .terminal-body {
-            padding: 28px;
-            min-height: 600px;
-        }
-
-        .command-line {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-            animation: slideIn 0.4s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .prompt {
-            color: #667eea;
-            margin-right: 10px;
-            font-weight: 600;
-        }
-
-        .command {
-            color: #a78bfa;
-        }
-
-        .output {
-            margin-left: 20px;
-            margin-bottom: 24px;
-            line-height: 1.8;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin: 24px 0;
-        }
-
-        .stat-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-            border: 1px solid rgba(102, 126, 234, 0.2);
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.5s ease-out forwards;
-            opacity: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .stat-box:hover::before {
-            opacity: 1;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .stat-box:nth-child(1) { animation-delay: 0.1s; }
-        .stat-box:nth-child(2) { animation-delay: 0.2s; }
-        .stat-box:nth-child(3) { animation-delay: 0.3s; }
-        .stat-box:nth-child(4) { animation-delay: 0.4s; }
-        .stat-box:nth-child(5) { animation-delay: 0.5s; }
-        .stat-box:nth-child(6) { animation-delay: 0.6s; }
-
-        .stat-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.4);
-        }
-
-        .stat-label {
-            font-family: 'Inter', sans-serif;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.75em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .stat-value {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2.2em;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .stat-bar {
-            width: 100%;
-            height: 6px;
-            background: rgba(102, 126, 234, 0.15);
-            border-radius: 3px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .stat-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            border-radius: 3px;
-            transition: width 1.2s ease-out;
-        }
-
-        .language-breakdown {
-            margin: 24px 0;
-        }
-
-        .language-item {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
-            gap: 12px;
-        }
-
-        .language-color {
-            width: 12px;
-            height: 12px;
-            border-radius: 4px;
-            flex-shrink: 0;
-        }
-
-        .language-name {
-            font-family: 'Inter', sans-serif;
-            min-width: 110px;
-            color: #c9d1d9;
-            font-weight: 500;
-            font-size: 0.9em;
-        }
-
-        .language-bar {
-            flex: 1;
-            height: 22px;
-            background: rgba(102, 126, 234, 0.08);
-            border-radius: 6px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .language-bar-fill {
-            height: 100%;
-            border-radius: 6px;
-            transition: width 1.5s ease-out;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            color: white;
-            font-size: 0.8em;
-            font-weight: 600;
-        }
-
-        .activity-graph {
-            margin: 24px 0;
-            padding: 20px;
-            background: rgba(13, 17, 23, 0.6);
-            border-radius: 12px;
-            border: 1px solid rgba(102, 126, 234, 0.15);
-        }
-
-        .graph-title {
-            font-family: 'Inter', sans-serif;
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-
-        .activity-bars {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            height: 180px;
-            gap: 6px;
-        }
-
-        .activity-bar {
-            flex: 1;
-            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-            border-radius: 4px 4px 0 0;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .activity-bar:hover {
-            opacity: 0.85;
-            transform: scaleY(1.02);
-        }
-
-        .activity-bar::after {
-            content: attr(data-value);
-            position: absolute;
-            top: -22px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #667eea;
-            font-size: 0.75em;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            font-weight: 600;
-        }
-
-        .activity-bar:hover::after {
-            opacity: 1;
-        }
-
-        .typing-cursor {
-            display: inline-block;
-            width: 8px;
-            height: 18px;
-            background: #667eea;
-            animation: blink 1s infinite;
-            margin-left: 4px;
-            border-radius: 1px;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .success { color: #27c93f; }
-        .warning { color: #ffbd2e; }
-        .error { color: #ff5f56; }
-        .info { color: #667eea; }
-
-        .skill-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            background: rgba(102, 126, 234, 0.12);
-            border: 1px solid rgba(102, 126, 234, 0.25);
-            border-radius: 20px;
-            margin: 4px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85em;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: rgba(102, 126, 234, 0.25);
-            transform: scale(1.02);
-            border-color: rgba(102, 126, 234, 0.4);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terminal Dashboard · Mitchell</title>
+  <meta name="description" content="A typed-out terminal session streaming Mitchell's real GitHub streaks, weekday patterns and language splits.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c8cf8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='18' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/lab.css">
+  <style>
+    .term { font-family: var(--mono); font-size: 13.5px; line-height: 1.65; }
+    .term-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border-soft); background: var(--card-2); }
+    .term-head i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .term-head .title { margin-left: 8px; font-size: 12.5px; color: var(--muted); font-family: var(--mono); }
+    .term-body { padding: 18px 20px 22px; min-height: 420px; white-space: pre-wrap; word-break: break-word; }
+    .line { display: block; min-height: 1.65em; }
+    .prompt { color: var(--success); font-weight: 700; }
+    .path { color: var(--primary); font-weight: 700; }
+    .cmd { color: var(--text); }
+    .ok::before { content: '✓ '; color: var(--success); }
+    .info::before { content: '→ '; color: var(--primary); }
+    .dim { color: var(--faint); }
+    .k { color: var(--muted); display: inline-block; min-width: 12ch; }
+    .bar { letter-spacing: -1px; }
+    .cursor { display: inline-block; width: 9px; height: 1.1em; background: var(--primary); vertical-align: text-bottom; animation: blink 1s steps(2) infinite; margin-left: 2px; }
+    @keyframes blink { to { visibility: hidden; } }
+    .val { color: var(--text); font-weight: 700; }
+    .warn { color: var(--amber); }
+  </style>
 </head>
 <body>
-    <a href="https://github.com/mitchell-917" class="back-link">
-        ← Back to Profile
-    </a>
-    
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <div class="terminal-button close"></div>
-            <div class="terminal-button minimize"></div>
-            <div class="terminal-button maximize"></div>
-            <div class="terminal-title">mitchell@github:~ $ coding-stats --live</div>
-        </div>
-        
-        <div class="terminal-body">
-            <div class="command-line">
-                <span class="prompt">mitchell@github:~$</span>
-                <span class="command">fetch --developer-stats --real-time</span>
-            </div>
-            
-            <div class="output">
-                <p class="success">✓ Connected to GitHub API</p>
-                <p class="success">✓ Analyzing contribution patterns</p>
-                <p class="success">✓ Computing language statistics</p>
-                <p class="info">→ Generating live dashboard...</p>
-            </div>
+<div class="wrap">
+  <nav id="lab-nav" aria-label="Lab navigation"></nav>
 
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <div class="stat-label">TOTAL COMMITS (2024)</div>
-                    <div class="stat-value" id="total-commits">1,247</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="85"></div>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">LINES OF CODE</div>
-                    <div class="stat-value" id="lines-code">26,482</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="92"></div>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">ACTIVE REPOSITORIES</div>
-                    <div class="stat-value" id="active-repos">12</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="75"></div>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">CURRENT STREAK</div>
-                    <div class="stat-value" id="streak">47 days</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="68"></div>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">PULL REQUESTS</div>
-                    <div class="stat-value" id="prs">89</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="78"></div>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">CODE REVIEWS</div>
-                    <div class="stat-value" id="reviews">156</div>
-                    <div class="stat-bar">
-                        <div class="stat-bar-fill" style="width: 0%" data-target="88"></div>
-                    </div>
-                </div>
-            </div>
+  <header class="page-head rise">
+    <p class="eyebrow">live-coding-stats</p>
+    <h1>Terminal <span class="grad">dashboard</span></h1>
+    <p>A shell session that types itself. Every number comes from the profile snapshot this repository regenerates daily, so what scrolls past is real.</p>
+  </header>
 
-            <div class="activity-graph">
-                <div class="graph-title">📊 Weekly Activity Pattern</div>
-                <div class="activity-bars" id="activity-bars"></div>
-            </div>
+  <div class="toolbar rise d1" style="margin-bottom: 14px;">
+    <button class="btn" id="replay">Replay</button>
+    <button class="btn ghost" id="skip">Skip animation</button>
+    <button class="btn ghost" id="copy">Copy as text</button>
+    <span class="note" id="status"></span>
+  </div>
 
-            <div class="language-breakdown">
-                <div class="command-line">
-                    <span class="prompt">mitchell@github:~$</span>
-                    <span class="command">analyze --language-distribution</span>
-                </div>
-                
-                <div class="language-item">
-                    <div class="language-color" style="background: #f1e05a;"></div>
-                    <div class="language-name">JavaScript/TS</div>
-                    <div class="language-bar">
-                        <div class="language-bar-fill" style="width: 0%; background: #f1e05a;" data-target="32">32%</div>
-                    </div>
-                </div>
-                <div class="language-item">
-                    <div class="language-color" style="background: #2962FF;"></div>
-                    <div class="language-name">Pine Script</div>
-                    <div class="language-bar">
-                        <div class="language-bar-fill" style="width: 0%; background: #2962FF;" data-target="28">28%</div>
-                    </div>
-                </div>
-                <div class="language-item">
-                    <div class="language-color" style="background: #3572A5;"></div>
-                    <div class="language-name">Python</div>
-                    <div class="language-bar">
-                        <div class="language-bar-fill" style="width: 0%; background: #3572A5;" data-target="18">18%</div>
-                    </div>
-                </div>
-                <div class="language-item">
-                    <div class="language-color" style="background: #00A6FF;"></div>
-                    <div class="language-name">MQL5</div>
-                    <div class="language-bar">
-                        <div class="language-bar-fill" style="width: 0%; background: #00A6FF;" data-target="15">15%</div>
-                    </div>
-                </div>
-                <div class="language-item">
-                    <div class="language-color" style="background: #701516;"></div>
-                    <div class="language-name">Ruby</div>
-                    <div class="language-bar">
-                        <div class="language-bar-fill" style="width: 0%; background: #701516;" data-target="7">7%</div>
-                    </div>
-                </div>
-            </div>
+  <section class="card rise d2">
+    <div class="term-head"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i><span class="title" id="title">mitchell@github: ~/profile — zsh</span></div>
+    <div class="term-body term" id="term" aria-live="polite"></div>
+  </section>
 
-            <div class="command-line">
-                <span class="prompt">mitchell@github:~$</span>
-                <span class="command">list --skills --expertise</span>
-            </div>
-            
-            <div class="output" style="margin-top: 20px;">
-                <span class="skill-tag">⚛️ React</span>
-                <span class="skill-tag">📘 TypeScript</span>
-                <span class="skill-tag">📊 Data Visualization</span>
-                <span class="skill-tag">🤖 Algorithmic Trading</span>
-                <span class="skill-tag">🎨 UI/UX Design</span>
-                <span class="skill-tag">🔄 CI/CD</span>
-                <span class="skill-tag">📈 TradingView</span>
-                <span class="skill-tag">⚡ Performance Optimization</span>
-                <span class="skill-tag">🧪 Test-Driven Development</span>
-                <span class="skill-tag">💎 Clean Code</span>
-            </div>
+  <footer id="lab-footer"></footer>
+</div>
 
-            <div class="command-line" style="margin-top: 30px;">
-                <span class="prompt">mitchell@github:~$</span>
-                <span class="command">status --session</span>
-                <span class="typing-cursor"></span>
-            </div>
-        </div>
-    </div>
+<script src="assets/js/lab.js"></script>
+<script>
+(async function () {
+  Lab.nav('live-coding-stats.html');
+  const profile = await Lab.load();
+  Lab.footer(profile);
+  const term = document.getElementById('term');
+  const status = document.getElementById('status');
+  const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const bar = (frac, width = 22) => { const n = Math.round(Math.max(0, Math.min(1, frac)) * width); return `<span class="bar">${'█'.repeat(n)}<span class="dim">${'░'.repeat(width - n)}</span></span>`; };
 
-    <script>
-        // Animate stat bars
-        function animateStats() {
-            document.querySelectorAll('.stat-bar-fill').forEach(bar => {
-                const target = bar.getAttribute('data-target');
-                setTimeout(() => {
-                    bar.style.width = target + '%';
-                }, 100);
-            });
+  const cal = profile.calendar, user = profile.user, totals = profile.totals;
+  const pct = cal.days.length ? Math.round((cal.activeDays / cal.days.length) * 100) : 0;
+  const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const wd = [1, 2, 3, 4, 5, 6, 0].map((i) => ({ name: weekdayNames[i], count: cal.byWeekday[i] || 0 }));
+  const wdMax = Math.max(1, ...wd.map((d) => d.count));
+  const months = (cal.monthly || []).slice(-12);
+  const mMax = Math.max(1, ...months.map((m) => m.count));
+  const langs = (profile.languages || []).slice(0, 6);
+  const repos = (profile.repos || []).filter((r) => !r.fork).slice(0, 6);
 
-            document.querySelectorAll('.language-bar-fill').forEach(bar => {
-                const target = bar.getAttribute('data-target');
-                setTimeout(() => {
-                    bar.style.width = target + '%';
-                }, 300);
-            });
+  const script = [
+    { cmd: 'profile --summary', out: [
+      `<span class="ok"><span class="val">${Lab.fmt(cal.total)}</span> contributions in the last 12 months · <span class="val">${cal.activeDays}</span> active days (${pct}%)</span>`,
+      `<span class="ok">current streak <span class="val">${cal.currentStreak}</span> days · longest <span class="val">${cal.longestStreak}</span> days${cal.longestStreakEnd ? ` (ended ${Lab.longDate(cal.longestStreakEnd)})` : ''}</span>`,
+      cal.busiest ? `<span class="ok">busiest day <span class="val">${Lab.longDate(cal.busiest.date)}</span> with <span class="val">${Lab.fmt(cal.busiest.count)}</span> contributions</span>` : '',
+      `<span class="ok"><span class="val">${totals.publicRepos}</span> public repositories · <span class="val">${totals.stars}</span> stars earned · <span class="val">${user.followers}</span> followers</span>`,
+    ].filter(Boolean) },
+    { cmd: 'activity --by-weekday', out: wd.map((d) => `<span class="k">${d.name}</span>${bar(d.count / wdMax)}  <span class="dim">${Lab.fmt(d.count)}</span>`) },
+    { cmd: 'activity --by-month', out: months.map((m) => `<span class="k">${Lab.MONTHS[+m.month.slice(5, 7) - 1]} ${m.month.slice(2, 4)}</span>${bar(m.count / mMax)}  <span class="dim">${Lab.fmt(m.count)}</span>`) },
+    { cmd: 'languages --public --by-bytes', out: langs.length ? langs.map((l) => `<span class="k">${esc(l.name)}</span><span style="color:${l.color}">${bar(l.percent / 100)}</span>  <span class="dim">${l.percent.toFixed(l.percent < 1 ? 2 : 1)}%</span>`) : ['<span class="warn">no language data in snapshot</span>'] },
+    { cmd: 'repos --sort=updated --top=6', out: repos.length ? repos.map((r) => `<span class="k">★ ${r.stars}</span><span class="val">${esc(r.name)}</span> <span class="dim">${r.language ? '· ' + esc(r.language) : ''} · pushed ${r.pushedAt ? Lab.longDate(r.pushedAt.slice(0, 10)) : 'n/a'}</span>`) : ['<span class="warn">no repository data in snapshot</span>'] },
+    { cmd: 'status', out: [
+      `<span class="info">snapshot generated ${Lab.longDate(profile.generatedAt.slice(0, 10))}${profile.demo ? ' <span class="warn">(demo data: snapshot not reachable)</span>' : ' by GitHub Actions'}</span>`,
+      `<span class="info">the profile README renders its SVGs from this same file</span>`,
+      `<span class="info">source: <a href="https://github.com/mitchell-917/mitchell-917">github.com/mitchell-917/mitchell-917</a></span>`,
+    ] },
+  ];
+
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  let run = 0;
+  let plain = [];
+
+  function promptHtml() { return `<span class="prompt">mitchell@github</span> <span class="path">~/profile</span> <span class="dim">$</span> `; }
+  function addLine(html) { const el = document.createElement('span'); el.className = 'line'; el.innerHTML = html; term.appendChild(el); return el; }
+
+  async function play(instant = false) {
+    const id = ++run;
+    term.innerHTML = '';
+    plain = [];
+    status.textContent = instant ? '' : 'typing…';
+    for (const block of script) {
+      if (id !== run) return;
+      const line = addLine(promptHtml());
+      plain.push(`$ ${block.cmd}`);
+      if (instant) line.innerHTML += `<span class="cmd">${esc(block.cmd)}</span>`;
+      else {
+        const cursor = '<span class="cursor"></span>';
+        let typed = '';
+        for (const ch of block.cmd) {
+          if (id !== run) return;
+          typed += ch;
+          line.innerHTML = promptHtml() + `<span class="cmd">${esc(typed)}</span>` + cursor;
+          await sleep(28 + Math.random() * 40);
         }
+        line.innerHTML = promptHtml() + `<span class="cmd">${esc(typed)}</span>`;
+        await sleep(220);
+      }
+      for (const out of block.out) {
+        if (id !== run) return;
+        addLine(out);
+        plain.push(out.replace(/<[^>]+>/g, ''));
+        if (!instant) await sleep(70);
+      }
+      addLine('');
+      plain.push('');
+      if (!instant) await sleep(320);
+    }
+    if (id !== run) return;
+    addLine(promptHtml() + '<span class="cursor"></span>');
+    status.textContent = '';
+  }
 
-        // Generate activity bars
-        function generateActivityBars() {
-            const container = document.getElementById('activity-bars');
-            const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-            const activities = [65, 82, 95, 88, 72, 45, 38]; // Percentage values
-
-            activities.forEach((value, index) => {
-                const bar = document.createElement('div');
-                bar.className = 'activity-bar';
-                bar.setAttribute('data-value', days[index]);
-                bar.style.height = '0%';
-                container.appendChild(bar);
-
-                setTimeout(() => {
-                    bar.style.height = value + '%';
-                }, 500 + (index * 100));
-            });
-        }
-
-        // Counter animation
-        function animateCounter(element, start, end, duration) {
-            let startTime = null;
-            
-            function animate(currentTime) {
-                if (!startTime) startTime = currentTime;
-                const progress = Math.min((currentTime - startTime) / duration, 1);
-                const value = Math.floor(progress * (end - start) + start);
-                element.textContent = value.toLocaleString();
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
-                }
-            }
-            
-            requestAnimationFrame(animate);
-        }
-
-        // Initialize
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                animateStats();
-                generateActivityBars();
-                
-                // Animate counters
-                animateCounter(document.getElementById('total-commits'), 0, 1247, 2000);
-                animateCounter(document.getElementById('lines-code'), 0, 26482, 2000);
-                animateCounter(document.getElementById('active-repos'), 0, 12, 1500);
-                animateCounter(document.getElementById('prs'), 0, 89, 1800);
-                animateCounter(document.getElementById('reviews'), 0, 156, 2000);
-            }, 500);
-        });
-
-        // Update time dynamically
-        setInterval(() => {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString();
-            // Could add real-time updates here
-        }, 1000);
-    </script>
+  document.getElementById('replay').addEventListener('click', () => play(false));
+  document.getElementById('skip').addEventListener('click', () => play(true));
+  document.getElementById('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(plain.join('\n')); Lab.toast('Copied session to clipboard'); } catch { Lab.toast('Clipboard unavailable'); }
+  });
+  play(false);
+})();
+</script>
 </body>
 </html>

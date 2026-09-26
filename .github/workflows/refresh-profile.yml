@@ -1,0 +1,52 @@
+name: Refresh profile
+
+# Regenerates every SVG in assets/generated and the JSON snapshot in assets/data from live
+# GitHub data. Uses the default GITHUB_TOKEN only: no secrets to configure.
+
+on:
+  schedule:
+    - cron: '17 5 * * *'   # daily, 05:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'profile.config.json'
+      - 'scripts/**'
+      - '.github/workflows/refresh-profile.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-profile
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate.mjs
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/generated assets/data
+          if git diff --cached --quiet; then
+            echo "Assets already up to date."
+            exit 0
+          fi
+          git commit -m "chore: refresh profile assets ($(date -u +%Y-%m-%d))"
+          git push

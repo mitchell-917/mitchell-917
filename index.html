@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Lab · Mitchell</title>
+  <meta name="description" content="Five live tools built from Mitchell's GitHub data: 3D contribution graph, terminal dashboard, skill radar, project carousel and banner generator.">
+  <meta property="og:title" content="Interactive Lab · Mitchell">
+  <meta property="og:description" content="Live tools built with vanilla Canvas, CSS and JavaScript from a daily GitHub data snapshot.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/mitchell-917/mitchell-917/main/assets/generated/hero.svg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c8cf8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='18' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/lab.css">
+  <style>
+    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; margin-bottom: 28px; }
+    .hero img { width: 100%; border-radius: 16px; box-shadow: var(--shadow); }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    .tool { display: flex; flex-direction: column; gap: 12px; padding: 22px; color: inherit; transition: transform .2s ease, border-color .2s ease; }
+    .tool:hover { transform: translateY(-3px); border-color: var(--primary); text-decoration: none; }
+    .tool .icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--tint) 14%, transparent); color: var(--tint); }
+    .tool h3 { margin: 0; font-size: 17px; }
+    .tool p { margin: 0; color: var(--muted); font-size: 13.5px; flex: 1; }
+    .tool .open { font-size: 13px; font-weight: 700; color: var(--tint); }
+    .tools-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav id="lab-nav" aria-label="Lab navigation"></nav>
+
+  <section class="hero">
+    <div class="rise">
+      <p class="eyebrow">mitchell-917 · interactive lab</p>
+      <h1 style="font-size: clamp(30px, 4.4vw, 46px); letter-spacing: -1.2px; line-height: 1.05; margin: 0 0 12px;">Live tools built from <span class="grad" style="background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent;">real GitHub data</span></h1>
+      <p style="color: var(--muted); font-size: 16px; margin: 0 0 18px; max-width: 58ch;">Every page here reads the same JSON snapshot that renders my profile README. No frameworks, no third-party widgets: vanilla Canvas, CSS and JavaScript.</p>
+      <div class="toolbar">
+        <a class="btn" href="contribution-graph-3d.html">Open the 3D graph</a>
+        <a class="btn ghost" href="https://github.com/mitchell-917" rel="noopener">Back to profile</a>
+      </div>
+    </div>
+    <div class="rise d2"><img src="assets/generated/hero.svg" alt="Mitchell — Software Engineer" width="900" height="280"></div>
+  </section>
+
+  <section class="grid cols-5 rise d2" id="stats" aria-label="Live statistics">
+    <div class="stat"><div class="bar"></div><div class="value" data-stat="contributions">—</div><div class="label">Contributions</div><div class="sub">last 12 months</div></div>
+    <div class="stat"><div class="bar" style="background: var(--secondary)"></div><div class="value" data-stat="activeDays">—</div><div class="label">Active days</div><div class="sub" data-stat="activePct"></div></div>
+    <div class="stat"><div class="bar" style="background: var(--accent)"></div><div class="value" data-stat="longestStreak">—</div><div class="label">Longest streak</div><div class="sub">days</div></div>
+    <div class="stat"><div class="bar" style="background: var(--success)"></div><div class="value" data-stat="currentStreak">—</div><div class="label">Current streak</div><div class="sub">days</div></div>
+    <div class="stat"><div class="bar" style="background: var(--amber)"></div><div class="value" data-stat="stars">—</div><div class="label">Stars earned</div><div class="sub" data-stat="repos"></div></div>
+  </section>
+
+  <h2 class="eyebrow" style="margin: 32px 0 14px;">Tools</h2>
+  <section class="grid tools-grid" id="tools">
+    <a class="card tool rise d1" href="contribution-graph-3d.html" style="--tint: var(--primary)">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 21 7.3v9.4L12 21.5 3 16.7V7.3z"/><path d="M3 7.3 12 12l9-4.7M12 12v9.5"/></svg></div>
+      <h3>3D Contribution Graph</h3>
+      <p>The last year of commits as a rotating isometric city. Drag to orbit, scroll to zoom, hover for the day.</p>
+      <span class="open">Open →</span>
+    </a>
+    <a class="card tool rise d2" href="live-coding-stats.html" style="--tint: var(--secondary)">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M7.5 9.5 10.5 12l-3 2.5M12.5 14.5h4"/></svg></div>
+      <h3>Terminal Dashboard</h3>
+      <p>A typed-out terminal session streaming real streaks, weekday patterns and language splits.</p>
+      <span class="open">Open →</span>
+    </a>
+    <a class="card tool rise d3" href="skill-radar.html" style="--tint: var(--accent)">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5" opacity=".7"/><path d="M12 12l6.5-6.5"/></svg></div>
+      <h3>Skill Radar</h3>
+      <p>Six-axis radar with live sliders, four palettes, shareable links and PNG export.</p>
+      <span class="open">Open →</span>
+    </a>
+    <a class="card tool rise d4" href="project-showcase.html" style="--tint: var(--cyan)">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5 20.5 8 12 12.5 3.5 8z"/><path d="M3.5 12 12 16.5l8.5-4.5M3.5 16 12 20.5l8.5-4.5"/></svg></div>
+      <h3>Project Carousel</h3>
+      <p>Featured repositories in a 3D carousel with live stars, languages and demo links.</p>
+      <span class="open">Open →</span>
+    </a>
+    <a class="card tool rise d5" href="banner-generator.html" style="--tint: var(--success)">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3.5 16.5 8.5 11.5l4 4 3-3 5 5"/><circle cx="16" cy="9" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+      <h3>Banner Generator</h3>
+      <p>Compose a profile banner from live stats, pick a palette and export at three sizes.</p>
+      <span class="open">Open →</span>
+    </a>
+  </section>
+
+  <footer id="lab-footer"></footer>
+</div>
+
+<script src="assets/js/lab.js"></script>
+<script>
+  Lab.nav('index.html');
+  Lab.load().then((p) => {
+    const c = p.calendar;
+    const q = (k) => document.querySelector(`[data-stat="${k}"]`);
+    Lab.animateNumber(q('contributions'), c.total);
+    Lab.animateNumber(q('activeDays'), c.activeDays);
+    Lab.animateNumber(q('longestStreak'), c.longestStreak);
+    Lab.animateNumber(q('currentStreak'), c.currentStreak);
+    Lab.animateNumber(q('stars'), p.totals.stars);
+    q('activePct').textContent = c.days.length ? `${Math.round((c.activeDays / c.days.length) * 100)}% of the year` : '';
+    q('repos').textContent = `${p.totals.publicRepos} public repos`;
+    Lab.footer(p);
+  });
+</script>
+</body>
+</html>

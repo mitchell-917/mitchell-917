@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="184" viewBox="0 0 440 184" role="img" aria-labelledby="t d" >
+<title id="t">Pine Script Lab — tradingview-pinescript-lab</title>
+<desc id="d">27 production-quality Pine Script v5 indicators, strategies and templates, documented as a progressive learning path.</desc>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+  
+  .in { animation: fade .7s ease-out both; }
+  .d1 { animation-delay: .1s } .d2 { animation-delay: .25s } .d3 { animation-delay: .4s }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+</style>
+<defs><linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2962ff"/><stop offset="100%" stop-color="#2962ff" stop-opacity=".25"/></linearGradient></defs>
+<defs><clipPath id="clip-0-0-440-184"><rect x="0" y="0" width="440" height="184" rx="16"/></clipPath></defs>
+<rect x="0.5" y="0.5" width="439" height="183" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="0" y="0" width="440" height="3" fill="url(#acc)" clip-path="url(#clip-0-0-440-184)"/><g class="in">
+  <rect x="24" y="26" width="44" height="44" rx="12" fill="#2962ff" opacity="0.12"/>
+  <g transform="translate(24 26)"><path d="M16 14 L8 22 L16 30" fill="none" stroke="#2962ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 14 L36 22 L28 30" fill="none" stroke="#2962ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 12 L19 32" stroke="#2962ff" stroke-width="2.4" stroke-linecap="round"/></g>
+</g><text x="84" y="46" font-size="18" font-weight="700" fill="#1f2328" letter-spacing="-0.2" class="in">Pine Script Lab</text><text x="84" y="64" font-size="11.5" fill="#59636e" class="mono in d1">mitchell-917/tradingview-pinescript-lab</text><text x="24" y="96" font-size="13" fill="#59636e" class="in d2">27 production-quality Pine Script v5 indicators, strategies and</text><text x="24" y="114" font-size="13" fill="#59636e" class="in d2">templates, documented as a progressive learning path.</text><g class="in d3"><g transform="translate(24 150)">
+<rect width="90" height="22" rx="11" fill="#2962ff" opacity="0.12"/>
+<rect x="0.5" y="0.5" width="89" height="21" rx="10.5" fill="none" stroke="#2962ff" opacity="0.45"/>
+<text x="45" y="14.78" font-size="10.5" font-weight="600" fill="#2962ff" text-anchor="middle">Pine Script v5</text>
+</g><g transform="translate(120 150)">
+<rect width="83" height="22" rx="11" fill="#2962ff" opacity="0.12"/>
+<rect x="0.5" y="0.5" width="82" height="21" rx="10.5" fill="none" stroke="#2962ff" opacity="0.45"/>
+<text x="41.5" y="14.78" font-size="10.5" font-weight="600" fill="#2962ff" text-anchor="middle">TradingView</text>
+</g><g transform="translate(305.2896 153)"><path d="M8 1.5l2 4.2 4.6.6-3.4 3.2.9 4.6L8 11.8 3.9 14.1l.9-4.6L1.4 6.3 6 5.7z" fill="#9a6700"/></g><text x="325.2896" y="165.5" font-size="12" font-weight="600" fill="#1f2328">4</text><circle cx="351.48" cy="161" r="5" fill="#2962ff"/><text x="362.48" y="165.5" font-size="12" font-weight="500" fill="#59636e">Pine Script</text></g></svg>

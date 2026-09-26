@@ -1,0 +1,14 @@
+{
+  "name": "mitchell-917-profile",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Self-hosted, self-updating GitHub profile: SVG generator, data snapshot and interactive lab for github.com/mitchell-917",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/generate.mjs",
+    "build:offline": "node scripts/generate.mjs --offline",
+    "check": "node --check scripts/generate.mjs && node scripts/generate.mjs --offline --dry-run"
+  },
+  "license": "MIT"
+}

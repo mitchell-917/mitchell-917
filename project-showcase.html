@@ -1,654 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Showcase - Mitchell</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0D1117;
-            color: #fff;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-            background: 
-                radial-gradient(ellipse at 20% 30%, rgba(102, 126, 234, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(118, 75, 162, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(240, 147, 251, 0.06) 0%, transparent 60%);
-        }
-
-        .particle {
-            position: absolute;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-                opacity: 0.3;
-            }
-            50% {
-                transform: translate(50px, -50px) scale(1.2);
-                opacity: 0.5;
-            }
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 48px 24px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 32px;
-        }
-
-        .back-link:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateX(-4px);
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.2em;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-24px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tagline {
-            font-size: 1.2em;
-            color: rgba(255, 255, 255, 0.6);
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 560px;
-            perspective: 2000px;
-            margin-bottom: 48px;
-        }
-
-        .carousel {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .project-card {
-            position: absolute;
-            width: 420px;
-            height: 520px;
-            left: 50%;
-            top: 50%;
-            transform-style: preserve-3d;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .card-inner {
-            width: 100%;
-            height: 100%;
-            background: rgba(22, 27, 34, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 32px;
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover .card-inner {
-            transform: translateY(-8px);
-            box-shadow: 
-                0 35px 70px rgba(102, 126, 234, 0.25),
-                0 0 0 1px rgba(102, 126, 234, 0.3);
-            border-color: rgba(102, 126, 234, 0.3);
-        }
-
-        .project-icon {
-            font-size: 3.5em;
-            margin-bottom: 16px;
-        }
-
-        .project-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8em;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .project-description {
-            font-size: 0.95em;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-            margin-bottom: 18px;
-            flex: 1;
-        }
-
-        .project-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 12px 8px;
-            background: rgba(102, 126, 234, 0.08);
-            border-radius: 10px;
-            border: 1px solid rgba(102, 126, 234, 0.15);
-        }
-
-        .stat-value {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5em;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.75em;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            padding: 6px 12px;
-            background: rgba(102, 126, 234, 0.12);
-            border: 1px solid rgba(102, 126, 234, 0.25);
-            border-radius: 16px;
-            font-size: 0.8em;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            background: rgba(102, 126, 234, 0.25);
-            border-color: rgba(102, 126, 234, 0.4);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 14px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 0.9em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .control-btn {
-            width: 52px;
-            height: 52px;
-            background: rgba(102, 126, 234, 0.12);
-            border: 1px solid rgba(102, 126, 234, 0.25);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.3em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .control-btn:hover {
-            background: rgba(102, 126, 234, 0.25);
-            border-color: rgba(102, 126, 234, 0.4);
-            transform: scale(1.08);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.25);
-        }
-
-        .indicators {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .indicator {
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            width: 32px;
-            border-radius: 5px;
-            box-shadow: 0 0 12px rgba(102, 126, 234, 0.5);
-        }
-
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 48px;
-        }
-
-        .achievement-card {
-            background: rgba(22, 27, 34, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 28px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .achievement-card:hover::before {
-            opacity: 1;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 32px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.2);
-        }
-
-        .achievement-icon {
-            font-size: 2.5em;
-            margin-bottom: 12px;
-        }
-
-        .achievement-value {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2em;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 8px;
-        }
-
-        .achievement-label {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.95em;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            .carousel-container { height: 480px; }
-            .project-card { width: 90%; height: 460px; }
-            .card-inner { padding: 24px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Carousel · Mitchell</title>
+  <meta name="description" content="Mitchell's featured repositories in a 3D carousel with live stars, languages and demo links.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c8cf8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='18' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/lab.css">
+  <style>
+    .scene { perspective: 1400px; height: 420px; position: relative; margin: 8px 0 12px; user-select: none; }
+    .ring { position: absolute; inset: 0; transform-style: preserve-3d; }
+    .pcard { position: absolute; left: 50%; top: 50%; width: min(520px, 86vw); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.7,.2,1), opacity .7s ease, filter .7s ease; cursor: pointer; }
+    .pcard .card { --tint: var(--primary); }
+    .pcard .card::before { background: linear-gradient(90deg, var(--tint), color-mix(in srgb, var(--tint) 30%, transparent)); }
+    .pcard.active { cursor: default; }
+    .pcard .card-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+    .phead { display: flex; gap: 14px; align-items: center; }
+    .picon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--tint) 16%, transparent); color: var(--tint); flex: none; }
+    .ptitle { margin: 0; font-size: 20px; letter-spacing: -.3px; }
+    .prepo { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .pdesc { margin: 0; color: var(--muted); font-size: 14px; min-height: 3.2em; }
+    .ptags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pmeta { display: flex; gap: 14px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+    .pmeta .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: -1px; }
+    .plinks { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+    .controls { display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .dots { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
+    .dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; background: var(--border); cursor: pointer; padding: 0; transition: transform .2s, background .2s; }
+    .dots button[aria-current="true"] { background: var(--primary); transform: scale(1.3); }
+    .repo-list { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .repo { padding: 14px 16px; border: 1px solid var(--border-soft); border-radius: 12px; background: var(--card-2); display: flex; flex-direction: column; gap: 6px; color: inherit; transition: border-color .2s; }
+    .repo:hover { border-color: var(--primary); text-decoration: none; }
+    .repo b { font-size: 14.5px; }
+    .repo p { margin: 0; color: var(--muted); font-size: 13px; flex: 1; }
+    .repo .meta { font-size: 12px; color: var(--faint); display: flex; gap: 12px; }
+    @media (max-width: 700px) { .scene { height: 470px; } }
+  </style>
 </head>
 <body>
-    <div class="bg-animation" id="particles"></div>
+<div class="wrap">
+  <nav id="lab-nav" aria-label="Lab navigation"></nav>
 
-    <div class="container">
-        <a href="https://github.com/mitchell-917" class="back-link">
-            ← Back to Profile
-        </a>
-        
-        <header>
-            <h1>🚀 Featured Projects</h1>
-            <p class="tagline">Production-grade solutions built with passion and precision</p>
-        </header>
+  <header class="page-head rise">
+    <p class="eyebrow">project-showcase</p>
+    <h1>Featured <span class="grad">projects</span></h1>
+    <p>The repositories I would show first, with stars and languages read live from the profile snapshot. Use the arrows, the keyboard, or swipe.</p>
+  </header>
 
-        <div class="carousel-container">
-            <div class="carousel" id="carousel"></div>
-        </div>
-
-        <div class="controls">
-            <button class="control-btn" onclick="prevProject()">◀</button>
-            <button class="control-btn" onclick="toggleAutoplay()">⏯️</button>
-            <button class="control-btn" onclick="nextProject()">▶</button>
-        </div>
-
-        <div class="indicators" id="indicators"></div>
-
-        <div class="achievements">
-            <div class="achievement-card">
-                <div class="achievement-icon">🏆</div>
-                <div class="achievement-value">177</div>
-                <div class="achievement-label">Tests Passing</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">📊</div>
-                <div class="achievement-value">26K+</div>
-                <div class="achievement-label">Lines of Code</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">⚡</div>
-                <div class="achievement-value">25+</div>
-                <div class="achievement-label">Indicators Built</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">🎯</div>
-                <div class="achievement-value">15+</div>
-                <div class="achievement-label">Trading Strategies</div>
-            </div>
-        </div>
+  <section class="rise d1">
+    <div class="scene" id="scene"><div class="ring" id="ring"></div></div>
+    <div class="controls">
+      <button class="btn ghost" id="prev" aria-label="Previous project">←</button>
+      <button class="btn ghost" id="auto">Pause autoplay</button>
+      <button class="btn ghost" id="next" aria-label="Next project">→</button>
     </div>
+    <div class="dots" id="dots"></div>
+  </section>
 
-    <script>
-        const projects = [
-            {
-                icon: '📊',
-                title: 'Trading Systems',
-                description: 'Enterprise-grade algorithmic trading platform with 24/7 automated CI/CD, live market dashboards, and production-ready strategies for MT5 & TradingView.',
-                stats: [
-                    { value: '25+', label: 'Indicators' },
-                    { value: '15+', label: 'Strategies' },
-                    { value: '26K', label: 'LOC' }
-                ],
-                tags: ['Pine Script v5', 'MQL5', 'Python', 'GitHub Actions'],
-                github: 'https://github.com/mitchell-917/trading-systems',
-                demo: 'https://mitchell-917.github.io/trading-systems'
-            },
-            {
-                icon: '🎨',
-                title: 'Algorithm Visualizer',
-                description: 'Production-ready React application with 177 passing tests. Features dark mode, real-time statistics, live code viewer, and audio feedback for 6 sorting algorithms.',
-                stats: [
-                    { value: '177', label: 'Tests' },
-                    { value: '95%', label: 'Coverage' },
-                    { value: '0', label: 'Bugs' }
-                ],
-                tags: ['React 18', 'TypeScript', 'Vitest', 'Tailwind CSS'],
-                github: 'https://github.com/mitchell-917/algorithm-visualizer',
-                demo: 'https://mitchell-917.github.io/algorithm-visualizer'
-            },
-            {
-                icon: '📚',
-                title: 'Pine Script Lab',
-                description: 'Comprehensive educational resource for mastering Pine Script v5. Production-ready indicators, progressive learning path, and extensive documentation.',
-                stats: [
-                    { value: '20+', label: 'Scripts' },
-                    { value: '100%', label: 'Documented' },
-                    { value: 'v5', label: 'Pine Script' }
-                ],
-                tags: ['Pine Script', 'TradingView', 'Education', 'Open Source'],
-                github: 'https://github.com/mitchell-917/tradingview-pinescript-lab',
-                demo: '#'
-            },
-            {
-                icon: '🌦️',
-                title: 'Weather Dashboard',
-                description: 'Clean, responsive weather application with real-time data integration, location search, geolocation support, and modern UI with smooth animations.',
-                stats: [
-                    { value: 'API', label: 'Real-time' },
-                    { value: '100%', label: 'Responsive' },
-                    { value: 'PWA', label: 'Ready' }
-                ],
-                tags: ['React', 'JavaScript', 'API Integration', 'Mobile-First'],
-                github: 'https://github.com/mitchell-917/weather-app',
-                demo: '#'
-            },
-            {
-                icon: '🎯',
-                title: 'Interactive Tools',
-                description: 'Collection of stunning data visualization tools including 3D contribution graphs, live terminal dashboards, and animated skill radar charts.',
-                stats: [
-                    { value: '3D', label: 'Graphics' },
-                    { value: 'Live', label: 'Real-time' },
-                    { value: '100%', label: 'Interactive' }
-                ],
-                tags: ['Canvas API', 'JavaScript', 'D3.js', 'WebGL'],
-                github: 'https://github.com/mitchell-917',
-                demo: 'https://mitchell-917.github.io/mitchell-917/contribution-graph-3d.html'
-            }
-        ];
+  <section class="rise d2" style="margin-top: 36px;">
+    <p class="eyebrow">All public repositories</p>
+    <div class="repo-list" id="repos"></div>
+  </section>
 
-        let currentIndex = 0;
-        let autoplayInterval;
-        let isAutoplay = true;
+  <footer id="lab-footer"></footer>
+</div>
 
-        function initCarousel() {
-            const carousel = document.getElementById('carousel');
-            const indicators = document.getElementById('indicators');
+<script src="assets/js/lab.js"></script>
+<script>
+(async function () {
+  Lab.nav('project-showcase.html');
+  const profile = await Lab.load();
+  Lab.footer(profile);
+  const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-            projects.forEach((project, index) => {
-                // Create card
-                const card = document.createElement('div');
-                card.className = 'project-card';
-                card.innerHTML = `
-                    <div class="card-inner">
-                        <div class="project-icon">${project.icon}</div>
-                        <div class="project-title">${project.title}</div>
-                        <div class="project-description">${project.description}</div>
-                        <div class="project-stats">
-                            ${project.stats.map(stat => `
-                                <div class="stat">
-                                    <span class="stat-value">${stat.value}</span>
-                                    <span class="stat-label">${stat.label}</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                        <div class="project-tags">
-                            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                        </div>
-                        <div class="project-links">
-                            <a href="${project.github}" class="btn" target="_blank">View Code</a>
-                            ${project.demo !== '#' ? `<a href="${project.demo}" class="btn" target="_blank">Live Demo</a>` : ''}
-                        </div>
-                    </div>
-                `;
-                carousel.appendChild(card);
+  const GLYPHS = {
+    chart: '<svg width="26" height="26" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 30 17 21l6 5 8-13 5 4"/><circle cx="36" cy="17" r="2.6" fill="currentColor" stroke="none"/></svg>',
+    code: '<svg width="26" height="26" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14 8 22l8 8M28 14l8 8-8 8M25 12l-6 20"/></svg>',
+    bars: '<svg width="26" height="26" viewBox="0 0 44 44" fill="currentColor"><rect x="9" y="24" width="5" height="10" rx="1.5"/><rect x="17" y="16" width="5" height="18" rx="1.5"/><rect x="25" y="20" width="5" height="14" rx="1.5"/><rect x="33" y="10" width="5" height="24" rx="1.5"/></svg>',
+    spark: '<svg width="26" height="26" viewBox="0 0 44 44" fill="currentColor"><path d="M22 8l3.5 10.5L36 22l-10.5 3.5L22 36l-3.5-10.5L8 22l10.5-3.5z"/></svg>',
+    lock: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  };
+  const langColor = (name) => (profile.languages.find((l) => l.name === name) || {}).color || 'var(--muted)';
 
-                // Create indicator
-                const indicator = document.createElement('div');
-                indicator.className = 'indicator';
-                indicator.onclick = () => goToProject(index);
-                indicators.appendChild(indicator);
-            });
+  const cards = (profile.projects || []).map((p) => ({
+    title: p.title, repo: `${profile.user.login}/${p.repo}`, description: p.description, tech: p.tech || [], stars: p.stars, language: p.language,
+    pushedAt: p.pushedAt, url: p.url, demo: p.demo, icon: p.icon, tint: p.accent,
+  }));
+  if (profile.config && profile.config.privateWork) {
+    cards.push({ title: profile.config.privateWork.title, repo: 'private · trading-systems', description: profile.config.privateWork.text, tech: ['MQL5', 'Pine Script', 'Python', 'GitHub Actions'], icon: 'lock', tint: '#f0b429', private: true });
+  }
+  if (!cards.length) cards.push({ title: 'No projects in snapshot', repo: '', description: 'The data snapshot could not be loaded.', tech: [], icon: 'spark', tint: '#7c8cf8' });
 
-            updateCarousel();
-            startAutoplay();
-        }
+  const ring = document.getElementById('ring');
+  const dots = document.getElementById('dots');
+  let index = 0, autoplay = true, timer = 0;
 
-        function updateCarousel() {
-            const cards = document.querySelectorAll('.project-card');
-            const indicators = document.querySelectorAll('.indicator');
-            const totalCards = cards.length;
-            const angle = 360 / totalCards;
+  cards.forEach((c, i) => {
+    const el = document.createElement('div'); el.className = 'pcard';
+    el.innerHTML = `<div class="card" style="--tint:${c.tint}"><div class="card-body">
+      <div class="phead"><div class="picon">${GLYPHS[c.icon] || GLYPHS.spark}</div><div><h3 class="ptitle">${esc(c.title)}</h3><div class="prepo">${esc(c.repo)}</div></div></div>
+      <p class="pdesc">${esc(c.description)}</p>
+      <div class="ptags">${c.tech.map((t) => `<span class="chip" style="color:${c.tint};background:color-mix(in srgb, ${c.tint} 14%, transparent);border-color:color-mix(in srgb, ${c.tint} 40%, transparent)">${esc(t)}</span>`).join('')}</div>
+      <div class="pmeta">${c.private ? '<span>🔒 private repository</span>' : `<span>★ ${Lab.fmt(c.stars)}</span>${c.language ? `<span><i class="dot" style="background:${langColor(c.language)}"></i>${esc(c.language)}</span>` : ''}${c.pushedAt ? `<span>updated ${Lab.longDate(c.pushedAt.slice(0, 10))}</span>` : ''}`}</div>
+      <div class="plinks">${c.url ? `<a class="btn small" href="${c.url}" rel="noopener">Repository</a>` : ''}${c.demo ? `<a class="btn small ghost" href="${c.demo}" rel="noopener">Live demo</a>` : ''}</div>
+    </div></div>`;
+    el.addEventListener('click', (e) => { if (!el.classList.contains('active')) { e.preventDefault(); go(i); } });
+    ring.appendChild(el);
+    const d = document.createElement('button'); d.setAttribute('aria-label', `Show ${c.title}`); d.addEventListener('click', () => go(i)); dots.appendChild(d);
+  });
 
-            cards.forEach((card, index) => {
-                const offset = (index - currentIndex + totalCards) % totalCards;
-                const rotation = offset * angle;
-                const scale = offset === 0 ? 1 : 0.7;
-                const opacity = offset === 0 ? 1 : 0.4;
-                const zIndex = offset === 0 ? 10 : 1;
+  function layout() {
+    const els = [...ring.children], n = els.length, angle = 360 / n;
+    const radius = Math.max(420, Math.min(720, ring.clientWidth * 0.62));
+    els.forEach((el, i) => {
+      let off = (i - index) % n; if (off > n / 2) off -= n; if (off < -n / 2) off += n;
+      const active = off === 0;
+      el.classList.toggle('active', active);
+      el.style.transform = `translate(-50%, -50%) rotateY(${off * angle}deg) translateZ(${radius}px) rotateY(${-off * angle}deg) scale(${active ? 1 : 0.82})`;
+      el.style.opacity = active ? 1 : Math.abs(off) === 1 ? 0.55 : 0.18;
+      el.style.zIndex = active ? 10 : 10 - Math.abs(off);
+      el.style.filter = active ? 'none' : 'blur(.6px)';
+      el.style.pointerEvents = Math.abs(off) <= 1 ? 'auto' : 'none';
+    });
+    [...dots.children].forEach((d, i) => d.setAttribute('aria-current', String(i === index)));
+  }
+  function go(i) { index = (i + cards.length) % cards.length; layout(); restart(); }
+  function restart() { clearInterval(timer); if (autoplay) timer = setInterval(() => go(index + 1), 6000); }
 
-                card.style.transform = `
-                    translate(-50%, -50%)
-                    rotateY(${rotation}deg)
-                    translateZ(500px)
-                    scale(${scale})
-                `;
-                card.style.opacity = opacity;
-                card.style.zIndex = zIndex;
-            });
+  document.getElementById('prev').addEventListener('click', () => go(index - 1));
+  document.getElementById('next').addEventListener('click', () => go(index + 1));
+  const autoBtn = document.getElementById('auto');
+  autoBtn.addEventListener('click', () => { autoplay = !autoplay; autoBtn.textContent = autoplay ? 'Pause autoplay' : 'Resume autoplay'; restart(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') go(index - 1); if (e.key === 'ArrowRight') go(index + 1); });
+  const scene = document.getElementById('scene');
+  let startX = null;
+  scene.addEventListener('pointerdown', (e) => { startX = e.clientX; });
+  scene.addEventListener('pointerup', (e) => { if (startX == null) return; const dx = e.clientX - startX; startX = null; if (Math.abs(dx) > 50) go(index + (dx < 0 ? 1 : -1)); });
+  scene.addEventListener('pointerenter', () => clearInterval(timer));
+  scene.addEventListener('pointerleave', restart);
+  new ResizeObserver(layout).observe(ring);
 
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentIndex);
-            });
-        }
+  // Public repositories list
+  const list = document.getElementById('repos');
+  const repos = (profile.repos || []).filter((r) => !r.fork);
+  list.innerHTML = repos.length ? repos.map((r) => `<a class="repo" href="${r.url}" rel="noopener">
+      <b>${esc(r.name)}</b><p>${esc(r.description || 'No description yet.')}</p>
+      <span class="meta">${r.language ? `<span><i class="dot" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${langColor(r.language)};margin-right:5px;vertical-align:-1px"></i>${esc(r.language)}</span>` : ''}<span>★ ${Lab.fmt(r.stars)}</span><span>updated ${Lab.longDate(r.pushedAt.slice(0, 10))}</span></span>
+    </a>`).join('') : '<p class="note">Repository list unavailable in this snapshot.</p>';
 
-        function nextProject() {
-            currentIndex = (currentIndex + 1) % projects.length;
-            updateCarousel();
-        }
-
-        function prevProject() {
-            currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-            updateCarousel();
-        }
-
-        function goToProject(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        function startAutoplay() {
-            if (isAutoplay) {
-                autoplayInterval = setInterval(nextProject, 5000);
-            }
-        }
-
-        function toggleAutoplay() {
-            isAutoplay = !isAutoplay;
-            if (isAutoplay) {
-                startAutoplay();
-            } else {
-                clearInterval(autoplayInterval);
-            }
-        }
-
-        // Create animated particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 20; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.width = Math.random() * 100 + 50 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-                container.appendChild(particle);
-            }
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            initCarousel();
-            createParticles();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevProject();
-            if (e.key === 'ArrowRight') nextProject();
-        });
-    </script>
+  layout(); restart();
+})();
+</script>
 </body>
 </html>
