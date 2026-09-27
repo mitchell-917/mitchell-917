@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T19:37:41.041Z",
+  "generatedAt": "2026-09-27T10:36:06.063Z",
   "user": {
     "login": "mitchell-917",
     "name": "Mitchell",
@@ -20,36 +20,8 @@
     "allRepos": 7
   },
   "calendar": {
-    "total": 2697,
+    "total": 2688,
     "days": [
-      {
-        "date": "2025-09-21",
-        "count": 9
-      },
-      {
-        "date": "2025-09-22",
-        "count": 0
-      },
-      {
-        "date": "2025-09-23",
-        "count": 0
-      },
-      {
-        "date": "2025-09-24",
-        "count": 0
-      },
-      {
-        "date": "2025-09-25",
-        "count": 0
-      },
-      {
-        "date": "2025-09-26",
-        "count": 0
-      },
-      {
-        "date": "2025-09-27",
-        "count": 0
-      },
       {
         "date": "2025-09-28",
         "count": 3
@@ -1505,39 +1477,13 @@
       {
         "date": "2026-09-26",
         "count": 1
+      },
+      {
+        "date": "2026-09-27",
+        "count": 0
       }
     ],
     "weeks": [
-      [
-        {
-          "date": "2025-09-21",
-          "count": 9
-        },
-        {
-          "date": "2025-09-22",
-          "count": 0
-        },
-        {
-          "date": "2025-09-23",
-          "count": 0
-        },
-        {
-          "date": "2025-09-24",
-          "count": 0
-        },
-        {
-          "date": "2025-09-25",
-          "count": 0
-        },
-        {
-          "date": "2025-09-26",
-          "count": 0
-        },
-        {
-          "date": "2025-09-27",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-09-28",
@@ -3097,10 +3043,21 @@
           "date": "2026-09-26",
           "count": 1
         }
+      ],
+      [
+        {
+          "date": "2026-09-27",
+          "count": 0
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ]
     ],
     "weekly": [
-      9,
       3,
       0,
       1,
@@ -3152,12 +3109,13 @@
       37,
       39,
       25,
-      35
+      35,
+      0
     ],
     "monthly": [
       {
         "month": "2025-09",
-        "count": 12
+        "count": 3
       },
       {
         "month": "2025-10",
@@ -3208,7 +3166,7 @@
         "count": 125
       }
     ],
-    "activeDays": 256,
+    "activeDays": 255,
     "max": 583,
     "busiest": {
       "date": "2025-11-13",
@@ -3223,7 +3181,7 @@
     "longestStreak": 24,
     "longestStreakEnd": "2026-09-15",
     "byWeekday": [
-      534,
+      525,
       335,
       304,
       281,
@@ -3231,8 +3189,8 @@
       268,
       144
     ],
-    "first": "2025-09-21",
-    "last": "2026-09-26",
+    "first": "2025-09-28",
+    "last": "2026-09-27",
     "source": "graphql"
   },
   "languages": [
@@ -3288,7 +3246,7 @@
       "forks": 0,
       "fork": false,
       "archived": false,
-      "pushedAt": "2026-09-26T19:37:28Z",
+      "pushedAt": "2026-09-26T19:37:41Z",
       "createdAt": "2023-01-19T22:29:36Z",
       "homepage": null,
       "hasPages": true,
@@ -3472,13 +3430,13 @@
       "url": "https://github.com/mitchell-917/mitchell-917",
       "stars": 1,
       "forks": 0,
-      "pushedAt": "2026-09-26T19:37:28Z",
+      "pushedAt": "2026-09-26T19:37:41Z",
       "hasPages": true,
       "files": 50
     }
   ],
   "heroChips": [
-    "2,697 contributions in the last year",
+    "2,688 contributions in the last year",
     "London, UK",
     "Open to opportunities"
   ],
