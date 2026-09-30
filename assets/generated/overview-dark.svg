@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="176" viewBox="0 0 900 176" role="img" aria-labelledby="t d" >
 <title id="t">GitHub activity at a glance</title>
-<desc id="d">2,700 contributions, 257 active days, longest streak 24 days, current streak 9 days.</desc>
+<desc id="d">2,700 contributions, 257 active days, longest streak 24 days, current streak 0 days.</desc>
 <style>
   text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
   .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
@@ -16,7 +16,7 @@
   <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c8cf8" stop-opacity=".45"/><stop offset="100%" stop-color="#7c8cf8" stop-opacity="0"/></linearGradient></defs>
 <defs><clipPath id="clip-0-0-900-176"><rect x="0" y="0" width="900" height="176" rx="16"/></clipPath></defs>
 <rect x="0.5" y="0.5" width="899" height="175" rx="16" fill="#161b22" stroke="#30363d"/>
-<rect x="0" y="0" width="900" height="3" fill="url(#brand)" clip-path="url(#clip-0-0-900-176)"/><text x="24" y="36" font-size="16" font-weight="700" fill="#e6edf3">At a glance</text><text x="876" y="36" font-size="12" fill="#636c76" text-anchor="end">updated 29 Sep 2026</text><g class="tile" style="animation-delay:0ms">
+<rect x="0" y="0" width="900" height="3" fill="url(#brand)" clip-path="url(#clip-0-0-900-176)"/><text x="24" y="36" font-size="16" font-weight="700" fill="#e6edf3">At a glance</text><text x="876" y="36" font-size="12" fill="#636c76" text-anchor="end">updated 30 Sep 2026</text><g class="tile" style="animation-delay:0ms">
   <rect x="24.5" y="56.5" width="149" height="95" rx="12" fill="#1c2128" stroke="#262c36"/>
   <rect x="40" y="74" width="18" height="4" rx="2" fill="#7c8cf8"/>
   <text x="40" y="112" font-size="28" font-weight="800" fill="#e6edf3" letter-spacing="-0.5">2,700</text>
@@ -37,7 +37,7 @@
 </g><g class="tile" style="animation-delay:270ms">
   <rect x="522.5" y="56.5" width="149" height="95" rx="12" fill="#1c2128" stroke="#262c36"/>
   <rect x="538" y="74" width="18" height="4" rx="2" fill="#3fb950"/>
-  <text x="538" y="112" font-size="28" font-weight="800" fill="#e6edf3" letter-spacing="-0.5">9 days</text>
+  <text x="538" y="112" font-size="28" font-weight="800" fill="#e6edf3" letter-spacing="-0.5">0 days</text>
   <text x="538" y="130" font-size="10" font-weight="700" fill="#9198a1" letter-spacing="1">CURRENT STREAK</text>
-  <text x="538" y="144" font-size="10.5" fill="#636c76">and counting</text>
+  <text x="538" y="144" font-size="10.5" fill="#636c76">starts with the next commit</text>
 </g><rect x="688.5" y="56.5" width="187" height="95" rx="12" fill="#1c2128" stroke="#262c36"/><text x="704" y="78" font-size="10" font-weight="700" fill="#9198a1" letter-spacing="1">WEEKLY RHYTHM</text><path d="M704.0 134.7 L707.0 138.0 L710.0 136.1 L713.0 134.7 L716.0 138.0 L719.0 135.3 L722.0 90.0 L725.0 98.2 L728.0 121.4 L731.0 109.2 L734.0 124.0 L737.0 126.5 L740.0 129.6 L743.0 128.0 L746.0 125.6 L749.0 126.7 L752.0 127.3 L755.0 125.6 L758.0 126.8 L761.0 128.4 L764.0 127.8 L767.0 127.8 L770.0 127.7 L773.0 125.7 L776.0 126.0 L779.0 127.1 L782.0 128.0 L785.0 127.1 L788.0 125.6 L791.0 128.2 L794.0 129.9 L797.0 127.3 L800.0 128.2 L803.0 126.7 L806.0 128.4 L809.0 125.4 L812.0 128.4 L815.0 128.8 L818.0 138.0 L821.0 128.0 L824.0 125.6 L827.0 127.8 L830.0 127.0 L833.0 127.1 L836.0 127.5 L839.0 128.0 L842.0 127.0 L845.0 125.9 L848.0 126.3 L851.0 126.0 L854.0 128.4 L857.0 126.7 L860.0 131.4 L860 138 L704 138 Z" fill="url(#sparkFill)" class="sparkArea"/><path d="M704.0 134.7 L707.0 138.0 L710.0 136.1 L713.0 134.7 L716.0 138.0 L719.0 135.3 L722.0 90.0 L725.0 98.2 L728.0 121.4 L731.0 109.2 L734.0 124.0 L737.0 126.5 L740.0 129.6 L743.0 128.0 L746.0 125.6 L749.0 126.7 L752.0 127.3 L755.0 125.6 L758.0 126.8 L761.0 128.4 L764.0 127.8 L767.0 127.8 L770.0 127.7 L773.0 125.7 L776.0 126.0 L779.0 127.1 L782.0 128.0 L785.0 127.1 L788.0 125.6 L791.0 128.2 L794.0 129.9 L797.0 127.3 L800.0 128.2 L803.0 126.7 L806.0 128.4 L809.0 125.4 L812.0 128.4 L815.0 128.8 L818.0 138.0 L821.0 128.0 L824.0 125.6 L827.0 127.8 L830.0 127.0 L833.0 127.1 L836.0 127.5 L839.0 128.0 L842.0 127.0 L845.0 125.9 L848.0 126.3 L851.0 126.0 L854.0 128.4 L857.0 126.7 L860.0 131.4" fill="none" stroke="#7c8cf8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" class="spark"/><circle cx="860.0" cy="131.4" r="3" fill="#f472b6" class="sparkArea"/><text x="860" y="78" font-size="10" fill="#636c76" text-anchor="end">53 wk</text></svg>
