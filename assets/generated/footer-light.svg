@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="96" viewBox="0 0 900 96" role="img" aria-labelledby="t d" >
 <title id="t">Footer</title>
-<desc id="d">Profile refreshed 2 Oct 2026.</desc>
+<desc id="d">Profile refreshed 3 Oct 2026.</desc>
 <style>
   text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
   .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
@@ -12,4 +12,4 @@
 <defs><linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4f5fd8"/><stop offset="50%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#db2777"/></linearGradient><clipPath id="clip"><rect width="900" height="96" rx="16"/></clipPath></defs><g clip-path="url(#clip)">
   <path class="w2" d="M0 44 C 112.5 53.94521895368273, 112.5 34.05478104631727, 225 44 C 337.5 34.05478104631727, 337.5 53.94521895368273, 450 44 C 562.5 53.94521895368273, 562.5 34.05478104631727, 675 44 C 787.5 34.05478104631727, 787.5 53.94521895368273, 900 44 C 1012.5 53.94521895368273, 1012.5 34.05478104631727, 1125 44 C 1237.5 34.05478104631727, 1237.5 53.94521895368273, 1350 44 C 1462.5 53.94521895368273, 1462.5 34.05478104631727, 1575 44 C 1687.5 34.05478104631727, 1687.5 53.94521895368274, 1800 44 C 1912.5 53.94521895368274, 1912.5 34.05478104631726, 2025 44 L1800 96 L0 96 Z" fill="url(#brand)" opacity=".35"/>
   <path class="w1" d="M0 52 C 112.5 52, 112.5 52, 225 52 C 337.5 52, 337.5 52, 450 52 C 562.5 52, 562.5 52, 675 52 C 787.5 52, 787.5 51.99999999999999, 900 52 C 1012.5 51.99999999999999, 1012.5 52.00000000000001, 1125 52 C 1237.5 52.00000000000001, 1237.5 51.99999999999999, 1350 52 C 1462.5 51.99999999999999, 1462.5 52.00000000000001, 1575 52 C 1687.5 52.00000000000001, 1687.5 51.99999999999999, 1800 52 C 1912.5 51.99999999999999, 1912.5 52.00000000000001, 2025 52 L1800 96 L0 96 Z" fill="url(#brand)" opacity=".95"/>
-</g><text x="450" y="80" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.95">Refreshed 2 Oct 2026  ·  every graphic on this page is generated inside this repository by GitHub Actions</text><text x="450" y="24" font-size="13" font-weight="600" fill="#59636e" text-anchor="middle">Thanks for stopping by.</text></svg>
+</g><text x="450" y="80" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.95">Refreshed 3 Oct 2026  ·  every graphic on this page is generated inside this repository by GitHub Actions</text><text x="450" y="24" font-size="13" font-weight="600" fill="#59636e" text-anchor="middle">Thanks for stopping by.</text></svg>
