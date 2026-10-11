@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T11:13:58.475Z",
+  "generatedAt": "2026-10-11T11:27:27.072Z",
   "user": {
     "login": "mitchell-917",
     "name": "Mitchell",
@@ -22,34 +22,6 @@
   "calendar": {
     "total": 2764,
     "days": [
-      {
-        "date": "2025-10-05",
-        "count": 0
-      },
-      {
-        "date": "2025-10-06",
-        "count": 0
-      },
-      {
-        "date": "2025-10-07",
-        "count": 0
-      },
-      {
-        "date": "2025-10-08",
-        "count": 0
-      },
-      {
-        "date": "2025-10-09",
-        "count": 0
-      },
-      {
-        "date": "2025-10-10",
-        "count": 0
-      },
-      {
-        "date": "2025-10-11",
-        "count": 0
-      },
       {
         "date": "2025-10-12",
         "count": 0
@@ -1505,39 +1477,13 @@
       {
         "date": "2026-10-10",
         "count": 3
+      },
+      {
+        "date": "2026-10-11",
+        "count": 0
       }
     ],
     "weeks": [
-      [
-        {
-          "date": "2025-10-05",
-          "count": 0
-        },
-        {
-          "date": "2025-10-06",
-          "count": 0
-        },
-        {
-          "date": "2025-10-07",
-          "count": 0
-        },
-        {
-          "date": "2025-10-08",
-          "count": 0
-        },
-        {
-          "date": "2025-10-09",
-          "count": 0
-        },
-        {
-          "date": "2025-10-10",
-          "count": 0
-        },
-        {
-          "date": "2025-10-11",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-10-12",
@@ -3097,10 +3043,21 @@
           "date": "2026-10-10",
           "count": 3
         }
+      ],
+      [
+        {
+          "date": "2026-10-11",
+          "count": 0
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ]
     ],
     "weekly": [
-      0,
       1,
       3,
       0,
@@ -3152,7 +3109,8 @@
       25,
       35,
       36,
-      43
+      43,
+      0
     ],
     "monthly": [
       {
@@ -3231,8 +3189,8 @@
       278,
       147
     ],
-    "first": "2025-10-05",
-    "last": "2026-10-10",
+    "first": "2025-10-12",
+    "last": "2026-10-11",
     "source": "graphql"
   },
   "languages": [
@@ -3288,7 +3246,7 @@
       "forks": 0,
       "fork": false,
       "archived": false,
-      "pushedAt": "2026-10-09T11:57:37Z",
+      "pushedAt": "2026-10-10T11:13:59Z",
       "createdAt": "2023-01-19T22:29:36Z",
       "homepage": null,
       "hasPages": true,
@@ -3472,7 +3430,7 @@
       "url": "https://github.com/mitchell-917/mitchell-917",
       "stars": 1,
       "forks": 0,
-      "pushedAt": "2026-10-09T11:57:37Z",
+      "pushedAt": "2026-10-10T11:13:59Z",
       "hasPages": true,
       "files": 50
     }
